@@ -43,7 +43,7 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <a class="nav-link btn btn-sm btn-success" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                         <i class="fas fa-plus"></i> &nbsp;Created
                     </a>
                 </li>
@@ -76,7 +76,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link active">
+                                    <a href="#" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Dashboard v1</p>
                                     </a>
