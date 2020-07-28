@@ -16,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.home');
 });
-Route::get('/home/admin', 'Frontend\HomeAdminController@home_admin');
+
+Route::get('/admin-login', function () {
+    return view('admin.layout_admin_master');
+});
