@@ -13,10 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
-
-Route::get('/admin-login', function () {
-    return view('admin.layout_admin_master');
-});
+Route::get('/', 'Frontend\HomeController@home');
