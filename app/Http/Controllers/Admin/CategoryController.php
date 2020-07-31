@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function Cate() {
-        return 'Cate page';
+        return 'Cate Page';
     }
 }
