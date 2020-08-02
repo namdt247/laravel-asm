@@ -11143,13 +11143,6 @@ li.cart-item:last-child {
     text-transform: capitalize;
     color: #000;
 }
-#tmcmsblock .cms-block .subbutton .btn:hover {} .tmcms1block .first-content {
-                                                    cursor: pointer;
-                                                    float: left;
-                                                    position: relative;
-                                                    width: 49%;
-                                                    margin-right: 0;
-                                                }
 .tmcms1block .first-content .cms_content .cms-block,
 .tmcms1block .second-content .cms_content .cms-block {
     position: absolute;
@@ -11295,29 +11288,6 @@ li.cart-item:last-child {
     color: #000;
     text-decoration: underline;
     text-transform: capitalize;
-}
-.tmcms1block .first-content .cms-block .subbutton .btn:hover,
-.tmcms1block .second-content .cms-block .subbutton .btn:hover {} .tmcms1block .second-content {
-                                                                     cursor: pointer;
-                                                                     float: left;
-                                                                     position: relative;
-                                                                     width: 49%;
-                                                                     margin: 0 0 0 28px;
-                                                                 }
-
-
-#tmcms1block {
-    float: left;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin: 30px 0 60px;
-    clear: both;
-}
-.tmcms1block {
-    position: relative;
-    float: left;
-    width: 100%;
 }
 .cms_content {
     overflow: hidden;
@@ -12958,11 +12928,11 @@ footer {
     #tmcmsblock {
         margin: 0 0 30px 0;
     }
-    .tmcms1block .second-content .cms_content .cms-block .cms_offer {} #servicecmsblock {} #servicecmsblock .service-cms-banner-list1 .service-details::after,
-                                                                                           #servicecmsblock .service-cms-banner-list2 .service-details::after,
-                                                                                           #servicecmsblock .service-cms-banner-list3 .service-details::after {
-                                                                                               right: 10px;
-                                                                                           }
+    #servicecmsblock .service-cms-banner-list1 .service-details::after,
+    #servicecmsblock .service-cms-banner-list2 .service-details::after,
+    #servicecmsblock .service-cms-banner-list3 .service-details::after {
+        right: 10px;
+    }
     .service-cms-banner-list1,
     .service-cms-banner-list2,
     .service-cms-banner-list3,
@@ -13609,7 +13579,7 @@ footer {
         min-height: 140px;
     }
     .tmcms1block .second-content {
-        margin: 0 0 0 20px;
+        margin: 0 0 0 20px !important;
     }
     #links_block_top li {
         margin: 22px 20px 14px;
@@ -15390,11 +15360,6 @@ footer {
     }
     .products-section-title {
         margin-bottom: 10px;
-    }
-    .tmcms1block .first-content {
-        float: none;
-        width: 100%;
-        text-align: center;
     }
     .tmcms1block .second-content {
         float: none;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('Admin/plugins/fontawesome-free/css/v4-shims.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/refresh_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/frontend/content_home.css')}}">
     <link rel="stylesheet" href="{{asset('Admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -339,20 +340,21 @@
             </div>
             <div class="container">
                 <div id="columns_inner">
-                    <nav data-depth="1" class="breadcrumb hidden-sm-down">
-                        <div class="container">
-                            <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                    <a itemprop="item" href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php">
-                                        <span itemprop="name">Home</span>
-                                    </a>
-                                    <meta itemprop="position" content="1">
-                                </li>
-                            </ol>
-                        </div>
-                    </nav>
+{{--                    <nav data-depth="1" class="breadcrumb hidden-sm-down">--}}
+{{--                        <div class="container">--}}
+{{--                            <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">--}}
+{{--                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">--}}
+{{--                                    <a itemprop="item" href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php">--}}
+{{--                                        <span itemprop="name">Home</span>--}}
+{{--                                    </a>--}}
+{{--                                    <meta itemprop="position" content="1">--}}
+{{--                                </li>--}}
+{{--                            </ol>--}}
+{{--                        </div>--}}
+{{--                    </nav>--}}
                     <div id="content-wrapper">
                         <section id="main">
+
                             <div class="topbelow">
                                 <div id="tmcms1block" class="container">
                                     <div class="tmcms1block">
@@ -360,14 +362,14 @@
                                             <div class="cms_content">
                                                 <div class="cms_img">
                                                     <a href="#">
-{{--                                                        <img alt="Cms-Banner1.jpg" src="img/cms/Sub-banner-1.jpg">--}}
+                                                        <img src="{{asset('img/Sub-banner-1.jpg')}}" alt="Sub-banner-1" />
                                                     </a>
                                                 </div>
                                                 <div class="cms-block">
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a href="#" class="btn btn-primary">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -376,14 +378,14 @@
                                             <div class="cms_content">
                                                 <div class="cms_img">
                                                     <a href="#">
-{{--                                                        <img alt="Cms-Banner2.jpg" src="img/cms/Sub-banner-2.jpg">--}}
+                                                        <img src="{{asset('img/Sub-banner-2.jpg')}}" alt="Sub-banner-1" />
                                                     </a>
                                                 </div>
                                                 <div class="cms-block">
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a href="#" class="btn btn-primary">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -391,6 +393,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <section id="content" class="page-home">
                                 <div class="tm-hometabcontent container">
                                     <div class="tabs">
@@ -675,6 +678,129 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div id="tmcms2_block" class="container">
+                                    <div class="tmcms2">
+                                        <div class="main-content">
+                                            <div class="cms_content">
+                                                <div class="cms_img">
+                                                    <a href="#">
+                                                        <img alt="Offer banner" src="{{asset('img/Offer-banner.jpg')}}">
+                                                    </a>
+                                                </div>
+                                                <div class="cms-block">
+                                                    <div class="cms_offer">Home Decor Collection</div>
+                                                    <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
+                                                    <div class="subbutton">
+                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tmcmsblock">
+                                    <div id="tmcmsbanner">
+                                        <div class="first-content main-content">
+                                            <div class="cms_content">
+                                                <div class="cms_img">
+                                                    <a href="">
+                                                        <img src="{{asset('img/Sub-banner-04.jpg')}}">
+                                                    </a>
+                                                </div>
+                                                <div class="cms-block">
+                                                    <div class="cms_offer">Latest Rest Chair</div>
+                                                    <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                    <div class="subbutton">
+                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="second-content main-content">
+                                            <div class="cms_content">
+                                                <div class="cms_img">
+                                                    <a href="#"> <img alt="Cms-Banner2.jpg" src="{{asset('img/Sub-banner-05.jpg')}}" /></a>
+                                                </div>
+                                                <div class="cms-block">
+                                                    <div class="cms_offer">New Drover Table</div>
+                                                    <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                    <div class="subbutton"><a class="btn btn-primary" href="#">shop now</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lastest_block block tmblog-latest container">
+                                    <div class="blog_title">
+                                        <h2 class="h1 products-section-title text-uppercase">from the Blog</h2>
+                                        <div id="spe_res">
+                                            <div class="homeblog-inner">
+                                                <div class="customNavigation">
+                                                    <a class="btn prev blog_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                                    <a class="btn next blog_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                </div>
+                                                <ul id="blog-carousel">
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="brands container">
+                                <div id="spe_res">
+                                    <div class="products">
+                                        <div class="customNavigation">
+                                            <a class="btn prev brand_prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                            <a class="btn next brand_next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div id="brand-carousel_last" class="carousel slide tm-carousel product_list" data-ride="carousel" style="opacity: 1; display: block;">
+                                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img2">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">
+                                                </div>
+                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </section>
                     </div>
@@ -764,6 +890,30 @@
             </div>
         </footer>
     </main>
+    <script>
+        $(document).ready(function() {
+            console.log(11222)
+            $('#carousel-example').on('slide.bs.carousel', function (e) {
+                var $e = $(e.relatedTarget);
+                var idx = $e.index();
+                var itemsPerSlide = 5;
+                var totalItems = $('.carousel-item').length;
+
+                if (idx >= totalItems-(itemsPerSlide-1)) {
+                    var it = itemsPerSlide - (totalItems - idx);
+                    console.log(it)
+                    for (var i=0; i<it; i++) {
+                        // append slides to end
+                        if (e.direction=="left") {
+                            $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                        } else {
+                            $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
