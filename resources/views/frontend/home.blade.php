@@ -398,7 +398,7 @@
                                 <div class="tm-hometabcontent container">
                                     <div class="tabs">
                                         <ul id="home-page-tabs" class="nav nav-tabs clearfix">
-                                            <h2 class="h1 products-section-title text-uppercase">Trending Product</h2>
+                                            <h2 class="h1 products-section-title text-uppercase" style="border: none;">Trending Product</h2>
                                             <li class="nav-item">
                                                 <a data-toggle="tab" href="#featureProduct" class="nav-link active" data-text="">
                                                     <span>Feature</span>
@@ -740,6 +740,132 @@
                                                     <a class="btn next blog_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                                 </div>
                                                 <ul id="blog-carousel">
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 600px;">
+                                                        <li class="blog-post item">
+                                                            <div class="blog-item">
+                                                                <div class="blog-image text-xs-center">
+                                                                    <a href="#" title="" class="link">
+                                                                        <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/psblog/b/6/1099_800/b-5.jpg" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">
+                                                                        <span class="post-image-hover"></span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="blog-content-wrap">
+                                                                    <h4 class="title">
+                                                                        <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                    </h4>
+                                                                    <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </div>
                                                     <div class="owl-item" style="width: 600px;">
                                                         <li class="blog-post item">
                                                             <div class="blog-item">
