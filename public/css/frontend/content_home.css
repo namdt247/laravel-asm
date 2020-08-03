@@ -487,7 +487,7 @@ ul#blog-carousel .owl-item{
 }
 .product-title a {
     color: #000;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: normal;
     letter-spacing: 0.8px;
     line-height: 20px;
@@ -676,4 +676,11 @@ ul#blog-carousel .owl-item{
 #blog_home .carousel-control-prev{
     left: unset !important;
     right: 30px !important;
+}
+.star_content .star{
+    float: left;
+    font-size: 12px;
+}
+.star_content .star_on i{
+    color: #febd69;
 }

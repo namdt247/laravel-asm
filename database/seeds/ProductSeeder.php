@@ -12,7 +12,9 @@ class ProductSeeder extends Seeder
     public function run()
     {
         //
-        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        if (env('DB_CONNECTION') == 'mysql') {
+            \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        }
         \Illuminate\Support\Facades\DB::table('products')->truncate();
         \Illuminate\Support\Facades\DB::table('products')->insert([
             [
@@ -21,9 +23,9 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn ăn PRINCETON',
                 'price' => 6990000,
                 'thumbnail' => 'ksnsjdsgzhfwlj30zkbp,g1rxjto9or4camsweczv,v0mojy82vvxzj4cbacv4,gsegjgwslnk0l4horqqo,ga8jhn0ffv1ji8tspwar',
-                'description' => 'Đơn giản và hiện đại, bàn ăn PRINCETON là lựa chọn hợp lý cho phòng ăn của gia đình bạn. 
-                Bàn được làm từ gỗ cao su, bề mặt phủ veneer màu gỗ sáng đẹp mắt. 
-                Chân bàn thu hút với thiết kế lạ mắt, là điểm nhấn ấn tượng cho không gian bàn ăn thêm sang trọng. 
+                'description' => 'Đơn giản và hiện đại, bàn ăn PRINCETON là lựa chọn hợp lý cho phòng ăn của gia đình bạn.
+                Bàn được làm từ gỗ cao su, bề mặt phủ veneer màu gỗ sáng đẹp mắt.
+                Chân bàn thu hút với thiết kế lạ mắt, là điểm nhấn ấn tượng cho không gian bàn ăn thêm sang trọng.
                 Hãy kết hợp bàn với các sản phẩm khác trong cùng bộ sưu tập PRINCETON của BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -82,7 +84,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn ăn PALL-MALL',
                 'price' => 1990000,
                 'thumbnail' => 'inadjcosgam9zejsstm7,i2ly5odfexek6r3ljccr,jbe9lwaoily1fl5dziap,tila0m3futeotpdltmrj,tlnpruygvm1atpvvfivx',
-                'description' => 'Bàn ăn PALL MALL từ nội thất BAYA được làm từ gỗ cao su phủ MFC bền chắc. 
+                'description' => 'Bàn ăn PALL MALL từ nội thất BAYA được làm từ gỗ cao su phủ MFC bền chắc.
                 Sản phẩm có thiết kế đơn giản với gam màu nâu thẫm và kiểu dáng thanh mảnh mang lại vẻ đẹp ấm cúng, tinh tế cho phòng ăn của gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -97,7 +99,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn cà phê TREVOR',
                 'price' => 2990000,
                 'thumbnail' => 'mvwghqbguvudevlpcpfg,lpeqhcr9dnanp818i5lx,yxjvior2q9hnothcsuy3,jomlkp4gqchhc6aksq64',
-                'description' => 'Bàn cà phê TREVOR với thiết kế đơn giản, hiện đại với ngăn chứa bên dưới và bao gồm 2 kích cỡ. 
+                'description' => 'Bàn cà phê TREVOR với thiết kế đơn giản, hiện đại với ngăn chứa bên dưới và bao gồm 2 kích cỡ.
                 Hãy kết hợp cùng kệ tivi TREVOR để hoàn thiện góc thư giãn trong phòng khách.',
                 'size' => 1,
                 'color' => 1,
@@ -112,9 +114,9 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn cà phê MANILOW',
                 'price' => 2990000,
                 'thumbnail' => 'mvwghqbguvudevlpcpfg,lpeqhcr9dnanp818i5lx,yxjvior2q9hnothcsuy3,jomlkp4gqchhc6aksq64',
-                'description' => 'Bàn cà phê là món đồ dùng không thể thiếu trong bất kỳ phòng khách nào. 
-                Đến BAYA và mang về bàn cà phê MANILOW được làm từ chất liệu gỗ MDF cao cấp, bền chắc, gam màu gỗ sáng sang trọng. 
-                Chân bàn vững chắc với kết cấu lạ mắt cùng chất liệu gỗ cao su cứng cáp. 
+                'description' => 'Bàn cà phê là món đồ dùng không thể thiếu trong bất kỳ phòng khách nào.
+                Đến BAYA và mang về bàn cà phê MANILOW được làm từ chất liệu gỗ MDF cao cấp, bền chắc, gam màu gỗ sáng sang trọng.
+                Chân bàn vững chắc với kết cấu lạ mắt cùng chất liệu gỗ cao su cứng cáp.
                 Kết hợp bàn cùng các sản phẩm khác trong cùng bộ sưu tập để hoàn thiện nội thất gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -129,8 +131,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn cà phê SUECIA',
                 'price' => 2390000,
                 'thumbnail' => 'u85gm3uh2nocqcbpogsq,ontdp9ppwadsrqgx5qwn,hykspks8s5uxzu8beqo1,jg5pmhuhbb5hqskehvpj',
-                'description' => 'Bàn cà phê SUECIA có thiết kế trang nhã, sang trọng, làm từ gỗ MFC chắc chắn. 
-                Kệ chứa bên dưới giúp bạn sắp xếp sách báo, các vật dụng nhỏ cũng như khay trà tiếp khách. 
+                'description' => 'Bàn cà phê SUECIA có thiết kế trang nhã, sang trọng, làm từ gỗ MFC chắc chắn.
+                Kệ chứa bên dưới giúp bạn sắp xếp sách báo, các vật dụng nhỏ cũng như khay trà tiếp khách.
                 Hãy khám phá trọn bộ sưu tập nội thất SUECIA dành cho tổ ấm của bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -159,9 +161,9 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn cà phê HUNG-VUONG',
                 'price' => 2490000,
                 'thumbnail' => 'bif28mtonogb6yypovou,yah8at2resu8gdrfm0c3,kd2bfrzzzjzvrdqiwyaj,z7jfv4u5irdsh8wbsmh4',
-                'description' => 'Bàn cà phê HUNG VUONG mang trong mình hơi thở truyền thống pha chút hiện đại Á Đông. 
-                Bàn được làm từ chất liệu gỗ tràm bền chắc với gam màu sang trọng, họa tiết sọc dọc nhấn nhá bởi kim loại phủ sơn cao cấp. 
-                Với chiều dài 100cm, bàn rất thích hợp với không gian vừa và nhỏ, cho bạn thoải mái thư giãn với tách cà phê ấm nóng sau ngày dài làm việc. 
+                'description' => 'Bàn cà phê HUNG VUONG mang trong mình hơi thở truyền thống pha chút hiện đại Á Đông.
+                Bàn được làm từ chất liệu gỗ tràm bền chắc với gam màu sang trọng, họa tiết sọc dọc nhấn nhá bởi kim loại phủ sơn cao cấp.
+                Với chiều dài 100cm, bàn rất thích hợp với không gian vừa và nhỏ, cho bạn thoải mái thư giãn với tách cà phê ấm nóng sau ngày dài làm việc.
                 Kết hợp bàn cà phê cùng các sản phẩm khác trong cùng bộ sưu tập HUNG VUONG để hoàn thiện không gian nội thất của gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -176,8 +178,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ đầu giường SUECIA',
                 'price' => 2490000,
                 'thumbnail' => 'v7uyynphfax7bb0h1sz8,m62dnmu1wayvuullbsjc,s5wkwxndmxl9arsh1nes,t2sp6pqsaxohg2duchpi,zxkw4cb0dg0huxmf40wr',
-                'description' => 'Tủ đầu giường SUECIA mang phong cách châu Âu đương đại gồm 1 ngăn kéo và 1 ngăn chứa mở. 
-                Chân gỗ vững chãi phủ sơn xám đem lại vẻ đẹp sang trọng cho căn phòng. 
+                'description' => 'Tủ đầu giường SUECIA mang phong cách châu Âu đương đại gồm 1 ngăn kéo và 1 ngăn chứa mở.
+                Chân gỗ vững chãi phủ sơn xám đem lại vẻ đẹp sang trọng cho căn phòng.
                 Không chỉ là nơi để bạn đặt đèn ngủ hay cuốn sách đọc dang dở, nếu khéo léo sắp xếp và biến tấu đây sẽ là điểm nhấn thu hút của toàn bộ không gian.',
                 'size' => 1,
                 'color' => 1,
@@ -206,8 +208,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ đầu giường ALBANY',
                 'price' => 2890000,
                 'thumbnail' => 'oxlajxk4tmjvmnihnroi,kohnac5vy6p902yi8bfx,uffeq03yxpnhuloriseg,t2sp6pqsaxohg2duchpi,xfn1wtingb3lo2hfhot9',
-                'description' => 'Được thiết kế theo phong cách châu Á đương đại, tủ đầu giường ALBANY góp phần làm hoàn hảo cho không gian phòng ngủ đẹp tinh tế của bạn. 
-                Tủ được làm từ gỗ sồi cao cấp, phủ lớp veneer màu nâu sậm ấm áp. 
+                'description' => 'Được thiết kế theo phong cách châu Á đương đại, tủ đầu giường ALBANY góp phần làm hoàn hảo cho không gian phòng ngủ đẹp tinh tế của bạn.
+                Tủ được làm từ gỗ sồi cao cấp, phủ lớp veneer màu nâu sậm ấm áp.
                 Phần chân tủ chắc chắn, cùng ngăn kéo và kệ phía dưới cho bạn thoải mái sắp xếp những món đồ yêu thích.',
                 'size' => 1,
                 'color' => 1,
@@ -222,8 +224,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ đầu giường HARRIS',
                 'price' => 2890000,
                 'thumbnail' => 'oxlajxk4tmjvmnihnroi,kohnac5vy6p902yi8bfx,uffeq03yxpnhuloriseg,t2sp6pqsaxohg2duchpi,xfn1wtingb3lo2hfhot9',
-                'description' => 'Tủ gỗ đầu giường gồm 3 ngăn kéo giúp phòng ngủ của bạn gọn gàng hơn. 
-                Thiết kế cổ điển góp phần đem lại vẻ đẹp sang trọng cho căn phòng. 
+                'description' => 'Tủ gỗ đầu giường gồm 3 ngăn kéo giúp phòng ngủ của bạn gọn gàng hơn.
+                Thiết kế cổ điển góp phần đem lại vẻ đẹp sang trọng cho căn phòng.
                 Hãy khám phá trọn bộ sưu tập nội thất HARRIS để hoàn thiện vẻ đẹp cho tổ ấm.',
                 'size' => 1,
                 'color' => 1,
@@ -238,8 +240,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ đầu giường AKIO',
                 'price' => 2990000,
                 'thumbnail' => 'g7qk9czlve7qi5gvhb5a,mqrxm82yywbof4ycodtn,yvwqm8vzzl595tredbk2,vwu3oazgsmb8c5mxsz9g',
-                'description' => 'Tủ đầu giường AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế. 
-                Với thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn. 
+                'description' => 'Tủ đầu giường AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế.
+                Với thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn.
                 Ngăn kéo có cơ chế đóng mở nhẹ nhàng và kệ mở bên dưới cho bạn thoải mái sắp xếp những vật dụng cần thiết.',
                 'size' => 1,
                 'color' => 1,
@@ -254,7 +256,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Giường AKIO',
                 'price' => 12900000,
                 'thumbnail' => 'ykovd7vckhheeweaou9s,j2n4djlzv260eld78khs,i3uaexvzymxwg26ljob3,xiwfzawjcqlhemv3bguw',
-                'description' => 'Giường AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế. 
+                'description' => 'Giường AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế.
                 Với khung giường rộng rãi làm từ thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -269,8 +271,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Giường BERNIE',
                 'price' => 3990000,
                 'thumbnail' => 'hplu3gpo9juhfsqozdfc,vkat9el8slx6ijzbddro,u9qqrn9hzbhn9svyijrl,towlax3riylq3ij4qqbr',
-                'description' => 'Là sản phẩm được thiết kế bởi BAYA, giường BERNIE mang đến giấc ngủ sâu và ngon hơn cho các thành viên trong gia đình. 
-                Giường được làm từ gỗ công nghiệp MFC bền chắc, có 2 hộc kéo từ bên trái và bên phải tiện dụng, cho bạn thoải mái lưu trữ đồ dùng. 
+                'description' => 'Là sản phẩm được thiết kế bởi BAYA, giường BERNIE mang đến giấc ngủ sâu và ngon hơn cho các thành viên trong gia đình.
+                Giường được làm từ gỗ công nghiệp MFC bền chắc, có 2 hộc kéo từ bên trái và bên phải tiện dụng, cho bạn thoải mái lưu trữ đồ dùng.
                 Sản phẩm có chiều cao 70cm với 2 kích cỡ cho bạn dễ dàng chọn lựa.',
                 'size' => 1,
                 'color' => 1,
@@ -285,8 +287,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Giường RALLY',
                 'price' => 5490000,
                 'thumbnail' => 'vlj70umw4zja35dtydsw,oh6g765drf6z3cwfeuzd,dqk8kuqk6u3qgw6xgp8c,mvpqslzkrtq0nblai0e7',
-                'description' => 'Giường ngủ RALLY có kết cấu vững chắc với 4 chân giường từ gỗ cao su và các chân phụ bên dưới khung giường. 
-                Thiết kế tinh tế dành cho những ai ưa chuộng phong cách sống tối giản mà vẫn không kém phần sang trọng. 
+                'description' => 'Giường ngủ RALLY có kết cấu vững chắc với 4 chân giường từ gỗ cao su và các chân phụ bên dưới khung giường.
+                Thiết kế tinh tế dành cho những ai ưa chuộng phong cách sống tối giản mà vẫn không kém phần sang trọng.
                 Hãy khám phá bộ sưu tập nội thất RALLY từ BAYA để hoàn thiện tổ ấm của mình.',
                 'size' => 1,
                 'color' => 1,
@@ -301,7 +303,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Giường MOZART',
                 'price' => 5490000,
                 'thumbnail' => 'agt3esh8mk6drrm5pbod,rseoswqfzonkhrcacafp,felafbczcy0swwpqhhtx,j0xngvbi8g6ht1glvzxh',
-                'description' => 'Giường MOZART được thiết kế tinh tế trên gam màu gỗ sáng trang nhã đem lại vẻ đẹp mộc mạc và cảm giác dễ chịu cho không gian thư giãn của bạn. 
+                'description' => 'Giường MOZART được thiết kế tinh tế trên gam màu gỗ sáng trang nhã đem lại vẻ đẹp mộc mạc và cảm giác dễ chịu cho không gian thư giãn của bạn.
                 Bắt đầu một buổi tối thảnh thơi trên chiếc giường thoải mái, bạn có thể đọc vài trang sách, hay lắng nghe một bản nhạc dịu nhẹ và chìm vào giấc ngủ say.',
                 'size' => 1,
                 'color' => 1,
@@ -316,8 +318,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Giường GRAFFITI',
                 'price' => 4490000,
                 'thumbnail' => 'dnryvyyehiruttvqbuza,uduxmwkmr7m2lfdmpipf,imyuzuz2mx57rhqscuag,yj4kqkqgwgs0j7zpzv8l',
-                'description' => 'Giường tầng GRAFFITI là một trong những giải pháp tốt nhất cho không gian phòng ngủ nhỏ. 
-                Sản phẩm được làm từ chất liệu kim loại phủ sơn tĩnh điện đen sang trọng có thiết kế vững chãi, giúp tiết kiệm diện tích hiệu quả. 
+                'description' => 'Giường tầng GRAFFITI là một trong những giải pháp tốt nhất cho không gian phòng ngủ nhỏ.
+                Sản phẩm được làm từ chất liệu kim loại phủ sơn tĩnh điện đen sang trọng có thiết kế vững chãi, giúp tiết kiệm diện tích hiệu quả.
                 Thiết kế thông minh giường đi kèm cầu thang tiện dụng để dễ di chuyển.',
                 'size' => 1,
                 'color' => 1,
@@ -346,8 +348,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế ăn KITKA',
                 'price' => 849000,
                 'thumbnail' => 'j3w4sgev1qrssqa3mcmd,l3ezt4unazh4usunpmor,esf8dbbisochyacsdbgj,koabxlredz2qc5it1u2i',
-                'description' => 'Ghế ăn KITKA với thiết kế đơn giản theo phong cách châu Á cổ điển, chất liệu gỗ cao su bền chắc và gam màu nâu thẫm mang vẻ đẹp ấm cúng vào phòng ăn gia đình bạn. 
-                Đệm ngồi làm từ mút bọc da tổng hợp êm ái, góp phần tô điểm cho không gian sang trọng. 
+                'description' => 'Ghế ăn KITKA với thiết kế đơn giản theo phong cách châu Á cổ điển, chất liệu gỗ cao su bền chắc và gam màu nâu thẫm mang vẻ đẹp ấm cúng vào phòng ăn gia đình bạn.
+                Đệm ngồi làm từ mút bọc da tổng hợp êm ái, góp phần tô điểm cho không gian sang trọng.
                 Kết hợp trọn bộ với bàn ăn KITKA để hoàn thiện nội thất tổ ấm bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -376,7 +378,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế đôn MOZART',
                 'price' => 499000,
                 'thumbnail' => 'df2mptp6dv9hjujvhtmo,xlgee8bpe2c2mnmptd4c,tvueh3hoiqghw7pbz2eu',
-                'description' => 'Ghế đẩu MOZART do BAYA thiết kế được làm từ gỗ keo sơn trắng với đệm ngồi bọc PVC, đem đến vẻ đẹp sang trọng cho không gian sống. 
+                'description' => 'Ghế đẩu MOZART do BAYA thiết kế được làm từ gỗ keo sơn trắng với đệm ngồi bọc PVC, đem đến vẻ đẹp sang trọng cho không gian sống.
                 Hãy kết hợp sử dụng chiếc ghế này với các món nội thất khác trong bộ sưu tập MOZART từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -391,8 +393,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế ngoài trời CAFE-ROYALE',
                 'price' => 749000,
                 'thumbnail' => 'ty8asgs06wypfa4wqz5h,ehkmlbhqzvowndgu3hyt,g4coj41qnqel1vgkorlh,bcb7pw69xmr4irwjtd6r',
-                'description' => 'Là thiết kế của BAYA, ghế ngoài trời CAFE ROYALE là lựa chọn hoàn hảo cho khu vườn nhà của bạn. 
-                Được làm bằng thép sơn tĩnh điện giúp hạn chế rỉ sét, ghế phù hợp để sử dụng ngoài trời. Ghế có thiết kế hiện đại với những chi tiết độc đáo góp phần làm đẹp thêm cho khu vườn. 
+                'description' => 'Là thiết kế của BAYA, ghế ngoài trời CAFE ROYALE là lựa chọn hoàn hảo cho khu vườn nhà của bạn.
+                Được làm bằng thép sơn tĩnh điện giúp hạn chế rỉ sét, ghế phù hợp để sử dụng ngoài trời. Ghế có thiết kế hiện đại với những chi tiết độc đáo góp phần làm đẹp thêm cho khu vườn.
                 Hãy kết hợp sản phẩm trong cùng bộ sưu tập CAFE ROYALE để hoàn thiện không gian sống.',
                 'size' => 1,
                 'color' => 1,
@@ -407,8 +409,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn ngoài trời CAFE-ROYALE',
                 'price' => 599000,
                 'thumbnail' => 'dxo5sjc6v8nqwjqwxr1y,vagvfkfggomtu80oyhvn,neckgp9s8or4gsninttn',
-                'description' => 'Bàn ngoài trời RIVIERA là lựa chọn hoàn hảo cho khu vườn nhà của bạn. 
-                Thiết kế đơn giản, ấn tượng với khung kim loại bền bỉ có thể gấp gọn và dễ di chuyển giúp tiết kiệm diện tích. 
+                'description' => 'Bàn ngoài trời RIVIERA là lựa chọn hoàn hảo cho khu vườn nhà của bạn.
+                Thiết kế đơn giản, ấn tượng với khung kim loại bền bỉ có thể gấp gọn và dễ di chuyển giúp tiết kiệm diện tích.
                 Sản phẩm sở hữu mặt gỗ với màu sắc hiện đại, đẹp mắt và góp phần hoàn thiện không gian sống của gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -423,8 +425,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn góc RAMO',
                 'price' => 2490000,
                 'thumbnail' => 'yxiolz3fmdsphwkjdwgr,ddirxiq7plbcmlotrgul,hbb4vgx9zggcjh4txqkt,dhhfyravfw8mc4wscoei',
-                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, bàn góc RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang. 
-                Được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính, sản phẩm sở hữu những đường nét mạnh mẽ, vững chãi và tinh tế. 
+                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, bàn góc RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang.
+                Được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính, sản phẩm sở hữu những đường nét mạnh mẽ, vững chãi và tinh tế.
                 Sáng tạo không gian phòng khách của bạn thật ấn tượng với trọn bộ sưu tập RAMO từ BAYA, khám phá ngay!',
                 'size' => 1,
                 'color' => 1,
@@ -439,7 +441,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn góc MOZART',
                 'price' => 849000,
                 'thumbnail' => 'akxhinfegnvzcbm8cqwm,kww37ib7fc6bggy44lkg,umooffpazndpqwftqglb,e1i8ablfgmwkqh1uu4s6',
-                'description' => 'Phụ kiện không thể thiếu bên cạnh bộ sofa phòng khách để bạn đặt đèn bàn, khung ảnh, bình hoa trang trí hay cuốn sách đang đọc. 
+                'description' => 'Phụ kiện không thể thiếu bên cạnh bộ sofa phòng khách để bạn đặt đèn bàn, khung ảnh, bình hoa trang trí hay cuốn sách đang đọc.
                 Hãy khám phá trọn bộ sưu tập nội thất MOZART từ BAYA dành cho tổ ấm của bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -454,8 +456,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn góc KINGSTON',
                 'price' => 799000,
                 'thumbnail' => 'fkvcqvllm3xuvmgabcn0,tepryscy4ij2r4zn7sik',
-                'description' => 'Là sản phẩm của nội thất BAYA, bàn góc KINGSTON thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã. 
-                Bàn được làm từ gỗ ván ép phủ veneer màu nâu đậm, vừa đẹp mắt vừa đảm bảo độ bền lâu dài khi sử dụng. 
+                'description' => 'Là sản phẩm của nội thất BAYA, bàn góc KINGSTON thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã.
+                Bàn được làm từ gỗ ván ép phủ veneer màu nâu đậm, vừa đẹp mắt vừa đảm bảo độ bền lâu dài khi sử dụng.
                 Hãy kết hợp cùng các sản phẩm khác trong bộ sưu tập KINGSTON đến từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -470,8 +472,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn góc CONNEMARA',
                 'price' => 1190000,
                 'thumbnail' => 'nfvchz0vvwcsbxfe44ql,df026fadguaju0xx5cid,dr2z7kc2ycrfoiwlji42,w45arv5md8zk9vwsanyq',
-                'description' => 'Bàn góc CONNEMARA - một thiết kế đặc biệt của BAYA là nơi bạn có thể đặt những ly cocktail ưa thích. 
-                Mặt bàn phủ veneer gỗ sồi với vân gỗ đối xứng, cùng những đường bo cạnh và kiểu dáng chân bàn lạ mắt mang lại vẻ đẹp cá tính cho không gian thư giãn của bạn. 
+                'description' => 'Bàn góc CONNEMARA - một thiết kế đặc biệt của BAYA là nơi bạn có thể đặt những ly cocktail ưa thích.
+                Mặt bàn phủ veneer gỗ sồi với vân gỗ đối xứng, cùng những đường bo cạnh và kiểu dáng chân bàn lạ mắt mang lại vẻ đẹp cá tính cho không gian thư giãn của bạn.
                 Kết hợp đầy đủ bộ sưu tập CONNEMARA để hoàn thiện việc bày trí ngôi nhà sang trọng và ấm cúng.',
                 'size' => 1,
                 'color' => 1,
@@ -486,7 +488,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Giá treo quần áo AKIO',
                 'price' => 3990000,
                 'thumbnail' => 'aczl69eiliibetttozzo,c1hqgp4ip7ubqakuyyyv,tak2mlg1rme7kr3fubdn,mmoh0ndjmrcod3g55or3',
-                'description' => 'Giá treo quần áo AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế. 
+                'description' => 'Giá treo quần áo AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế.
                 Với thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn.
                  Đây cũng là nơi thay giày lý tưởng cho bạn linh hoạt sử dụng khi cần thiết.',
                 'size' => 1,
@@ -502,8 +504,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Giá treo quần áo VIBORG',
                 'price' => 1690000,
                 'thumbnail' => 'rnikibiol1x1bwemmsox,frhbzz65wozrtdviyyy2,hjkf88fvvsqputnxxc0o,flks1muneddqasmgnnby',
-                'description' => 'Một thiết kế bởi BAYA. Giá treo quần áo VIBORG phong cách Bắc Âu đương đại giúp bạn giải phóng không gian sống nhờ có thêm các kệ lưu trữ bên dưới. 
-                Sản phẩm từ gỗ tự nhiên với đường nét thiết kế đơn giản, gọn nhẹ mà bền bỉ. 
+                'description' => 'Một thiết kế bởi BAYA. Giá treo quần áo VIBORG phong cách Bắc Âu đương đại giúp bạn giải phóng không gian sống nhờ có thêm các kệ lưu trữ bên dưới.
+                Sản phẩm từ gỗ tự nhiên với đường nét thiết kế đơn giản, gọn nhẹ mà bền bỉ.
                 Hãy khám phá thêm nhiều sản phẩm khác trong bộ sưu tập VIBORG từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -518,9 +520,9 @@ class ProductSeeder extends Seeder
                 'name' => 'Giá treo quần áo REBEL',
                 'price' => 1690000,
                 'thumbnail' => 'yfahnl3bggegu0z46pw9,vybghlzbxa6tels06m6r,zlafijlad9iwo0afa6ap,strpevbjbto0odtca3sr',
-                'description' => 'Một sản phẩm thiết kế độc quyền của nội thất BAYA. 
-                Giá treo quần áo REBEL có chiều cao 1m48 có thiết kế sang trọng và tiện dụng. 
-                Sản phẩm được làm từ chất liệu thép cứng cáp và phủ sơn tĩnh điện màu đen mạnh mẽ. 
+                'description' => 'Một sản phẩm thiết kế độc quyền của nội thất BAYA.
+                Giá treo quần áo REBEL có chiều cao 1m48 có thiết kế sang trọng và tiện dụng.
+                Sản phẩm được làm từ chất liệu thép cứng cáp và phủ sơn tĩnh điện màu đen mạnh mẽ.
                 Sản phẩm không chiếm quá nhiều diện tích, gồm 4 bánh xe có thể di chuyển, cho bạn thoải mái treo móc quần áo, tiết kiệm diện tích.',
                 'size' => 1,
                 'color' => 1,
@@ -535,7 +537,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Cây treo quần áo EDEN',
                 'price' => 749000,
                 'thumbnail' => 'bihuow2pggfgukaeiek3,wwmxmsibtrbpf2jdxhg7',
-                'description' => 'Một cây treo quần áo với thiết kế đẹp mắt ngay tại lối vào hoặc trong phòng ngủ ngoài chức năng chính của nó còn có tác dụng trong việc làm đẹp ngôi nhà bạn. 
+                'description' => 'Một cây treo quần áo với thiết kế đẹp mắt ngay tại lối vào hoặc trong phòng ngủ ngoài chức năng chính của nó còn có tác dụng trong việc làm đẹp ngôi nhà bạn.
                 Hơn cả việc treo quần áo, hãy chọn những cây treo đồ phù hợp với phong cách nội thất để tăng thêm phần sinh động cho tổ ấm của mình nhé.',
                 'size' => 1,
                 'color' => 1,
@@ -550,7 +552,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ TV SUECIA',
                 'price' => 3990000,
                 'thumbnail' => 'suhuvb5ma3euosoorthp,buiolavekr1cjsdsxe4g,a427dkuvjfve6ktrtkcf,opcdrv7rd8fpaeblatxy',
-                'description' => 'Kệ TV SUECIA sẽ là điểm nhấn đẹp mắt trong ngôi nhà bạn nhờ phong cách thiết kế Bắc Âu đương đại tối giản, chất liệu cao cấp với màu sắc sang trọng cùng các ngăn lưu trữ tiện dụng. 
+                'description' => 'Kệ TV SUECIA sẽ là điểm nhấn đẹp mắt trong ngôi nhà bạn nhờ phong cách thiết kế Bắc Âu đương đại tối giản, chất liệu cao cấp với màu sắc sang trọng cùng các ngăn lưu trữ tiện dụng.
                 Hãy kết hợp chiếc kệ này với các món nội thất khác trong bộ sưu tập SUECIA từ BAYA để hoàn thiện không gian tiếp đón thật ấm cúng của mình nhé!',
                 'size' => 1,
                 'color' => 1,
@@ -565,8 +567,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ TV RAMO',
                 'price' => 5490000,
                 'thumbnail' => 'kysp82dfhtetqiqcyxwu,jibzntvrwl4bdmjqizfp,znl89msm207fbbxmaskd,svc0sscsshdpwag7f1b4',
-                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, kệ TV RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang. 
-                Được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính, sản phẩm sở hữu những đường nét mạnh mẽ, vững chãi và tinh tế. 
+                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, kệ TV RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang.
+                Được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính, sản phẩm sở hữu những đường nét mạnh mẽ, vững chãi và tinh tế.
                 Sáng tạo không gian phòng khách của bạn thật ấn tượng với trọn bộ sưu tập RAMO từ BAYA, khám phá ngay!',
                 'size' => 1,
                 'color' => 1,
@@ -581,8 +583,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ TV DYNAMO',
                 'price' => 4990000,
                 'thumbnail' => 'rbgaxeoqkfsu25hxehmq,yoosyo44c9lkciqwwjfx,lov1t2erx0iyswmxozbs,hbz9iur9jw4reockyxcz',
-                'description' => 'Là sản phẩm độc quyền của nội thất BAYA, kệ ti vi DYNAMO sẽ là điểm nhấn đẹp mắt của phòng khách. Tủ được làm từ chất liệu gỗ keo bền chắc, gia tăng độ bền cho sản phẩm. 
-                Với hai hộc tủ kéo cùng nhiều ngăn nhỏ bên ngoài, bạn có thể thoải mái sắp xếp đồ dùng, tiết kiệm không gian sống. 
+                'description' => 'Là sản phẩm độc quyền của nội thất BAYA, kệ ti vi DYNAMO sẽ là điểm nhấn đẹp mắt của phòng khách. Tủ được làm từ chất liệu gỗ keo bền chắc, gia tăng độ bền cho sản phẩm.
+                Với hai hộc tủ kéo cùng nhiều ngăn nhỏ bên ngoài, bạn có thể thoải mái sắp xếp đồ dùng, tiết kiệm không gian sống.
                 Kết hợp tủ cùng các sản phẩm nội thất khác trong cùng bộ sưu tập DYNAMO để hoàn thiện bày trí.',
                 'size' => 1,
                 'color' => 1,
@@ -597,8 +599,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ TV COBRA',
                 'price' => 6490000,
                 'thumbnail' => 'clqnub97v8qznpqkw8sl,vpwzksfsd6cxz5epih0l,vcdq1dv6uzlxc3niwosg,drny3fvsfk9zro1h2hix',
-                'description' => 'Kệ TV COBRA do BAYA thiết kế đem đến giải pháp trưng bày và lưu trữ hiệu quả cho tổ ấm. Mặt kệ rộng rãi để đặt TV, loa, vật trang trí; 2 ngăn chứa mở dành cho đầu DVD, ampli, đầu karaoke; 2 hộc tủ có cánh và 1 ngăn kéo giúp bạn bảo quản sách báo, tạp chí,... hiệu quả. 
-                Mặt sau kệ có 2 lỗ tròn để bạn luồn gọn các dây cáp điện. Mặt trước và chân kệ được làm từ gỗ sồi đặc, các cạnh bên và mặt trên cùng được phủ veneer sồi đẹp mắt. Bạn có thể kết hợp thêm với 1 chiếc kệ TV COBRA nhỏ hơn để có cụm kệ TV dài trọn 2 mét. 
+                'description' => 'Kệ TV COBRA do BAYA thiết kế đem đến giải pháp trưng bày và lưu trữ hiệu quả cho tổ ấm. Mặt kệ rộng rãi để đặt TV, loa, vật trang trí; 2 ngăn chứa mở dành cho đầu DVD, ampli, đầu karaoke; 2 hộc tủ có cánh và 1 ngăn kéo giúp bạn bảo quản sách báo, tạp chí,... hiệu quả.
+                Mặt sau kệ có 2 lỗ tròn để bạn luồn gọn các dây cáp điện. Mặt trước và chân kệ được làm từ gỗ sồi đặc, các cạnh bên và mặt trên cùng được phủ veneer sồi đẹp mắt. Bạn có thể kết hợp thêm với 1 chiếc kệ TV COBRA nhỏ hơn để có cụm kệ TV dài trọn 2 mét.
                 Hãy khám phá trọn bộ nội thất COBRA bằng gỗ sồi từ BAYA với nhiều sản phẩm chất lượng khác.',
                 'size' => 1,
                 'color' => 1,
@@ -613,7 +615,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ quần áo SUECIA',
                 'price' => 6490000,
                 'thumbnail' => 'by221wea97vg0wfmncxi,lchysfsnhnmep3p9m4iw,xse9701q9ihzivxp3yng,huup7qgqmhii2ywie9jx',
-                'description' => 'Tủ quần áo SUECIA từ BAYA với thiết kế đơn giản và hiện đại, gồm 2 ngăn kéo và không gian treo đồ, cùng chất liệu gỗ mộc mạc sẽ là món đồ hữu dụng và thu hút trong tổ ấm của bạn. 
+                'description' => 'Tủ quần áo SUECIA từ BAYA với thiết kế đơn giản và hiện đại, gồm 2 ngăn kéo và không gian treo đồ, cùng chất liệu gỗ mộc mạc sẽ là món đồ hữu dụng và thu hút trong tổ ấm của bạn.
                 Thiết kế của tủ phù hợp với nhiều phong cách nội thất khác nhau, hãy kết hợp cùng các sản phẩm nội thất khác trong cùng bộ sưu tập SUECIA cho ngôi nhà đầy cảm hứng.',
                 'size' => 1,
                 'color' => 1,
@@ -628,7 +630,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ quần áo PALLADIUM',
                 'price' => 4998000,
                 'thumbnail' => 'glvlhjajc4zanco6cxet,r1wts4htbd087e305x1r,j7184gj582krjcndojev,l3uy7isbmtg6hzcfqea6',
-                'description' => 'Tủ quần áo 2 cánh với thiết kế đơn giản mang đến vẻ đẹp mộc mạc cho tổ ấm. 
+                'description' => 'Tủ quần áo 2 cánh với thiết kế đơn giản mang đến vẻ đẹp mộc mạc cho tổ ấm.
                 Sản phẩm đi kèm 1 thanh treo quần áo và 1 giá đỡ, bạn có thể lắp ráp thêm nhiều giá đỡ nữa để tăng không gian lưu trữ.',
                 'size' => 1,
                 'color' => 1,
@@ -643,8 +645,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ quần áo AKIO',
                 'price' => 21900000,
                 'thumbnail' => 'n7dghuk6jumybtnok6q3,nkonmcj9gwvav5u5fiqq,ob7ygojh8pvoaw16rh3k,lnbalbwsskrucatjexud',
-                'description' => 'Tủ quần áo 3 cửa AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế. 
-                Với thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn. 
+                'description' => 'Tủ quần áo 3 cửa AKIO thuộc bộ sưu tập cùng tên của BAYA lấy cảm hứng từ phong cách nội thất Nhật Bản giản đơn pha trộn với vẻ đẹp Việt Nam tinh tế.
+                Với thành phần chất liệu gỗ óc chó cao cấp, sản phẩm sở hữu những đường vân tự nhiên và thiết kế độc đáo mang nét sang trọng và thanh lịch vào ngôi nhà bạn.
                 Ngăn kéo và cửa tủ có cơ chế đóng mở nhẹ nhàng, phần kệ bên trong có thể linh hoạt điều chỉnh cho bạn thoải mái sắp xếp những vật dụng cần thiết.',
                 'size' => 1,
                 'color' => 1,
@@ -659,7 +661,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ quần áo BERNIE',
                 'price' => 3990000,
                 'thumbnail' => 'ipmidbx2rdejxnsbrama,uebgg1fpoaflxwjuk0bp,nrzpppsyz8wfevtw8jga,g4qfccytdzrrlktiz7br',
-                'description' => 'Tủ quần áo với thiết kế trang nhã, đơn giản giúp bạn sắp xếp gọn gàng các vật dụng cá nhân. 
+                'description' => 'Tủ quần áo với thiết kế trang nhã, đơn giản giúp bạn sắp xếp gọn gàng các vật dụng cá nhân.
                 Sản phẩm kèm theo 1 thanh treo quần áo và 2 giá đỡ. Hãy bổ sung các sản phẩm khác trong bộ sưu tập BERNIE NEW để hoàn thiện nội thất nhà bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -674,7 +676,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ quần áo MOZART',
                 'price' => 7490000,
                 'thumbnail' => 'ipmidbx2rdejxnsbrama,uebgg1fpoaflxwjuk0bp,nrzpppsyz8wfevtw8jga,g4qfccytdzrrlktiz7br',
-                'description' => 'Thiết kế tinh tế với màu trắng trang nhã và nóc tủ màu gỗ cao su tự nhiên, đem lại vẻ đẹp sang trọng cho căn phòng. 
+                'description' => 'Thiết kế tinh tế với màu trắng trang nhã và nóc tủ màu gỗ cao su tự nhiên, đem lại vẻ đẹp sang trọng cho căn phòng.
                 Sản phẩm đi kèm 1 thanh treo quần áo và 3 giá đỡ. Hãy kết hợp với các món nội thất khác trong bộ sưu tập MOZART từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -689,7 +691,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ ngăn kéo HARRIS',
                 'price' => 6990000,
                 'thumbnail' => 'exfjsdsoxfnxmjvhrm48,kpojhgqstnkuwrq0ibqn,c63dagvi2g0xploxqqlu,urqhhgzqmmsunv171urk',
-                'description' => 'Tủ ngăn kéo HARRIS thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian. 
+                'description' => 'Tủ ngăn kéo HARRIS thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian.
                 Sản phẩm được làm từ gỗ công nghiệp bền chắc phủ melamine màu gỗ sồi hoặc gỗ óc chó đẹp mắt cho bạn thoải mái cất gọn những vật dụng cần thiết.',
                 'size' => 1,
                 'color' => 1,
@@ -704,7 +706,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ ngăn kéo ALBANY',
                 'price' => 7990000,
                 'thumbnail' => 'qx2wf4hwwkv93212p7um,krzzeuicz2fr5m1vmzhj,vxjpwzwy0yotkrq1xdjm,esi29hbrl7r5f3fb7xy1',
-                'description' => 'Tủ ngăn kéo ALBANY thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian. 
+                'description' => 'Tủ ngăn kéo ALBANY thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian.
                 Sản phẩm được làm từ gỗ công nghiệp bền chắc phủ melamine màu gỗ sồi hoặc gỗ óc chó đẹp mắt cho bạn thoải mái cất gọn những vật dụng cần thiết.',
                 'size' => 1,
                 'color' => 1,
@@ -719,7 +721,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ ngăn kéo FREESTYLE',
                 'price' => 3990000,
                 'thumbnail' => 'vu2i9iiye1bpbwnwu33r,d4ln8qa4fze84ae1pide,kt97w558ex4uwbmlgohq,udco7tkqhy9bephtpnhe',
-                'description' => 'Tủ ngăn kéo FREESTYLE thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian. 
+                'description' => 'Tủ ngăn kéo FREESTYLE thuộc bộ sưu tập cùng tên được thiết kế bởi BAYA, với nhiều hộc chứa giúp bạn sắp xếp căn phòng thật ngăn nắp đồng thời tạo điểm nhấn cho không gian.
                 Sản phẩm được làm từ gỗ công nghiệp bền chắc phủ melamine màu gỗ sồi hoặc gỗ óc chó đẹp mắt cho bạn thoải mái cất gọn những vật dụng cần thiết.',
                 'size' => 1,
                 'color' => 1,
@@ -734,8 +736,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ ngăn kéo MOZART',
                 'price' => 4990000,
                 'thumbnail' => 'dbtjfsk2fcb73otxjzij,yk9x3lk5had0rus50wsp,dq9uew0hriioddphmcz7,xla0lbf9u7hmv6kgla1f',
-                'description' => 'Tủ ngăn kéo MOZART được thiết kế tinh tế với chất liệu gỗ cao su thiên nhiên và màu sơn trắng trang nhã đem lại vẻ đẹp sang trọng cho căn phòng. 
-                Sản phẩm có 3 ngăn rộng rãi giúp bạn cất giữ nhiều vật dụng cần thiết mà không chiếm nhiều diện tích. 
+                'description' => 'Tủ ngăn kéo MOZART được thiết kế tinh tế với chất liệu gỗ cao su thiên nhiên và màu sơn trắng trang nhã đem lại vẻ đẹp sang trọng cho căn phòng.
+                Sản phẩm có 3 ngăn rộng rãi giúp bạn cất giữ nhiều vật dụng cần thiết mà không chiếm nhiều diện tích.
                 Khám phá trọn bộ sưu tập MOZART từ BAYA để trang hoàng tổ ấm đơn giản và hoàn mỹ.',
                 'size' => 1,
                 'color' => 1,
@@ -750,8 +752,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ ngăn kéo SUECIA',
                 'price' => 4990000,
                 'thumbnail' => 'zrnsqxlceaxr6b1pkwq1,si9a32p83ph5sebt6evq,rzmvzakeiw2aezip0zgh,tziv1fzlztggkawpjn6c',
-                'description' => 'Tủ ngăn kéo MOZART được thiết kế tinh tế với chất liệu gỗ cao su thiên nhiên và màu sơn trắng trang nhã đem lại vẻ đẹp sang trọng cho căn phòng. 
-                Sản phẩm có 3 ngăn rộng rãi giúp bạn cất giữ nhiều vật dụng cần thiết mà không chiếm nhiều diện tích. 
+                'description' => 'Tủ ngăn kéo MOZART được thiết kế tinh tế với chất liệu gỗ cao su thiên nhiên và màu sơn trắng trang nhã đem lại vẻ đẹp sang trọng cho căn phòng.
+                Sản phẩm có 3 ngăn rộng rãi giúp bạn cất giữ nhiều vật dụng cần thiết mà không chiếm nhiều diện tích.
                 Khám phá trọn bộ sưu tập MOZART từ BAYA để trang hoàng tổ ấm đơn giản và hoàn mỹ.',
                 'size' => 1,
                 'color' => 1,
@@ -766,9 +768,9 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ giầy kèm giá treo mũ RAMO',
                 'price' => 4990000,
                 'thumbnail' => 'kyjqxwd8yqr32emsquyr,q1jfuorkmje5z9t04jqa,w2ewado6vi0m5v4h3i4x,rqjemcal6rssrrvwxqfa',
-                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, tủ giày RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang. 
-                Tủ tích hợp 3 tính năng, gồm tủ giày, móc treo áo quần và kệ để mũ nón giúp tối ưu hoá không gian sảnh & lối vào của gia đình bạn. 
-                Sản phẩm được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính cùng những đường nét mạnh mẽ, vững chãi và tinh tế. 
+                'description' => 'Lấy cảm hứng từ phong cách Á Đông hiện đại kết hợp cùng dáng dấp công nghiệp (Industrial) thời thượng, tủ giày RAMO là một thiết kế đặc biệt của BAYA hướng tới những người trẻ yêu thích những vật dụng nội thất mang tính ứng dụng cao và thời trang.
+                Tủ tích hợp 3 tính năng, gồm tủ giày, móc treo áo quần và kệ để mũ nón giúp tối ưu hoá không gian sảnh & lối vào của gia đình bạn.
+                Sản phẩm được làm từ chất liệu gỗ MFC màu sồi tự nhiên tươi sáng, phối lạ mắt với khung sắt sơn tĩnh điện màu đen nhám cá tính cùng những đường nét mạnh mẽ, vững chãi và tinh tế.
                 Sáng tạo không gian phòng khách của bạn thật ấn tượng với trọn bộ sưu tập RAMO từ BAYA, khám phá ngay!',
                 'size' => 1,
                 'color' => 1,
@@ -783,7 +785,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ giầy GUARDIA',
                 'price' => 1790000,
                 'thumbnail' => 'y7mn2p8knbss8ulzn7q0,thipcwvb1siozkacobxc,w4dczqkkkqoeacpi1fab,pk4qt8z9assesnuizsi1',
-                'description' => 'Tủ giày GUARDIA làm từ gỗ keo bền chắc mang lại vẻ đẹp gần gũi cho ngôi nhà bạn. Thiết kế 3 tầng chứa được từ 6 - 9 đôi giày, với hộc chứa phía trên cho bạn thoải mái sắp xếp những vật dụng nhỏ xinh như chìa khóa, áo mưa, kính râm... 
+                'description' => 'Tủ giày GUARDIA làm từ gỗ keo bền chắc mang lại vẻ đẹp gần gũi cho ngôi nhà bạn. Thiết kế 3 tầng chứa được từ 6 - 9 đôi giày, với hộc chứa phía trên cho bạn thoải mái sắp xếp những vật dụng nhỏ xinh như chìa khóa, áo mưa, kính râm...
                 Bạn cũng có thể sử dụng mặt trên của tủ cho các món đồ trang trí hoặc để nón bảo hiểm.',
                 'size' => 1,
                 'color' => 1,
@@ -798,7 +800,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Tủ giầy TOBAGO',
                 'price' => 499000,
                 'thumbnail' => 'dgb7hucbhet5had5lekh,ijwvkoaqpdnaazfdet2z',
-                'description' => 'Với chất liệu gỗ thông, bền đẹp thân thiện với môi trường, giá giày TOBAGO rất thích hợp cho việc cất giữ giầy dép một cách ngăn nắp, sạch sẽ và tô điểm thêm màu sắc cho ngôi nhà của bạn đẹp mắt. 
+                'description' => 'Với chất liệu gỗ thông, bền đẹp thân thiện với môi trường, giá giày TOBAGO rất thích hợp cho việc cất giữ giầy dép một cách ngăn nắp, sạch sẽ và tô điểm thêm màu sắc cho ngôi nhà của bạn đẹp mắt.
                 Các góc cạnh cạnh được gia công kỹ lưỡng, bề mặt nhẵn bóng tạo tính thẩm mỹ cao, thiết kế chắc chắn, có 3 tầng tiện dụng.',
                 'size' => 1,
                 'color' => 1,
@@ -843,8 +845,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 4 ghế PRINCETON',
                 'price' => 14400000,
                 'thumbnail' => 'r0oqpgokyttyfcicpznm,xw3lerdrifjk7wpgbuva,ty4hvzd7ikil4owe04uw,bdiw8dju3motxwifydhz',
-                'description' => 'Đơn giản và hiện đại, bộ bàn PRINCETON & 4 ghế ăn CONNEMARA là lựa chọn lý tưởng cho phòng ăn gia đình bạn. 
-                Chất liệu khung làm từ veneer gỗ óc chó, gỗ cao su và MDF bền chắc với gam màu nâu thẫm và vân gỗ bắt mắt. Chân bàn được thiết kế ấn tượng, là điểm nhấn cho không gian dùng bữa thêm thu hút. 
+                'description' => 'Đơn giản và hiện đại, bộ bàn PRINCETON & 4 ghế ăn CONNEMARA là lựa chọn lý tưởng cho phòng ăn gia đình bạn.
+                Chất liệu khung làm từ veneer gỗ óc chó, gỗ cao su và MDF bền chắc với gam màu nâu thẫm và vân gỗ bắt mắt. Chân bàn được thiết kế ấn tượng, là điểm nhấn cho không gian dùng bữa thêm thu hút.
                 Ghế có đệm ngồi và lưng tựa êm ái bọc da tổng hợp mang lại nét sang trọng, tinh tế.',
                 'size' => 1,
                 'color' => 1,
@@ -859,7 +861,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 4 ghế PALL-MALL',
                 'price' => 4790000,
                 'thumbnail' => 'smpnmcxmqwiaqs4ztmsq,smpnmcxmqwiaqs4ztmsq,fod3ozctoczvnfos1jql,wrtnprmhjpdxg6u2pegx',
-                'description' => 'Bộ bàn & 4 ghế ăn PALL MALL từ nội thất BAYA được làm từ gỗ cao su phủ MFC bền chắc. 
+                'description' => 'Bộ bàn & 4 ghế ăn PALL MALL từ nội thất BAYA được làm từ gỗ cao su phủ MFC bền chắc.
                 Sản phẩm có thiết kế đơn giản với gam màu nâu thẫm và kiểu dáng thanh mảnh mang lại vẻ đẹp ấm cúng, tinh tế cho phòng ăn gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -874,8 +876,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 4 ghế BIANCA',
                 'price' => 4490000,
                 'thumbnail' => 'riqhsuy6bxaya1ndvmxe,xl9fmhzplfkwtaobdfpu,m5xmsownafu4igsljy0l,sxkua4fchehagbvgpa44',
-                'description' => 'Bộ bàn & 4 ghế ăn BIANCA có thể xếp gọn thích hợp cho không gian nhỏ hẹp, với màu sắc tươi sáng và vân gỗ tự nhiên dễ phối cùng nhiều phong cách nội thất. 
-                2 hộc kéo cho bạn thoải mái cất giữ dao nĩa, khăn ăn… Bộ sản phẩm kèm 4 chiếc ghế xếp giúp bạn hoàn chỉnh bàn ăn cho gia đình hiện đại. 
+                'description' => 'Bộ bàn & 4 ghế ăn BIANCA có thể xếp gọn thích hợp cho không gian nhỏ hẹp, với màu sắc tươi sáng và vân gỗ tự nhiên dễ phối cùng nhiều phong cách nội thất.
+                2 hộc kéo cho bạn thoải mái cất giữ dao nĩa, khăn ăn… Bộ sản phẩm kèm 4 chiếc ghế xếp giúp bạn hoàn chỉnh bàn ăn cho gia đình hiện đại.
                 Khi không sử dụng, ghế có thể đặt gọn vào gầm bàn.',
                 'size' => 1,
                 'color' => 1,
@@ -890,8 +892,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 4 ghế RIVIERA',
                 'price' => 1890000,
                 'thumbnail' => 'cb271wxasbqcunruz6b1,yygzdokmvcmelei6ouqr,dmaepnayxogvas2osebk,pocnqmcwp0apuzemzhr2',
-                'description' => 'Bộ bàn & 4 ghế ngoài trời RIVIERA là lựa chọn hoàn hảo cho khu vườn nhà của bạn. 
-                Thiết kế đơn giản, ấn tượng với khung kim loại bền bỉ có thể gấp gọn và dễ di chuyển giúp tiết kiệm diện tích. 
+                'description' => 'Bộ bàn & 4 ghế ngoài trời RIVIERA là lựa chọn hoàn hảo cho khu vườn nhà của bạn.
+                Thiết kế đơn giản, ấn tượng với khung kim loại bền bỉ có thể gấp gọn và dễ di chuyển giúp tiết kiệm diện tích.
                 Sản phẩm sở hữu mặt gỗ với màu sắc hiện đại, đẹp mắt và góp phần hoàn thiện không gian sống của gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -906,8 +908,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 6 ghế KITKA',
                 'price' => 7690000,
                 'thumbnail' => 'bdrjgepulkbeiihivwqw,r8aplpw5nlhii5fymwkg,fsez2c7zfuvzot6wlyaa',
-                'description' => 'Bộ bàn & 6 ghế ăn KITKA với thiết kế đơn giản theo phong cách châu Á cổ điển, chất liệu gỗ cao su bền chắc và gam màu nâu thẫm mang vẻ đẹp ấm cúng vào phòng ăn gia đình bạn. 
-                Đệm ngồi làm từ mút bọc da tổng hợp êm ái, góp phần tô điểm cho không gian sang trọng. 
+                'description' => 'Bộ bàn & 6 ghế ăn KITKA với thiết kế đơn giản theo phong cách châu Á cổ điển, chất liệu gỗ cao su bền chắc và gam màu nâu thẫm mang vẻ đẹp ấm cúng vào phòng ăn gia đình bạn.
+                Đệm ngồi làm từ mút bọc da tổng hợp êm ái, góp phần tô điểm cho không gian sang trọng.
                 Trọn bộ với giá tốt là lựa chọn hoàn hảo mà BAYA dành tặng tổ ấm bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -922,7 +924,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 6 ghế ATTILA',
                 'price' => 18400000,
                 'thumbnail' => 'dmiw03kfkf0ekxnijzej,vs5e7jlsshtveu3bol2v,s3bbnrat3f2uwwsibvb6,vm1ddfqlpmmzhogpx1os',
-                'description' => 'Bộ bàn & 6 ghế ăn ATTILA do BAYA thiết kế thuận theo tư thế ngồi tự nhiên, với vẻ đẹp từ những vân gỗ sồi và cấu trúc vững chãi góp phần làm cho bữa ăn gia đình thêm ấm cúng. 
+                'description' => 'Bộ bàn & 6 ghế ăn ATTILA do BAYA thiết kế thuận theo tư thế ngồi tự nhiên, với vẻ đẹp từ những vân gỗ sồi và cấu trúc vững chãi góp phần làm cho bữa ăn gia đình thêm ấm cúng.
                 Khung gỗ sồi đặc và mặt bàn phủ veneer gỗ sồi chất lượng cao, cùng đệm ngồi từ mút bọc da tổng hợp êm ái cho không gian dùng bữa của bạn thoải mái hơn bao giờ hết.',
                 'size' => 1,
                 'color' => 1,
@@ -937,8 +939,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 6 ghế QATAR',
                 'price' => 6400000,
                 'thumbnail' => 'v9y7banzfmu1rgiunq89,bhkvom804iyzldhufsc3,mbnhcrafuez1bmqrcfzy',
-                'description' => 'Với thiết kế đơn giản và chân phương, bộ bàn & 6 ghế ăn QATAR thích hợp với nhiều phong cách phòng ăn. 
-                Sản phẩm làm từ chất liệu gỗ cao su bền chắc, với màu sắc tự nhiên tươi sáng mang lại vẻ đẹp mộc mạc nhưng không kém phần sang trọng cho không gian dùng bữa. 
+                'description' => 'Với thiết kế đơn giản và chân phương, bộ bàn & 6 ghế ăn QATAR thích hợp với nhiều phong cách phòng ăn.
+                Sản phẩm làm từ chất liệu gỗ cao su bền chắc, với màu sắc tự nhiên tươi sáng mang lại vẻ đẹp mộc mạc nhưng không kém phần sang trọng cho không gian dùng bữa.
                 Trọn bộ với giá tốt là lựa chọn hoàn hảo cho phòng ăn gia đình bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -953,8 +955,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bộ bàn ăn 6 ghế PRINCETON',
                 'price' => 16400000,
                 'thumbnail' => 'cqschi5byjvbyg4nrnzk,wqmxgnkmsqahgsdsvesv,aj1lhfpgtkhaywx2lyvy,nhpmf18kpbqxeigsu4zw,i39b3qeqevhvotf9ug2w',
-                'description' => 'Đơn giản và hiện đại, bộ bàn & 6 ghế ăn PRINCETON là lựa chọn lý tưởng cho phòng ăn gia đình bạn. 
-                Chất liệu khung làm từ veneer gỗ óc chó, gỗ cao su và MDF bền chắc với gam màu nâu thẫm và vân gỗ bắt mắt. 
+                'description' => 'Đơn giản và hiện đại, bộ bàn & 6 ghế ăn PRINCETON là lựa chọn lý tưởng cho phòng ăn gia đình bạn.
+                Chất liệu khung làm từ veneer gỗ óc chó, gỗ cao su và MDF bền chắc với gam màu nâu thẫm và vân gỗ bắt mắt.
                 Chân bàn được thiết kế ấn tượng, là điểm nhấn cho không gian dùng bữa thêm thu hút. Ghế có đệm ngồi và lưng tựa êm ái mang lại nét sang trọng, tinh tế.',
                 'size' => 1,
                 'color' => 1,
@@ -1013,7 +1015,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế đôn ALI',
                 'price' => 799000,
                 'thumbnail' => 'fuanmew7e6mshwwou5dr,lz7jhubpjs0s3yzuimf3,zxmoorre8jp2jju85sha,jfuq0hadyd6f8flybnwe',
-                'description' => 'Chiếc ghế đẩu từ gỗ thông với đệm ngồi êm ái. Sản phẩm cho độ bền cao, dễ vệ sinh và di chuyển. 
+                'description' => 'Chiếc ghế đẩu từ gỗ thông với đệm ngồi êm ái. Sản phẩm cho độ bền cao, dễ vệ sinh và di chuyển.
                 Hãy kết hợp sử dụng cùng bàn trang điểm cũng như các món nội thất khác trong bộ sưu tập ALI từ BAYA dành cho tổ ấm của bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -1028,7 +1030,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế đôn HARRIS',
                 'price' => 1600000,
                 'thumbnail' => 'xgoz61dn93errqto5kjl,pdrmszp8kjstlcwhyggc',
-                'description' => 'Chiếc ghế đẩu từ gỗ sồi và phủ sồi với đệm ngồi êm ái. 
+                'description' => 'Chiếc ghế đẩu từ gỗ sồi và phủ sồi với đệm ngồi êm ái.
                 Sản phẩm có độ bền cao, dễ vệ sinh và di chuyển. Hãy kết hợp sử dụng với bàn trang điểm cũng như các món nội thất khác trong bộ sưu tập HARRIS từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -1043,7 +1045,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Ghế đôn ANN-LOUISE',
                 'price' => 850000,
                 'thumbnail' => 'shqgri2l1lipzr7zhqte,tzvr6brd0mjjhuzjv5kk',
-                'description' => 'Được thiết kế bởi BAYA, ghế đẩu ANN LOUISE thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã. 
+                'description' => 'Được thiết kế bởi BAYA, ghế đẩu ANN LOUISE thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã.
                 Ghế được làm từ gỗ keo phủ MDF trắng, vừa đẹp mắt vừa đảm bảo độ bền lâu dài khi sử dụng. Hãy kết hợp cùng các sản phẩm khác trong bộ sưu tập ANN LOUISE đến từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -1058,7 +1060,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn trang điểm HARRIS',
                 'price' => 3140000,
                 'thumbnail' => 'fq8esvdvihbg58ccza9n,kcj0q0h0inngczlvaqnq,ssva2woxhws8j0c1bwtb',
-                'description' => 'Bàn trang điểm HARRIS từ gỗ sồi sẽ giúp góc làm đẹp của bạn thêm sang trọng, ấn tượng. Sẽ hoàn hảo hơn khi kết hợp chiếc bàn này cùng trang điểm HARRIS. 
+                'description' => 'Bàn trang điểm HARRIS từ gỗ sồi sẽ giúp góc làm đẹp của bạn thêm sang trọng, ấn tượng. Sẽ hoàn hảo hơn khi kết hợp chiếc bàn này cùng trang điểm HARRIS.
                 Hãy bổ sung thêm các món nội thất khác trong bộ sưu tập HARRIS từ gỗ sồi để hoàn thiện không gian sống thật đẹp và tiện nghi của bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -1073,8 +1075,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn trang điểm ANN-LOUISE',
                 'price' => 2690000,
                 'thumbnail' => 'rgkpgneintwywljaoeub,hkyzkvlnrn0qsvfg3xdi,m4j7hb77s8equf7vkmht',
-                'description' => 'Được thiết kế bởi BAYA, bàn trang điểm ANN LOUISE thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã. 
-                Bàn được làm từ gỗ keo phủ MDF trắng kèm hộc kéo tiện dụng, vừa đẹp mắt vừa đảm bảo độ bền lâu dài khi sử dụng. 
+                'description' => 'Được thiết kế bởi BAYA, bàn trang điểm ANN LOUISE thích hợp với các không gian phòng mang hơi thở hiện đại, sang trọng và đầy trang nhã.
+                Bàn được làm từ gỗ keo phủ MDF trắng kèm hộc kéo tiện dụng, vừa đẹp mắt vừa đảm bảo độ bền lâu dài khi sử dụng.
                 Hãy kết hợp cùng các sản phẩm khác trong bộ sưu tập ANN LOUISE đến từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -1089,7 +1091,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn trang điểm MOZART',
                 'price' => 2060000,
                 'thumbnail' => 'hfrmz5kzer5s5stcwdux,f8ws3gvl9hioh56vapdv,assinspquurs9qcmhlps',
-                'description' => 'Thiết kế tinh tế với màu trắng trang nhã và mặt bàn màu gỗ cao su tự nhiên, đem lại vẻ đẹp sang trọng cho căn phòng. 
+                'description' => 'Thiết kế tinh tế với màu trắng trang nhã và mặt bàn màu gỗ cao su tự nhiên, đem lại vẻ đẹp sang trọng cho căn phòng.
                 Hãy kết hợp với gương để bàn và ghế đôn cũng như các món nội thất khác trong bộ sưu tập MOZART từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -1104,8 +1106,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Bàn trang điểm CATCH',
                 'price' => 699000,
                 'thumbnail' => 'nps0tb4cgyxggwrpdscv,upld6aspjmvxubsgrej7,flsm4nnhw4ffvsn1hf0x',
-                'description' => 'Kệ gắn tường 3 tầng với thiết kế cơ bản, thuần chức năng nhưng không kém phần đẹp mắt và hiện đại nhờ gỗ keo kết hợp các chi tiết kim loại. 
-                Sản phẩm có độ bền cao và dễ lắp đặt. 
+                'description' => 'Kệ gắn tường 3 tầng với thiết kế cơ bản, thuần chức năng nhưng không kém phần đẹp mắt và hiện đại nhờ gỗ keo kết hợp các chi tiết kim loại.
+                Sản phẩm có độ bền cao và dễ lắp đặt.
                 Hãy bổ sung trọn bộ sưu tập nội thất bằng gỗ keo CATCH từ BAYA dành cho sảnh và lối vào.',
                 'size' => 1,
                 'color' => 1,
@@ -1120,8 +1122,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ gắn tường EDEN',
                 'price' => 999000,
                 'thumbnail' => 'imrlplpmbo8kjcrjcgvt,k5mb6gpjs6da3xyd54u0,s2ebtbghhna7jhislv1l,mafh1h8rx0p6ojfrakyj',
-                'description' => 'Đến từ nội thất BAYA, giá treo tường EDEN bền chắc với chất liệu gỗ cao su và gỗ thông cao cấp. 
-                Giá dễ dàng gắn lên tường và giúp bạn sắp xếp và lưu trữ đồ dùng hiệu quả mà không chiếm nhiều diện tích trong nhà. 
+                'description' => 'Đến từ nội thất BAYA, giá treo tường EDEN bền chắc với chất liệu gỗ cao su và gỗ thông cao cấp.
+                Giá dễ dàng gắn lên tường và giúp bạn sắp xếp và lưu trữ đồ dùng hiệu quả mà không chiếm nhiều diện tích trong nhà.
                 Sản phẩm thích hợp dùng trong phòng khách hoặc phòng ngủ.',
                 'size' => 1,
                 'color' => 1,
@@ -1136,7 +1138,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ gắn tường AUSTRO',
                 'price' => 999000,
                 'thumbnail' => 'q1ietuz2g7udqqe0zqfv,qkcpgxnb18zeembjas66,wgzziysikjauoo6wizwl',
-                'description' => 'Kệ AUSTRO gồm 3 ngăn (chưa bao gồm khung kim loại) màu gỗ tự nhiên trang nhã cho bạn thoải mái sắp xếp các vật dụng trong phòng, và tùy thích trang trí cho mảng tường trống thêm bắt mắt. 
+                'description' => 'Kệ AUSTRO gồm 3 ngăn (chưa bao gồm khung kim loại) màu gỗ tự nhiên trang nhã cho bạn thoải mái sắp xếp các vật dụng trong phòng, và tùy thích trang trí cho mảng tường trống thêm bắt mắt.
                 Làm từ chất liệu ván dăm và veneer gỗ sồi bền chắc, sản phẩm phù hợp cho phòng khách, phòng làm việc, phòng ngủ hay thậm chí là phòng ăn thêm cảm hứng.',
                 'size' => 1,
                 'color' => 1,
@@ -1151,7 +1153,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Kệ gắn tường REBEL',
                 'price' => 999000,
                 'thumbnail' => 'qbva3dap2gggudinldvs,abdnfvn8dlylmccmpr1o,ohmafmui92leknwm4wux',
-                'description' => 'Giá treo tường REBEL đơn giản mang đến phong cách hiện đại cho bất kỳ không gian nào của gia đình bạn. Sản phẩm có khung làm từ thép phủ sơn tĩnh điện chắc chắn, giữ cho giá luôn được cố định vị trí. 
+                'description' => 'Giá treo tường REBEL đơn giản mang đến phong cách hiện đại cho bất kỳ không gian nào của gia đình bạn. Sản phẩm có khung làm từ thép phủ sơn tĩnh điện chắc chắn, giữ cho giá luôn được cố định vị trí.
                 Đặt giá vào vị trí phù hợp, bạn có thể thoải mái bổ sung các vật dụng khác để hoàn thiện căn phòng.',
                 'size' => 1,
                 'color' => 1,
@@ -1166,8 +1168,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương để bàn trang điểm ANN-LOUISE',
                 'price' => 809000,
                 'thumbnail' => 'nrqyqogqhmtu0ykmyqmz,ezbnus64tnidfiqbpajh,dod8ftikxqnwumig5oqp',
-                'description' => 'Nội thất BAYA mang đến gương trang điểm ANN LOUISE khung gỗ sơn trắng, kiểu dáng tinh tế trang nhã, mặt gương cho hình ảnh phản chiếu sắc nét trung thực. 
-                Gương được làm từ chất liệu gỗ keo phủ MDF bền chắc. 
+                'description' => 'Nội thất BAYA mang đến gương trang điểm ANN LOUISE khung gỗ sơn trắng, kiểu dáng tinh tế trang nhã, mặt gương cho hình ảnh phản chiếu sắc nét trung thực.
+                Gương được làm từ chất liệu gỗ keo phủ MDF bền chắc.
                 Gương trang điểm ANN LOUISE là món phụ kiện không thể thiếu của phái đẹp được thiết kế bởi BAYA',
                 'size' => 1,
                 'color' => 1,
@@ -1182,7 +1184,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương để bàn trang điểm HARRIS',
                 'price' => 899000,
                 'thumbnail' => 'djbo8erpzwh0vymrtcbn,z6mca9n1tcjcrju6putv',
-                'description' => 'Gương HARRIS từ gỗ sồi sẽ giúp góc làm đẹp của bạn thêm sang trọng, ấn tượng. Sẽ hoàn hảo hơn khi kết hợp chiếc gương này cùng bàn trang điểm HARRIS. 
+                'description' => 'Gương HARRIS từ gỗ sồi sẽ giúp góc làm đẹp của bạn thêm sang trọng, ấn tượng. Sẽ hoàn hảo hơn khi kết hợp chiếc gương này cùng bàn trang điểm HARRIS.
                 Hãy bổ sung thêm các món nội thất khác trong bộ sưu tập ALI từ gỗ sồi để hoàn thiện không gian sống thật đẹp và tiện nghi của bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -1197,8 +1199,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương đứng KITKA',
                 'price' => 2490000,
                 'thumbnail' => 'awzqpikgque33r6ayefw,dn3ut1bp33av3rulqwqd,cgr2zksrpcmd1mtfgv3a',
-                'description' => 'Gương đứng KITKA mang lại nét đẹp cổ điển cho không gian với tông màu nâu trầm và thiết kế theo phong cách retro. 
-                Gương cao 165cm, có thể thoải mái điều chỉnh độ nghiêng. 
+                'description' => 'Gương đứng KITKA mang lại nét đẹp cổ điển cho không gian với tông màu nâu trầm và thiết kế theo phong cách retro.
+                Gương cao 165cm, có thể thoải mái điều chỉnh độ nghiêng.
                 Kết hợp cùng các sản phẩm khác trong bộ sưu tập KITKA đến từ BAYA để hoàn thiện việc bày trí nội thất cho ngôi nhà bạn.',
                 'size' => 1,
                 'color' => 1,
@@ -1213,7 +1215,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương treo tường MOZART',
                 'price' => 690000,
                 'thumbnail' => 'afiit7f7lttknt7kwdgz,sbeg31ffynudqwpzgkux',
-                'description' => 'Gương gắn tường từ bộ sưu tập MOZART do BAYA thiết kế sẽ đem đến nét thanh lịch và sang trọng cho không gian sống của bạn. 
+                'description' => 'Gương gắn tường từ bộ sưu tập MOZART do BAYA thiết kế sẽ đem đến nét thanh lịch và sang trọng cho không gian sống của bạn.
                 Sản phẩm từ gỗ cao su bền bỉ và giúp bạn tiết kiệm không gian thật hiệu quả. Hãy khám phá trọn bộ sưu tập MOZART để chọn cho tổ ấm những món nội thất thật đẹp.',
                 'size' => 1,
                 'color' => 1,
@@ -1228,7 +1230,7 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương treo tường MITFORD',
                 'price' => 740000,
                 'thumbnail' => 'ljcrexewtcxlzt5ehp3s,muphffadvbhnbzhegs86',
-                'description' => 'Chiếc gương treo tường MITFORD được làm từ chất liệu gỗ keo cao cấp, tạo độ bền cho sản phẩm. Thiết kế gương hình chữ nhật đơn giản, sang trọng và tinh tế. 
+                'description' => 'Chiếc gương treo tường MITFORD được làm từ chất liệu gỗ keo cao cấp, tạo độ bền cho sản phẩm. Thiết kế gương hình chữ nhật đơn giản, sang trọng và tinh tế.
                 Bạn có thể treo gương lên tường tạo điểm nhấn hoặc kết hợp cùng tủ trong bộ sưu tập MITFORD để tăng thêm tính thẩm mỹ cho không gian sống.',
                 'size' => 1,
                 'color' => 1,
@@ -1243,8 +1245,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương đứng REBEL',
                 'price' => 1690000,
                 'thumbnail' => 'm1rtu7s7wnsy6yr6ibzz,sg0qincpwupgtlbfkhpt,yqxqoupkynsjf0m25rut',
-                'description' => 'Gương đứng REBEL đơn giản mang đến phong cách hiện đại cho bất kỳ không gian nào của gia đình bạn. 
-                Sản phẩm có khung làm từ thép phủ sơn tĩnh điện chắc chắn, gương soi toàn thân kiểu dáng trang nhã, cung cấp hình ảnh phản chiếu sắt nét, kết hợp trang trí phòng ngủ gia đình. 
+                'description' => 'Gương đứng REBEL đơn giản mang đến phong cách hiện đại cho bất kỳ không gian nào của gia đình bạn.
+                Sản phẩm có khung làm từ thép phủ sơn tĩnh điện chắc chắn, gương soi toàn thân kiểu dáng trang nhã, cung cấp hình ảnh phản chiếu sắt nét, kết hợp trang trí phòng ngủ gia đình.
                 Đặt gương vào vị trí phù hợp, bạn có thể thoải mái bổ sung các vật dụng khác để hoàn thiện căn phòng.',
                 'size' => 1,
                 'color' => 1,
@@ -1259,8 +1261,8 @@ class ProductSeeder extends Seeder
                 'name' => 'Gương đứng MOZART',
                 'price' => 1590000,
                 'thumbnail' => 'rycucnsbgf8zcai9ugs7,gnzp6kwtfyxxzradpnk9,pkebcinsljouiil6y0y9',
-                'description' => 'Gương đứng MOZART do BAYA thiết kế sẽ đem đến vẻ đẹp trang nhã, sang trọng cho không gian nội thất. 
-                Sản phẩm có thể gấp gọn và dễ di chuyển, giúp bạn tiết kiệm diện tích phòng thật hiệu quả. 
+                'description' => 'Gương đứng MOZART do BAYA thiết kế sẽ đem đến vẻ đẹp trang nhã, sang trọng cho không gian nội thất.
+                Sản phẩm có thể gấp gọn và dễ di chuyển, giúp bạn tiết kiệm diện tích phòng thật hiệu quả.
                 Hãy khám phá thêm các món nội thất còn lại trong bộ sưu tập MOZART bằng gỗ cao su từ BAYA.',
                 'size' => 1,
                 'color' => 1,
@@ -1270,7 +1272,9 @@ class ProductSeeder extends Seeder
                 'updated_at' => \Illuminate\Support\Carbon::now()->addDays()->format('Y-m-d H:i:s'),
             ],
         ]);
-        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        if (env('DB_CONNECTION') == 'mysql') {
+            \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        }
     }
 }
 
