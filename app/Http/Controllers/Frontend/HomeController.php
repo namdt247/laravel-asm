@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         return view('frontend.home');
     }
 }
