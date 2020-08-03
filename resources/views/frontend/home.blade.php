@@ -301,7 +301,6 @@
                 </div>
             </div>
         </header>
-
         <aside id="notifications"></aside>
         <section id="wrapper">
             <div class="topdiv">

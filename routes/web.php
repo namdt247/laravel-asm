@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Frontend\HomeController@home');
+
+Route::get('/login', 'Frontend\HomeController@login');
