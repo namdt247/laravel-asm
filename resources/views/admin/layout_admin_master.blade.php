@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini text-sm">
+<<<<<<< HEAD
 <div class="wrapper">
     <nav class="main-header navbar navbar-expand border-bottom-0 navbar-dark navbar-gray">
         <ul class="navbar-nav">
@@ -125,6 +126,43 @@
 <script src="{{asset('Admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <script src="{{asset('Admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <script src="{{asset('Admin/dist/js/adminlte.min.js')}}"></script>
+=======
+    <div class="wrapper">
+
+        @include('admin.include.header')
+
+        @include('admin.include.main_sidebar')
+
+        <div class="content-wrapper">
+            <section class="content-header clearfix">
+                @yield('main-header')
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                @yield('main-content')
+            </section>
+        </div>
+        @include('admin.include.footer')
+    </div>
+
+    <script src="{{asset('Admin/plugins/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <script src="{{asset('Admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/chart.js/Chart.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/sparklines/sparkline.js')}}"></script>
+    <script src="{{asset('Admin/plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/moment/moment.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/daterangepicker/daterangepicker.js')}}"></script>
+    <script src="{{asset('Admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+    <script src="{{asset('Admin/dist/js/adminlte.min.js')}}"></script>
+
+    @yield('main-script')
+>>>>>>> 35474baf2e5a3d69a772fdda5c4b18a4597b9d7c
 </body>
 </html>
 

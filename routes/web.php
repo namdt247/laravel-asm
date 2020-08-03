@@ -14,3 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Frontend\HomeController@home');
+
+Route::get('/product', 'Frontend\HomeController@product');
+
+Route::get('/product/{type}', 'Frontend\HomeController@getProduct');
+
+Route::get('/product/detail/{id}', 'Frontend\HomeController@getProductDetail');
+
+Route::get('/about', 'Frontend\HomeController@about');
+
+Route::get('/contact', 'Frontend\HomeController@contact');
+
+Route::get('/faq', 'Frontend\HomeController@faq');
