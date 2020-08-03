@@ -630,9 +630,9 @@ pre code {
     overflow-y: scroll;
 }
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
 }
 .container::after {
     content: "";
@@ -11129,23 +11129,12 @@ li.cart-item:last-child {
     width: 100%;
     padding-bottom: 8px;
 }
-#block-contact_list li .contactdiv {
-    display: inline-block;
-    float: right;
-    padding-left: 0;
-    line-height: 25px;
-    width: 85%;
-}
 
 #block-contact_list i {
     color: #febd69;
     float: left;
     font-size: 20px;
     margin-top: 5px;
-}
-#block-contact_list li .contactdiv {
-    display: block;
-    padding-left: 0;
 }
 #block-contact_list li span {
     font-size: 13px;
@@ -11164,8 +11153,12 @@ li.cart-item:last-child {
     letter-spacing: 0.5px;
     text-transform: capitalize;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 0;
     margin-top: 5px;
+    padding-left: 5px;
+    display: inline-block;
+    float: right;
+    width: 85%;
 }
 #block-contact_list .email a {
     margin-left: 40px;
@@ -13143,12 +13136,6 @@ li.cart-item:last-child {
     }
     .tmcms2 .main-content .cms-block .subbutton {
         padding-top: 20px;
-    }
-    #block-contact_list li .contactdiv {
-        margin-left: 40px;
-    }
-    #block-contact_list li .contactdiv {
-        float: left;
     }
     #_desktop_user_info {
         width: auto;
