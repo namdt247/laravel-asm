@@ -9,9 +9,5 @@
 @extends('frontend.layout_master')
 
 @section('main-content')
-    <section id="wrapper">
-        <div class="container">
 
-        </div>
-    </section>
 @endsection
