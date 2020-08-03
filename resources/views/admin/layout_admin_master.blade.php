@@ -17,94 +17,22 @@
 </head>
 <body class="hold-transition sidebar-mini text-sm">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand border-bottom-0 navbar-dark navbar-gray">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{asset('Admin/dist/img/avatar.png')}}" class="user-image" alt="Admin">
-                        <span class="text-white">Admin</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="user-header">
-                            <img src="{{asset('Admin/dist/img/avatar.png')}}" class="img-circle" alt="Admin">
-                            <p>ADMIN - quản trị</p>
-                        </li>
-                        <li class="user-footer" style="background-color: #6c757d;">
-                            <div class="float-left">
-                                <a href="#" class="btn btn-outline-light">Hồ sơ</a>
-                            </div>
-                            <div class="float-right">
-                                <a href="#" class="btn btn-outline-light">Đăng xuất</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-light-primary elevation-4" id="aside-nav-left">
-            <div class="sidebar">
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="{{asset('Admin/dist/img/avatar.png')}}" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">ADMIN</a>
-                    </div>
-                </div>
+        @include('admin.include.header')
 
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column nav-compact text-sm nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Danh mục</p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-tags"></i>
-                                <p>Sản phẩm</p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-list"></i>
-                                <p>Bộ sưu tập</p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview menu-open">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fa fa-file"></i>
-                                <p>Đơn hàng</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+        @include('admin.include.main_sidebar')
 
         <div class="content-wrapper">
-            <div class="content-header">
-                <div class="container-fluid">
-                </div>
-            </div>
+            <section class="content-header clearfix">
+                @yield('main-header')
+            </section>
+
             <!-- Main content -->
             <section class="content">
-                <div class="container-fluid">
-                </div>
+                @yield('main-content')
             </section>
         </div>
-
-        <aside class="control-sidebar control-sidebar-dark">
-        </aside>
+        @include('admin.include.footer')
     </div>
 
     <script src="{{asset('Admin/plugins/jquery/jquery.min.js')}}"></script>
@@ -121,6 +49,8 @@
     <script src="{{asset('Admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
     <script src="{{asset('Admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
     <script src="{{asset('Admin/dist/js/adminlte.min.js')}}"></script>
+
+    @yield('main-script')
 </body>
 </html>
 
