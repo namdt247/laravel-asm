@@ -34,7 +34,6 @@
     top: 56px;
     position: absolute;
     z-index: 1001;
-    display: block;
 }
 #block-contact_list > li a{
     color: #ebebeb;
@@ -51,4 +50,42 @@
 }
 #_desktop_cart a{
     padding: 0 10px;
+}
+#tm_vertical_menu_top #top-menu {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    float: left;
+    width: 243px;
+    border: 1px solid #000;
+    border-radius: 0px 0px 5px 5px;
+}
+#tm_vertical_menu_top #top-menu li {
+    position: relative;
+    width: 100%;
+    color: #fff;
+}
+#tm_vertical_menu_top .dropdown-item1{
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 13px 20px 13px 25px;
+}
+#tm_vertical_menu_top .top-menu > li:hover > a {
+    color: #f2b527;
+    text-decoration: none;
+}
+.categorie_toggle:hover{
+    color: #000 !important;
+}
+#tm_vertical_menu_top .dropdown-item{
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid #343434;
+    background: #000;
+}
+#_desktop_cart a:hover i{
+    color: #febd69;
 }
