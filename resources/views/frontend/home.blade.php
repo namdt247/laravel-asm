@@ -897,7 +897,6 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=7&amp;controller=category&amp;id_lang=1">Eyewear</a>
                                                                                     </div>
-=======
                                                                     </div>
                                                                 </li>
                                                             </div>
@@ -927,7 +926,6 @@
                                                                                 <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                             </div>
                                                                         </div>
-<<<<<<< HEAD
                                                                     </li>
                                                                 </div>
                                                                 <div class="owl-item carousel-item">
