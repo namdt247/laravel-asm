@@ -86,3 +86,6 @@
     border-bottom: 1px solid #343434;
     background: #000;
 }
+#_desktop_cart a:hover i{
+    color: #febd69;
+}

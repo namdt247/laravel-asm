@@ -89,12 +89,10 @@ img {
     padding: 0;
 }
 .tm-carousel {
-    display: none;
     position: relative;
     float: left;
     width: 100%;
     margin: 0;
-    -ms-touch-action: pan-y;
 }
 #tmcms1block {
     float: left;
@@ -275,7 +273,6 @@ img {
     padding: 0;
     text-align: left;
     text-transform: capitalize !important;
-    border-bottom: 1px solid #f0f0f0;
 }
 .lastest_block.block.tmblog-latest #spe_res {
     margin: 0 -15px;
@@ -428,4 +425,100 @@ img {
 ul#blog-carousel .owl-item{
     float: left;
     width: 570px;
+}
+.customNavigation a {
+    position: absolute;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 0;
+}
+.customNavigation {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    clear: both;
+    top: 35px;
+    opacity: 0;
+    -webkit-opacity: 0;
+}
+.brands:hover .customNavigation {
+    opacity: 1;
+    -webkit-opacity: 1;
+    right: 0;
+    left: auto;
+}
+.customNavigation i{
+    font-size: 20px;
+    color: #000;
+ }
+.first-content:hover .cms_content .cms_img img, .second-content:hover .cms_content .cms_img img{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.add-to-cart{
+    background: #000;
+    vertical-align: middle;
+    border: 1px solid #000;
+    color: #fff;
+    transition: all 500ms ease 0s;
+    padding: 5px 15px 5px 35px;
+    font-size: 12px !important;
+}
+.add-to-cart:hover{
+    background: #febd69;
+    border: 1px solid #febd69;
+    color: #000;
+}
+.add-to-cart i{
+    color: #fff !important;
+    font-size: 13px !important;
+    padding-right: 5px;
+}
+.add-to-cart:hover i{
+    color: #000 !important;
+}
+#products .product-title, .products .product-title, .product-accessories .product-title {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+#products .product-title, .products .product-title, .product-accessories .product-title {
+    text-transform: capitalize;
+    margin: 14px 0 12px;
+    display: block;
+    float: left;
+}
+.h3 {
+    font-size: 1.125rem !important;
+}
+.product-title a {
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: none;
+    float: left;
+    overflow: hidden;
+    text-decoration: none;
+    width: 100%;
+}
+.product-title a:hover {
+    text-decoration: none;
+}
+.page-home .owl-item{
+    width: 20%;
+}
+.tm_productinner:hover .customNavigation {
+    opacity: 1;
+    -webkit-opacity: 1;
+    right: 0;
+    left: auto;
 }

@@ -8,34 +8,13 @@
     <link rel="stylesheet" href="{{asset('Admin/plugins/fontawesome-free/css/v4-shims.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/refresh_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/frontend/carousel_home.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/content_home.css')}}">
     <link rel="stylesheet" href="{{asset('Admin/plugins/bootstrap/css/bootstrap.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="{{asset('Admin/plugins/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('Admin/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script>
-        jQuery(document).ready(function() {
-            $('#carousel-example').on('slide.bs.carousel', function (e) {
-                var $e = $(e.relatedTarget);
-                var idx = $e.index();
-                var itemsPerSlide = 5;
-                var totalItems = $('.carousel-item').length;
-
-                if (idx >= totalItems-(itemsPerSlide-1)) {
-                    var it = itemsPerSlide - (totalItems - idx);
-                    for (var i=0; i<it; i++) {
-                        // append slides to end
-                        if (e.direction=="left") {
-                            $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                        }
-                        else {
-                            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="{{asset('js/carousel_home.js')}}"></script>
 </head>
 <body>
     <main>
@@ -104,11 +83,11 @@
                             </a>
                         </div>
 
-                        <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
+                        <div id="search_widget" class="search-widget">
                             <span class="search_button"></span>
                             <div class="searchtoggle">
 
-                                <form method="get" action="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
+                                <form method="get" >
                                     <input type="hidden" name="controller" value="search">
                                     <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="s" value="" placeholder="Serach Product here..." aria-label="Search" class="ui-autocomplete-input" autocomplete="off">
                                     <button type="submit">
@@ -393,7 +372,7 @@
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a href="#" class="btn btn-primary">shop now</a>
+                                                        <a href="#" class="btn ">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -409,7 +388,7 @@
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a href="#" class="btn btn-primary">shop now</a>
+                                                        <a href="#" class="btn ">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -446,8 +425,8 @@
                                                         <div class="products">
                                                             <ul id="feature-carousel" class="tm-carousel product_list owl-carousel owl-theme" style="opacity: 1; display: block;">
                                                                 <div class="owl-wrapper-outer">
-                                                                    <div class="owl-wrapper" style="width: 4544px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                                                        <div class="owl-item first" style="width: 284px;">
+                                                                    <div class="owl-wrapper" style="width: auto; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                                                        <div class="owl-item first">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -472,7 +451,6 @@
                                                                                                 <div class="star star_on"></div>
                                                                                                 <div class="star star_on"></div>
                                                                                             </div>
-                                                                                            <span>%s Review(s)&nbsp;</span>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
                                                                                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white">Curabitur Dolor NuncPellentesque augue</a>
@@ -488,7 +466,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="1" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart</button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -507,7 +485,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="2" data-id-product-attribute="48" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -549,7 +527,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="2" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart </button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart </button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -574,7 +552,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="3" data-id-product-attribute="72" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -610,7 +588,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="3" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart </button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart </button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -635,7 +613,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="4" data-id-product-attribute="76" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -668,27 +646,75 @@
                                                                                         <div class="product-actions-main">
                                                                                             <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
-                                                                                                <input type="hidden" name="id_product" value="4" class="product_page_product_id">
-                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">Add to cart </button>
+                                                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id">
+                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
                                                                                         <div class="highlighted-informations hidden-sm-down">
-                                                                                            <div class="variant-links"></div>
+                                                                                            <div class="variant-links">
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff">
+                                                                                                    <span class="sr-only">White</span>
+                                                                                                </a>
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54">
+                                                                                                    <span class="sr-only">Black</span>
+                                                                                                </a>
+                                                                                                <span class="js-count count"></span>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item last" style="width: 284px;">
+                                                                        <div class="owl-item last">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="5" data-id-product-attribute="87" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm" class="thumbnail product-thumbnail">
                                                                                             <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-home_default.jpg" alt="Tellus Eu Volutpat VariusCurabitur sit amet era" data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-large_default.jpg">
+                                                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-home_default.jpg" data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-large_default.jpg" alt="">
                                                                                         </a>
+                                                                                        <ul class="product-flags">
+                                                                                            <li class="new">New</li>
+                                                                                        </ul>
                                                                                     </div>
-                                                                                    <div class="product-description"></div>
+                                                                                    <div class="product-description">
+                                                                                        <div class="comments_note">
+                                                                                            <div class="star_content clearfix">
+                                                                                                <div class="star star_on"></div>
+                                                                                                <div class="star star_on"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="h3 product-title" itemprop="name"><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm">Tellus Eu Volutpat VariusCurabitur sit amet era</a></span>
+                                                                                        <div class="product-price-and-shipping">
+                                                                                            <span class="sr-only">Price</span>
+                                                                                            <span itemprop="price" class="price">$29.00</span>
+                                                                                        </div>
+                                                                                        <div class="product-actions-main">
+                                                                                            <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
+                                                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
+                                                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id">
+                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
+                                                                                            </form>
+                                                                                            <a class="quick-view" href="#" data-link-action="quickview"></a>
+                                                                                        </div>
+                                                                                        <div class="highlighted-informations hidden-sm-down">
+                                                                                            <div class="variant-links">
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff">
+                                                                                                    <span class="sr-only">White</span>
+                                                                                                </a>
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54">
+                                                                                                    <span class="sr-only">Black</span>
+                                                                                                </a>
+                                                                                                <span class="js-count count"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </article>
                                                                             </li>
                                                                         </div>
@@ -696,6 +722,10 @@
                                                                 </div>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <div class="customNavigation">
+                                                        <a class="btn prev brand_prev carousel-control-prev" href="#" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                                        <a class="btn next brand_next carousel-control-next" href="#" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                                     </div>
                                                 </section>
                                             </div>
@@ -715,7 +745,7 @@
                                                     <div class="cms_offer">Home Decor Collection</div>
                                                     <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a class="btn " href="#">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1150,8 +1180,6 @@
                                                                 </a>
                                                             </span>
 
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                             <div class="comments_note">
                                                                                                 <div class="star_content clearfix">
                                                                                                     <div class="star"></div>
@@ -1207,8 +1235,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="21" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -1398,8 +1426,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="7" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -1589,8 +1617,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="27" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -1757,8 +1785,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -1925,8 +1953,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="25" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -2093,8 +2121,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="11" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -2261,8 +2289,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="2" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -2429,8 +2457,8 @@
                                                                                                     <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                                     <input type="hidden" name="id_product" value="29" class="product_page_product_id" />
                                                                                                     <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
+                                                                                                    <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit" title="<i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart">
+                                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                                     </button>
                                                                                                 </form>
 
@@ -2480,7 +2508,7 @@
                                                     <div class="cms_offer">Latest Rest Chair</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a class="btn " href="#">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2493,7 +2521,7 @@
                                                 <div class="cms-block">
                                                     <div class="cms_offer">New Drover Table</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
-                                                    <div class="subbutton"><a class="btn btn-primary" href="#">shop now</a></div>
+                                                    <div class="subbutton"><a class="btn " href="#">shop now</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2604,8 +2632,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2715,8 +2743,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="2" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2842,8 +2870,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2967,8 +2995,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="3" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3083,8 +3111,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="4" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3221,8 +3249,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="7" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3329,8 +3357,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="6" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3429,8 +3457,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="8" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3564,8 +3592,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3688,8 +3716,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="9" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3817,8 +3845,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="3" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3933,9 +3961,7 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="4" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
-                                                                                            </button>
+                                                                                            <button class="btn add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                         </form>
 
                                                                                         <a class="quick-view" href="#" data-link-action="quickview">
@@ -4041,8 +4067,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="5" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4150,8 +4176,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="12" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4258,8 +4284,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="13" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4317,77 +4343,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="lastest_block block tmblog-latest container">
-                                    <div class="blog_title">
-                                        <h2 class="products-section-title text-uppercase">from the Blog</h2>
-                                        <div id="spe_res">
-                                            <div class="homeblog-inner">
-{{--                                                <div class="customNavigation">--}}
-{{--                                                    <a class="btn prev blog_prev" href="#blog-carousel" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
-{{--                                                    <a class="btn next blog_next" href="#blog-carousel" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
-{{--                                                </div>--}}
-{{--                                                <ul id="blog-carousel" class="carousel slide clearfix" data-ride="carousel">--}}
-{{--                                                    <div class="carousel-inner row w-100 mx-auto">--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6 active">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img1">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img2">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6 ">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">--}}
-{{--                                                        </div>--}}
-                                                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                                                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block active">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto" alt="img1">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block">
-                                                            <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto" alt="img2">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors4.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors5.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">
-                                                        </div>
-                                                    </div>
-                                                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
-                                                </div>
+{{--                                <div class="lastest_block block tmblog-latest container">--}}
+{{--                                    <div class="blog_title">--}}
+{{--                                        <h2 class="products-section-title text-uppercase">from the Blog</h2>--}}
+{{--                                        <div id="spe_res">--}}
+{{--                                            <div class="homeblog-inner">--}}
+{{--                                        --}}
 {{--                                                        <div class="owl-item carousel-item">--}}
 {{--                                                            <li class="blog-post item">--}}
 {{--                                                                <div class="blog-item">--}}
@@ -4532,51 +4493,51 @@
 {{--                                                                </div>--}}
 {{--                                                            </li>--}}
 {{--                                                        </div>--}}
-                                                    </div>
+{{--                                                    </div>--}}
 {{--                                                </ul>--}}
-{{--                                            </div>--}}
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-{{--                            <section class="brands container">--}}
-{{--                                <div id="spe_res">--}}
-{{--                                    <div class="products">--}}
-{{--                                        <div class="customNavigation">--}}
-{{--                                            <a class="btn prev brand_prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
-{{--                                            <a class="btn next brand_next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div id="brand-carousel_last" class="carousel slide tm-carousel product_list" data-ride="carousel" style="opacity: 1; display: block;">--}}
-{{--                                            <div class="carousel-inner row w-100 mx-auto" role="listbox">--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img2">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">--}}
-{{--                                                </div>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-{{--                            </section>--}}
+                            </section>
+                            <section class="brands container">
+                                <div id="spe_res">
+                                    <div class="products">
+                                        <div class="customNavigation">
+                                            <a class="btn prev brand_prev carousel-control-prev" href="#brand_carousel_last" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                            <a class="btn next brand_next carousel-control-next" href="#brand_carousel_last" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div id="brand_carousel_last" class="carousel slide tm-carousel product_list" data-ride="carousel">
+                                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                                <div class="carousel-item col-md-2 active">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors4.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors5.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </section>
                     </div>
                 </div>
@@ -4588,7 +4549,7 @@
                     <div class="row footer">
                         <div class="block-contact footer-block col-xs-12 col-sm-2 links wrapper hb-animate-element right-to-left" style="padding: 0 10px 0 0 !important;">
                             <h3 class="block-contact-title hidden-md-down">address</h3>
-                            <ul>
+                            <ul id="block-contact_list">
                                 <li>
                                     <a href="">
                                         <i class="fa fa-map-marked"></i>
@@ -4640,13 +4601,13 @@
                         </div>
                         <div class="links block_newsletter block col-sm-3" style="padding-left: 30px !important;">
                             <h3 class="block_title hidden-md-down">Đăng ký</h3>
-                            <div class="col-md-12 col-xs-12 block_content" id="block_email_toggle">
+                            <div class="col-md-12 block_content" id="block_email_toggle" style="padding: 0 !important;">
                                 <p class="text">Bạn có thể hủy đăng ký bất cứ lúc nào. Xin vui lòng tìm thông tin liên lạc của chúng tôi trong thông báo pháp lý.</p>
                                 <form >
                                     <div class="col-xs-12">
                                         <div class="input-wrapper">
                                             <input name="email" type="email" value="" placeholder="Nhập id" aria-labelledby="block-newsletter-label">
-                                            <button class="btn btn-primary pull-xs-right hidden-xs-down" name="submitNewsletter"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                            <button class="btn bg-white pull-xs-right hidden-xs-down" name="submitNewsletter"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                                             </button>
                                         </div>
                                         <div class="clearfix"></div>
