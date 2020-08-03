@@ -404,6 +404,96 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                        </div>
+                        <div id="links_block_top" class="block links">
+                            <h3 class="h3 title_block "><i class="material-icons"></i></h3>
+                            <ul id="tm_toplink" class="block_content">
+                                <li><a href="#" title="today deal's">today deal's</a></li>
+                                <li><a href="#" title="gift card">gift card</a></li>
+                                <li><a href="#" title="subscribe">subscribe</a></li>
+                                <li><a href="#" title="buyer Protection">buyer Protection</a></li>
+                                <li><a href="#" title="portfolio">portfolio</a></li>
+                                <li><a href="#" title="Contacts">Contacts</a></li>
+                                <li><a href="#" title="news">news</a></li>
+                            </ul>
+                        </div>
+                        <div id="_desktop_cart">
+                            <a href=""><i class="fa fa-user-o"></i></a>
+                            <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside id="notifications"></aside>
+        <section id="wrapper">
+            <div class="topdiv">
+                <div class="flexslider" data-interval="3000" data-pause="true">
+                    <div class="loadingdiv"></div>
+                    <ul class="slides">
+                        <li class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" data-thumb-alt="">
+                            <a href="#" title="sample-1">
+                                <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-1.jpg" alt="sample-1" title="Sample 1" draggable="false">
+                            </a>
+                        </li>
+                        <li class="slide flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" data-thumb-alt="">
+                            <a href="#" title="sample-2">
+                                <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-2.jpg" alt="sample-2" title="Sample 2" draggable="false">
+                            </a>
+                        </li>
+                    </ul>
+                    <ol class="flex-control-nav flex-control-paging">
+                        <li>
+                            <a href="#" class="">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex-active">2</a>
+                        </li>
+                    </ol>
+                    <ul class="flex-direction-nav">
+                        <li class="flex-nav-prev">
+                            <a class="flex-prev" href="#">Previous</a>
+                        </li>
+                        <li class="flex-nav-next">
+                            <a class="flex-next" href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div id="columns_inner">
+                    <nav data-depth="1" class="breadcrumb hidden-sm-down">
+                        <div class="container">
+                            <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a itemprop="item" href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php">
+                                        <span itemprop="name">Home</span>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                            </ol>
+                        </div>
+                    </nav>
+                    <div id="content-wrapper">
+                        <section id="main">
+                            <div class="topbelow">
+                                <div id="tmcms1block" class="container">
+                                    <div class="tmcms1block">
+                                        <div class="first-content main-content">
+                                            <div class="cms_content">
+                                                <div class="cms_img">
+                                                    <a href="#">
+{{--                                                        <img alt="Cms-Banner1.jpg" src="img/cms/Sub-banner-1.jpg">--}}
+                                                    </a>
+                                                </div>
+                                                <div class="cms-block">
+                                                    <div class="cms_offer">New Lighting</div>
+                                                    <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                    <div class="subbutton">
+                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                    </div>
+=======
                             <div id="tmcms2_block" class="container">
                                 <div class="tmcms2">
                                     <div class="main-content">
@@ -418,6 +508,7 @@
                                                 <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
                                                 <div class="subbutton">
                                                     <a class="btn " href="#">shop now</a>
+>>>>>>> 9372428f532480b442516814f76d91de9614c4af
                                                 </div>
                                             </div>
                                         </div>
