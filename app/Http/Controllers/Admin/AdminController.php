@@ -10,4 +10,19 @@ class AdminController extends Controller
     {
         return view('admin.layout_admin_master');
     }
+
+    public function getListCate()
+    {
+        return view('admin.list_cate');
+    }
+
+    public function getListProduct()
+    {
+        return view('admin.list_product');
+    }
+
+    public function getListOrder()
+    {
+        return view('admin.list_order');
+    }
 }
