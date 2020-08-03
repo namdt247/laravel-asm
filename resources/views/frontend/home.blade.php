@@ -418,11 +418,11 @@
                                                                                     <div class="product-description">
                                                                                         <div class="comments_note">
                                                                                             <div class="star_content clearfix">
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                             </div>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
@@ -478,13 +478,12 @@
                                                                                     <div class="product-description">
                                                                                         <div class="comments_note">
                                                                                             <div class="star_content clearfix">
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star"></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
                                                                                             </div>
-                                                                                            <span>%s Review(s)&nbsp;</span>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
                                                                                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm">Suspendisse Massa Nullaqm vulputate dictum</a>
@@ -541,13 +540,12 @@
                                                                                     <div class="product-description">
                                                                                         <div class="comments_note">
                                                                                             <div class="star_content clearfix">
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star"></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
                                                                                             </div>
-                                                                                            <span>%s Review(s)&nbsp;</span>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
                                                                                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow">Justo Neque Commodo Pellentesque augue justo</a>
@@ -601,13 +599,12 @@
                                                                                     <div class="product-description">
                                                                                         <div class="comments_note">
                                                                                             <div class="star_content clearfix">
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star"></div>
-                                                                                                <div class="star"></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
                                                                                             </div>
-                                                                                            <span>%s Review(s)&nbsp;</span>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
                                                                                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige">Suspendisse PotentiSed atant Mauris eleifend</a>
@@ -655,11 +652,11 @@
                                                                                     <div class="product-description">
                                                                                         <div class="comments_note">
                                                                                             <div class="star_content clearfix">
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star star_on"></div>
-                                                                                                <div class="star"></div>
-                                                                                                <div class="star"></div>
-                                                                                                <div class="star"></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
+                                                                                                <div class="star"><i class="fa fa-star"></i></div>
                                                                                             </div>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name"><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm">Tellus Eu Volutpat VariusCurabitur sit amet era</a></span>
@@ -1047,13 +1044,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1158,13 +1154,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1285,13 +1280,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1415,13 +1409,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1531,13 +1524,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1664,13 +1656,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -1777,11 +1768,11 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
                                                                                         <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
@@ -1877,11 +1868,11 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                         </div>
                                                                                         <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
@@ -2007,13 +1998,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -2136,13 +2126,12 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
                                                                                     <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
@@ -2265,17 +2254,13 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star star_on"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
-                                                                                    <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                    <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
                                                                                     <span class="h3 product-title" itemprop="name">
                                                         <a
                                                                 href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
@@ -2602,11 +2587,7 @@
                                                                                             <div class="star star_on"></div>
                                                                                             <div class="star star_on"></div>
                                                                                         </div>
-                                                                                        <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
-                                                                                    <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                    <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
                                                                                     <span class="h3 product-title" itemprop="name">
                                                         <a
                                                                 href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
@@ -2704,11 +2685,11 @@
                                                                                     <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
                                                                                     <div class="comments_note">
                                                                                         <div class="star_content clearfix">
-                                                                                            <div class="star"></div>
-                                                                                            <div class="star"></div>
-                                                                                            <div class="star"></div>
-                                                                                            <div class="star"></div>
-                                                                                            <div class="star"></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
+                                                                                            <div class="star"><i class="fa fa-star"></i></div>
                                                                                         </div>
                                                                                         <span>%s Review(s)&nbsp;</span>
                                                                                     </div>
