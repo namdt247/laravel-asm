@@ -630,9 +630,9 @@ pre code {
     overflow-y: scroll;
 }
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 !important;
 }
 .container::after {
     content: "";
@@ -7463,19 +7463,7 @@ body#checkout #gift_message {
     border-radius: 5px;
     -webkit-border-radius: 5px;
 }
-.product-title a {
-    color: #000;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    line-height: 20px;
-    text-align: left;
-    text-transform: none;
-    float: left;
-    overflow: hidden;
-    text-decoration: none;
-    width: 100%;
-}
+
 .special-products .product-title a {
     font-size: 16px;
     line-height: 25px;
@@ -9035,17 +9023,6 @@ li:hover .product-flags {
 .product-unit-price {
     font-size: 0.8125rem;
     margin-bottom: 0;
-}
-.tabs {
-    margin-top: 0;
-}
-.tabs .tab-pane {
-    padding: 15px 30px 10px;
-    border: 1px solid #f5f5f5;
-    background: #f5f5f5;
-    margin-top: 0;
-    border-radius: 0 0 5px 5px;
-    -webkit-border-radius: 0 0 5px 5px;
 }
 .product-tabcontent .tabs .tab-pane {
     width: 100%;
@@ -11152,23 +11129,12 @@ li.cart-item:last-child {
     width: 100%;
     padding-bottom: 8px;
 }
-#block-contact_list li .contactdiv {
-    display: inline-block;
-    float: right;
-    padding-left: 0;
-    line-height: 25px;
-    width: 85%;
-}
 
 #block-contact_list i {
     color: #febd69;
     float: left;
     font-size: 20px;
     margin-top: 5px;
-}
-#block-contact_list li .contactdiv {
-    display: block;
-    padding-left: 0;
 }
 #block-contact_list li span {
     font-size: 13px;
@@ -11187,8 +11153,12 @@ li.cart-item:last-child {
     letter-spacing: 0.5px;
     text-transform: capitalize;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 0;
     margin-top: 5px;
+    padding-left: 5px;
+    display: inline-block;
+    float: right;
+    width: 85%;
 }
 #block-contact_list .email a {
     margin-left: 40px;
@@ -13166,12 +13136,6 @@ li.cart-item:last-child {
     }
     .tmcms2 .main-content .cms-block .subbutton {
         padding-top: 20px;
-    }
-    #block-contact_list li .contactdiv {
-        margin-left: 40px;
-    }
-    #block-contact_list li .contactdiv {
-        float: left;
     }
     #_desktop_user_info {
         width: auto;
