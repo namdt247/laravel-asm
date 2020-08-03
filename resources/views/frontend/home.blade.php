@@ -8,34 +8,13 @@
     <link rel="stylesheet" href="{{asset('Admin/plugins/fontawesome-free/css/v4-shims.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/refresh_style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/frontend/carousel_home.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/content_home.css')}}">
     <link rel="stylesheet" href="{{asset('Admin/plugins/bootstrap/css/bootstrap.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <script src="{{asset('Admin/plugins/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('Admin/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-    <script>
-        jQuery(document).ready(function() {
-            $('#carousel-example').on('slide.bs.carousel', function (e) {
-                var $e = $(e.relatedTarget);
-                var idx = $e.index();
-                var itemsPerSlide = 5;
-                var totalItems = $('.carousel-item').length;
-
-                if (idx >= totalItems-(itemsPerSlide-1)) {
-                    var it = itemsPerSlide - (totalItems - idx);
-                    for (var i=0; i<it; i++) {
-                        // append slides to end
-                        if (e.direction=="left") {
-                            $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                        }
-                        else {
-                            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="{{asset('js/carousel_home.js')}}"></script>
 </head>
 <body>
     <main>
@@ -104,11 +83,11 @@
                             </a>
                         </div>
 
-                        <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
+                        <div id="search_widget" class="search-widget">
                             <span class="search_button"></span>
                             <div class="searchtoggle">
 
-                                <form method="get" action="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
+                                <form method="get" >
                                     <input type="hidden" name="controller" value="search">
                                     <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="s" value="" placeholder="Serach Product here..." aria-label="Search" class="ui-autocomplete-input" autocomplete="off">
                                     <button type="submit">
@@ -330,52 +309,25 @@
         <aside id="notifications"></aside>
         <section id="wrapper">
             <div class="topdiv">
-                <div class="flexslider" data-interval="3000" data-pause="true">
-                    <div class="loadingdiv"></div>
-                    <ul class="slides">
-                        <li class="slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" data-thumb-alt="">
-                            <a href="#" title="sample-1">
-                                <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-1.jpg" alt="sample-1" title="Sample 1" draggable="false">
-                            </a>
-                        </li>
-                        <li class="slide flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" data-thumb-alt="">
-                            <a href="#" title="sample-2">
-                                <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-2.jpg" alt="sample-2" title="Sample 2" draggable="false">
-                            </a>
-                        </li>
-                    </ul>
-                    <ol class="flex-control-nav flex-control-paging">
-                        <li>
-                            <a href="#" class="">1</a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex-active">2</a>
-                        </li>
-                    </ol>
-                    <ul class="flex-direction-nav">
-                        <li class="flex-nav-prev">
-                            <a class="flex-prev" href="#">Previous</a>
-                        </li>
-                        <li class="flex-nav-next">
-                            <a class="flex-next" href="#">Next</a>
-                        </li>
-                    </ul>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-wrap="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-1.jpg" alt="First slide" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://prestashop.templatemela.com/PRSADD11/PRS273/modules/tm_imageslider/views/img/sample-2.jpg" alt="Second slide" />
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="font-size: 30px;color: #000;">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="font-size: 30px;color: #000;">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
             <div class="container">
                 <div id="columns_inner">
-{{--                    <nav data-depth="1" class="breadcrumb hidden-sm-down">--}}
-{{--                        <div class="container">--}}
-{{--                            <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">--}}
-{{--                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">--}}
-{{--                                    <a itemprop="item" href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php">--}}
-{{--                                        <span itemprop="name">Home</span>--}}
-{{--                                    </a>--}}
-{{--                                    <meta itemprop="position" content="1">--}}
-{{--                                </li>--}}
-{{--                            </ol>--}}
-{{--                        </div>--}}
-{{--                    </nav>--}}
                     <div id="content-wrapper">
                         <section id="main">
 
@@ -393,7 +345,7 @@
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a href="#" class="btn btn-primary">shop now</a>
+                                                        <a href="#" class="btn ">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -409,7 +361,7 @@
                                                     <div class="cms_offer">New Lighting</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a href="#" class="btn btn-primary">shop now</a>
+                                                        <a href="#" class="btn ">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -441,13 +393,13 @@
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tm_productinner tab-pane active" id="featureProduct">
-                                                <section class="featured-products clearfix" id="featureProduct">
+                                                <section class="featured-products clearfix">
                                                     <div id="spe_res">
                                                         <div class="products">
                                                             <ul id="feature-carousel" class="tm-carousel product_list owl-carousel owl-theme" style="opacity: 1; display: block;">
                                                                 <div class="owl-wrapper-outer">
-                                                                    <div class="owl-wrapper" style="width: 4544px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                                                        <div class="owl-item first" style="width: 284px;">
+                                                                    <div class="owl-wrapper" style="width: auto; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                                                                        <div class="owl-item first">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -472,7 +424,6 @@
                                                                                                 <div class="star star_on"></div>
                                                                                                 <div class="star star_on"></div>
                                                                                             </div>
-                                                                                            <span>%s Review(s)&nbsp;</span>
                                                                                         </div>
                                                                                         <span class="h3 product-title" itemprop="name">
                                                                                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white">Curabitur Dolor NuncPellentesque augue</a>
@@ -488,7 +439,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="1" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart</button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -507,7 +458,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="2" data-id-product-attribute="48" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -549,7 +500,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="2" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart </button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart </button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -574,7 +525,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="3" data-id-product-attribute="72" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -610,7 +561,7 @@
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
                                                                                                 <input type="hidden" name="id_product" value="3" class="product_page_product_id">
                                                                                                 <input type="hidden" name="id_customization" value="0" class="product_customization_id">
-                                                                                                <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">Add to cart </button>
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart </button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
@@ -635,7 +586,7 @@
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item" style="width: 284px;">
+                                                                        <div class="owl-item">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="4" data-id-product-attribute="76" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
@@ -668,27 +619,75 @@
                                                                                         <div class="product-actions-main">
                                                                                             <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
                                                                                                 <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
-                                                                                                <input type="hidden" name="id_product" value="4" class="product_page_product_id">
-                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">Add to cart </button>
+                                                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id">
+                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                             </form>
                                                                                             <a class="quick-view" href="#" data-link-action="quickview"></a>
                                                                                         </div>
                                                                                         <div class="highlighted-informations hidden-sm-down">
-                                                                                            <div class="variant-links"></div>
+                                                                                            <div class="variant-links">
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff">
+                                                                                                    <span class="sr-only">White</span>
+                                                                                                </a>
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54">
+                                                                                                    <span class="sr-only">Black</span>
+                                                                                                </a>
+                                                                                                <span class="js-count count"></span>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </article>
                                                                             </li>
                                                                         </div>
-                                                                        <div class="owl-item last" style="width: 284px;">
+                                                                        <div class="owl-item last">
                                                                             <li class="item">
                                                                                 <article class="product-miniature js-product-miniature" data-id-product="5" data-id-product-attribute="87" itemscope="" itemtype="http://schema.org/Product">
                                                                                     <div class="thumbnail-container">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm" class="thumbnail product-thumbnail">
                                                                                             <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-home_default.jpg" alt="Tellus Eu Volutpat VariusCurabitur sit amet era" data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-large_default.jpg">
+                                                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-home_default.jpg" data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-large_default.jpg" alt="">
                                                                                         </a>
+                                                                                        <ul class="product-flags">
+                                                                                            <li class="new">New</li>
+                                                                                        </ul>
                                                                                     </div>
-                                                                                    <div class="product-description"></div>
+                                                                                    <div class="product-description">
+                                                                                        <div class="comments_note">
+                                                                                            <div class="star_content clearfix">
+                                                                                                <div class="star star_on"></div>
+                                                                                                <div class="star star_on"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                                <div class="star"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <span class="h3 product-title" itemprop="name"><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm">Tellus Eu Volutpat VariusCurabitur sit amet era</a></span>
+                                                                                        <div class="product-price-and-shipping">
+                                                                                            <span class="sr-only">Price</span>
+                                                                                            <span itemprop="price" class="price">$29.00</span>
+                                                                                        </div>
+                                                                                        <div class="product-actions-main">
+                                                                                            <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
+                                                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c">
+                                                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id">
+                                                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id">
+                                                                                                <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
+                                                                                            </form>
+                                                                                            <a class="quick-view" href="#" data-link-action="quickview"></a>
+                                                                                        </div>
+                                                                                        <div class="highlighted-informations hidden-sm-down">
+                                                                                            <div class="variant-links">
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white" class="color" title="White" style="background-color: #ffffff">
+                                                                                                    <span class="sr-only">White</span>
+                                                                                                </a>
+                                                                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black" class="color" title="Black" style="background-color: #434A54">
+                                                                                                    <span class="sr-only">Black</span>
+                                                                                                </a>
+                                                                                                <span class="js-count count"></span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </article>
                                                                             </li>
                                                                         </div>
@@ -696,6 +695,10 @@
                                                                 </div>
                                                             </ul>
                                                         </div>
+                                                    </div>
+                                                    <div class="customNavigation">
+                                                        <a class="btn prev brand_prev carousel-control-prev" href="#" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                                        <a class="btn next brand_next carousel-control-next" href="#" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                                     </div>
                                                 </section>
                                             </div>
@@ -715,7 +718,7 @@
                                                     <div class="cms_offer">Home Decor Collection</div>
                                                     <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a class="btn " href="#">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -727,18 +730,17 @@
                                         <div class="tmcategorylist">
                                             <div class="tmcategory-container container hb-animate-element left-to-right">
                                                 <div class="row">
-                                                    <h2 class="products-section-title">Shop by department</h2>
+                                                    <h2 class="h1 products-section-title">Shop by department</h2>
                                                     <div class="menu-title">choose what you looking for</div>
-
                                                     <div class="customNavigation">
-                                                        <a class="btn prev cat_prev">&nbsp;</a>
-                                                        <a class="btn next cat_next">&nbsp;</a>
+                                                        <a class="carousel-control-prev" href="#tmcategorylist-carousel" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                                        <a class="carousel-control-next" href="#tmcategorylist-carousel" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                                     </div>
 
-                                                    <ul id="tmcategorylist-carousel" class="tm-carousel product_list product_slider_grid owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                                    <ul id="tmcategorylist-carousel" class="carousel slide tm-carousel product_list product_slider_grid owl-carousel owl-theme" data-ride="carousel">
                                                         <div class="owl-wrapper-outer">
-                                                            <div class="owl-wrapper" style="width: 2682px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                                                <div class="owl-item first" style="width: 149px;">
+                                                            <div class="owl-wrapper carousel-inner row w-100 mx-auto">
+                                                                <div class="owl-item carousel-item active">
                                                                     <li>
                                                                         <div class="categoryblock0 categoryblock item">
                                                                             <div class="block_content">
@@ -754,23 +756,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=3&amp;controller=category&amp;id_lang=1">furniture </a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=4&amp;controller=category&amp;id_lang=1">Men</a>,</li>
-                                                                                        <li><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=5&amp;controller=category&amp;id_lang=1">Women</a>,</li>
-                                                                                        <li><a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=10&amp;controller=category&amp;id_lang=1">kids</a>,</li>
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=3&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock1 categoryblock item">
                                                                             <div class="block_content">
@@ -786,20 +777,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=6&amp;controller=category&amp;id_lang=1">Accessories</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=6&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock2 categoryblock item">
                                                                             <div class="block_content">
@@ -815,20 +798,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=9&amp;controller=category&amp;id_lang=1">Sports Shoes</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=9&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock3 categoryblock item">
                                                                             <div class="block_content">
@@ -844,20 +819,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=7&amp;controller=category&amp;id_lang=1">Eyewear</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=7&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock4 categoryblock item">
                                                                             <div class="block_content">
@@ -873,20 +840,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=8&amp;controller=category&amp;id_lang=1">Footwear</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=8&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock5 categoryblock item">
                                                                             <div class="block_content">
@@ -902,20 +861,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=20&amp;controller=category&amp;id_lang=1">Electronics</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=20&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock6 categoryblock item">
                                                                             <div class="block_content">
@@ -931,20 +882,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=21&amp;controller=category&amp;id_lang=1">Smartphones</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=21&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item last" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock7 categoryblock item">
                                                                             <div class="block_content">
@@ -960,20 +903,12 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=22&amp;controller=category&amp;id_lang=1">Televison</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=22&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </li>
                                                                 </div>
-                                                                <div class="owl-item" style="width: 149px;">
+                                                                <div class="owl-item carousel-item">
                                                                     <li>
                                                                         <div class="categoryblock8 categoryblock item">
                                                                             <div class="block_content">
@@ -989,14 +924,6 @@
                                                                                     <div class="cate-heading">
                                                                                         <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=23&amp;controller=category&amp;id_lang=1">digital camera</a>
                                                                                     </div>
-                                                                                    <ul class="subcategory">
-                                                                                        <li>
-                                                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_category=23&amp;controller=category&amp;id_lang=1"> View all</a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <div class="cate-description">
-                                                                                    <p>Nunc gavida nisl utrices loborti molis temp tempor quam congue turpis sed psum blandit donec vitae laoreet vestibulum...</p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1017,1456 +944,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="special-banner" id="special">
-                                    <div class="container">
-                                        <div class="special-banner-inner"></div>
-
-                                        <section class="special-products">
-                                            <div class="special_inner">
-                                                <h1 class="products-section-title text-uppercase">Deal of the day</h1>
-                                                <div id="spe_res">
-                                                    <div class="products">
-                                                        <!-- Define Number of product for SLIDER -->
-                                                        <div class="product-carousel">
-                                                            <ul id="special-carousel" class="tm-carousel product_list owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                                                <div class="owl-wrapper-outer">
-                                                                    <div class="owl-wrapper" style="width: 9520px; left: 0px; display: block;">
-                                                                        <div class="owl-item first" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="21" data-id-product-attribute="566" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/4/8/148-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/4/8/148-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/3/153-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/3/153-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/4/154-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/4/154-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/5/155-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/5/155-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/6/156-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/6/156-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/7/157-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/7/157-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=21&amp;id_product_attribute=566&amp;rewrite=mountain-fox-notebook&amp;controller=product&amp;id_lang=1#/1-size-s/10-color-red/19-dimension-40x60cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/4/8/148-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/4/8/148-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-20%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=21&amp;id_product_attribute=566&amp;rewrite=mountain-fox-notebook&amp;controller=product&amp;id_lang=1#/1-size-s/10-color-red/19-dimension-40x60cm"
-                                                                        title="Venkash Foramationdi"
-                                                                >
-                                                                    Venkash Foramationdi
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$64.24</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$80.30</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <!-- begin modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-                                                                                            <div class="psproductcountdown buttons_bottom_block" data-to="1614488400000">
-                                                                                                <div class="pspc-main days-diff-209 weeks-diff-29">
-                                                                                                    <div class="time days flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">209</span><span class="count next bottom">209</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">days</span>
-                                                                                                    </div>
-                                                                                                    <div class="time hours flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">15</span><span class="count next bottom">15</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">hours</span>
-                                                                                                    </div>
-                                                                                                    <div class="time minutes flip">
-                                                                                                        <span class="count curr top">15</span><span class="count next top">14</span><span class="count next bottom">14</span><span class="count curr bottom">15</span>
-                                                                                                        <span class="label">min</span>
-                                                                                                    </div>
-                                                                                                    <div class="time seconds flip">
-                                                                                                        <span class="count curr top">40</span><span class="count next top">39</span><span class="count next bottom">39</span><span class="count curr bottom">40</span>
-                                                                                                        <span class="label">sec</span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <input type="hidden" class="pspc-checker" />
-                                                                                            </div>
-                                                                                            <!-- end modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="21" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item last" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="7" data-id-product-attribute="111" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/9/69-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/9/69-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/0/70-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/0/70-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/1/71-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/1/71-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/2/72-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/2/72-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-7%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                        title="Arcu Vitae Imperdiet Facilisisconsectetur adipiscing"
-                                                                >
-                                                                    Arcu Vitae Imperdiet Facilisisconsectetur adipiscing
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$60.45</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$65.00</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <!-- begin modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-                                                                                            <div class="psproductcountdown buttons_bottom_block" data-to="1614488400000">
-                                                                                                <div class="pspc-main days-diff-209 weeks-diff-29">
-                                                                                                    <div class="time days flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">209</span><span class="count next bottom">209</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">days</span>
-                                                                                                    </div>
-                                                                                                    <div class="time hours flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">15</span><span class="count next bottom">15</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">hours</span>
-                                                                                                    </div>
-                                                                                                    <div class="time minutes flip">
-                                                                                                        <span class="count curr top">15</span><span class="count next top">14</span><span class="count next bottom">14</span><span class="count curr bottom">15</span>
-                                                                                                        <span class="label">min</span>
-                                                                                                    </div>
-                                                                                                    <div class="time seconds flip">
-                                                                                                        <span class="count curr top">40</span><span class="count next top">39</span><span class="count next bottom">39</span><span class="count curr bottom">40</span>
-                                                                                                        <span class="label">sec</span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <input type="hidden" class="pspc-checker" />
-                                                                                            </div>
-                                                                                            <!-- end modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="7" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="27" data-id-product-attribute="665" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/8/178-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/8/178-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/8/188-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/8/188-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/9/189-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/9/189-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/0/190-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/0/190-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/1/191-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/1/191-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/2/192-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/2/192-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=27&amp;id_product_attribute=665&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/8/178-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/8/178-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-7%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=27&amp;id_product_attribute=665&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                        title="Vitae Arcu Imperdietaliquam risus rutrum interdum"
-                                                                >
-                                                                    Vitae Arcu Imperdietaliquam risus rutrum interdum
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$60.45</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$65.00</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <!-- begin modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-                                                                                            <div class="psproductcountdown buttons_bottom_block" data-to="1614488400000">
-                                                                                                <div class="pspc-main days-diff-209 weeks-diff-29">
-                                                                                                    <div class="time days flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">209</span><span class="count next bottom">209</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">days</span>
-                                                                                                    </div>
-                                                                                                    <div class="time hours flip">
-                                                                                                        <span class="count curr top">00</span><span class="count next top">15</span><span class="count next bottom">15</span><span class="count curr bottom">00</span>
-                                                                                                        <span class="label">hours</span>
-                                                                                                    </div>
-                                                                                                    <div class="time minutes flip">
-                                                                                                        <span class="count curr top">15</span><span class="count next top">14</span><span class="count next bottom">14</span><span class="count curr bottom">15</span>
-                                                                                                        <span class="label">min</span>
-                                                                                                    </div>
-                                                                                                    <div class="time seconds flip">
-                                                                                                        <span class="count curr top">40</span><span class="count next top">39</span><span class="count next bottom">39</span><span class="count curr bottom">40</span>
-                                                                                                        <span class="label">sec</span>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <input type="hidden" class="pspc-checker" />
-                                                                                            </div>
-                                                                                            <!-- end modules/psproductcountdown/views/templates/hook/psproductcountdown.tpl -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="27" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="10" data-id-product-attribute="157" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/4/84-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/4/84-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/5/85-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/5/85-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/6/86-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/6/86-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/7/87-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/7/87-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="online-only">Online only</li>
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-12%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                        title="Nascetur ridiculus muscursus dictum risusrte"
-                                                                >
-                                                                    Nascetur ridiculus muscursus dictum risusrte
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$56.19</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$63.85</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="25" data-id-product-attribute="629" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/2/152-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/2/152-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/3/173-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/3/173-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/4/174-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/4/174-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/5/175-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/5/175-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/6/176-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/6/176-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/7/177-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/7/7/177-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=25&amp;id_product_attribute=629&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/2/152-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/5/2/152-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="online-only">Online only</li>
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-12%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=25&amp;id_product_attribute=629&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                        title="Ridiculus Mus NasceturPellentesque augue justo"
-                                                                >
-                                                                    Ridiculus Mus NasceturPellentesque augue justo
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$56.19</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$63.85</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="25" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="11" data-id-product-attribute="178" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/8/88-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/8/88-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/3/93-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/3/93-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/4/94-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/4/94-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/5/95-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/5/95-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/6/96-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/6/96-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/7/97-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/7/97-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=11&amp;id_product_attribute=178&amp;rewrite=hummingbird-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white/21-dimension-80x120cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/8/88-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/8/88-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="online-only">Online only</li>
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-12%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=11&amp;id_product_attribute=178&amp;rewrite=hummingbird-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white/21-dimension-80x120cm"
-                                                                        title="Integer Tempor Lacus Pellentesque augue justo"
-                                                                >
-                                                                    Integer Tempor Lacus Pellentesque augue justo
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$48.84</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$55.50</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="11" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="2" data-id-product-attribute="48" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/8/38-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/8/38-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/9/39-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/9/39-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/0/40-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/0/40-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/1/41-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/1/41-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="online-only">Online only</li>
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-20%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
-                                                                        title="Suspendisse Massa Nullaqm vulputate dictum"
-                                                                >
-                                                                    Suspendisse Massa Nullaqm vulputate dictum
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star star_on"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$28.72</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$35.90</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="2" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                        <div class="owl-item" style="width: 595px;">
-                                                                            <li class="item">
-                                                                                <div class="product-miniature1 js-product-miniature" data-id-product="29" data-id-product-attribute="707" itemscope="" itemtype="http://schema.org/Product">
-                                                                                    <div class="image-block_slider">
-                                                                                        <aside id="thumbnails" class="thumbnails js-thumbnails text-xs-center">
-                                                                                            <div class="js-modal-mask mask">
-                                                                                                <ul class="product-images js-modal-product-images">
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/1/181-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/1/181-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/8/198-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/8/198-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/9/199-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/9/9/199-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/0/200-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/0/200-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/1/201-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/1/201-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                    <li class="thumb-container">
-                                                                                                        <img
-                                                                                                                data-image-large-src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/2/202-large_default.jpg"
-                                                                                                                class="thumb js-modal-thumb"
-                                                                                                                src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/0/2/202-home_default.jpg"
-                                                                                                                alt=""
-                                                                                                                title=""
-                                                                                                                width="256"
-                                                                                                                itemprop="image"
-                                                                                                        />
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-
-                                                                                            <div class="arrows js-modal-arrows">
-                                                                                                <i class="material-icons arrow-up js-modal-arrow-up"></i>
-                                                                                                <i class="material-icons arrow-down js-modal-arrow-down"></i>
-                                                                                            </div>
-                                                                                        </aside>
-                                                                                    </div>
-
-                                                                                    <div class="thumbnail-container col-sm-12 col-md-5">
-                                                                                        <div class="special_block">
-                                                                                            <div class="image-block">
-                                                                                                <a
-                                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=29&amp;id_product_attribute=707&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
-                                                                                                        class="thumbnail product-thumbnail"
-                                                                                                >
-                                                                                                    <img
-                                                                                                            class="primary-image js-modal-product-cover product-cover-modal"
-                                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/1/181-home_default.jpg"
-                                                                                                            alt=""
-                                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/8/1/181-large_default.jpg"
-                                                                                                            title=""
-                                                                                                    />
-                                                                                                </a>
-                                                                                            </div>
-
-                                                                                            <ul class="product-flags">
-                                                                                                <li class="online-only">Online only</li>
-                                                                                                <li class="on-sale">On sale!</li>
-                                                                                                <li class="new">New</li>
-                                                                                            </ul>
-
-                                                                                            <div class="discount_type_flag">
-                                                                                                <span class="discount-percentage">-20%</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="product-description col-sm-12 col-md-7">
-                                                            <span class="h3 product-title" itemprop="name">
-                                                                <a
-                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=29&amp;id_product_attribute=707&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
-                                                                        title="Massa Suspendisselibero Incursus dictum risus"
-                                                                >
-                                                                    Massa Suspendisselibero Incursus dictum risus
-                                                                </a>
-                                                            </span>
-
-                                                                                            <!-- begin module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- begin /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <div class="comments_note">
-                                                                                                <div class="star_content clearfix">
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                    <div class="star"></div>
-                                                                                                </div>
-                                                                                                <span>%s Review(s)&nbsp;</span>
-                                                                                            </div>
-                                                                                            <!-- end /var/www/html/PRSADD11/PRS273/modules/productcomments/views/templates/front/productcomments_reviews.tpl -->
-                                                                                            <!-- end module:productcomments/views/templates/front/productcomments_reviews.tpl -->
-
-                                                                                            <div class="product-price-and-shipping">
-                                                                                                <span itemprop="price" class="price">$28.72</span>
-
-                                                                                                <span class="sr-only">Regular price</span>
-                                                                                                <span class="regular-price">$35.90</span>
-                                                                                            </div>
-
-                                                                                            <div class="product-detail" itemprop="description">
-                                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget...</p>
-                                                                                            </div>
-
-                                                                                            <!-- <div id="product-description-offer">Hurry Up! Offer Ends in:</div> -->
-
-                                                                                            <div class="product-actions-main">
-                                                                                                <form action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=cart" method="post" class="add-to-cart-or-refresh">
-                                                                                                    <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                                                    <input type="hidden" name="id_product" value="29" class="product_page_product_id" />
-                                                                                                    <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                                    <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit" title="Add to cart">
-                                                                                                        Add to cart
-                                                                                                    </button>
-                                                                                                </form>
-
-                                                                                                <a href="#" class="quick-view" data-link-action="quickview">
-                                                                                                    <!-- <i class="material-icons search">&#xE417;</i> -->
-                                                                                                    <!-- Quick view -->
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </li>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="owl-controls clickable">
-                                                                    <div class="owl-pagination">
-                                                                        <div class="owl-page active"><span class=""></span></div>
-                                                                        <div class="owl-page"><span class=""></span></div>
-                                                                        <div class="owl-page"><span class=""></span></div>
-                                                                        <div class="owl-page"><span class=""></span></div>
-                                                                    </div>
-                                                                </div>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="customNavigation">
-                                                        <a class="btn prev special_prev"></a>
-                                                        <a class="btn next special_next"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
                                 <div id="tmcmsblock">
                                     <div id="tmcmsbanner">
                                         <div class="first-content main-content">
@@ -2480,7 +957,7 @@
                                                     <div class="cms_offer">Latest Rest Chair</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
                                                     <div class="subbutton">
-                                                        <a class="btn btn-primary" href="#">shop now</a>
+                                                        <a class="btn " href="#">shop now</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2493,7 +970,7 @@
                                                 <div class="cms-block">
                                                     <div class="cms_offer">New Drover Table</div>
                                                     <div class="cms_offer1">Now in all Color Varient Available..</div>
-                                                    <div class="subbutton"><a class="btn btn-primary" href="#">shop now</a></div>
+                                                    <div class="subbutton"><a class="btn " href="#">shop now</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -2604,8 +1081,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2715,8 +1192,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="2" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2842,8 +1319,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -2967,8 +1444,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="3" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3083,8 +1560,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="4" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3221,8 +1698,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="7" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3329,8 +1806,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="6" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3429,8 +1906,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="8" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3564,8 +2041,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="10" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3688,8 +2165,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="9" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3817,8 +2294,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="3" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn  add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -3933,9 +2410,7 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="4" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
-                                                                                            </button>
+                                                                                            <button class="btn add-to-cart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart</button>
                                                                                         </form>
 
                                                                                         <a class="quick-view" href="#" data-link-action="quickview">
@@ -4041,8 +2516,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="5" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4150,8 +2625,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="12" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4258,8 +2733,8 @@
                                                                                             <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
                                                                                             <input type="hidden" name="id_product" value="13" class="product_page_product_id" />
                                                                                             <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                                            <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                                                                Add to cart
+                                                                                            <button class="btn add-to-cart" data-button-action="add-to-cart" type="submit">
+                                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Add to cart
                                                                                             </button>
                                                                                         </form>
 
@@ -4317,266 +2792,160 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="lastest_block block tmblog-latest container">
+
+                                <div class="lastest_block block tmblog-latest container" id="blog_home">
                                     <div class="blog_title">
                                         <h2 class="products-section-title text-uppercase">from the Blog</h2>
-                                        <div id="spe_res">
-                                            <div class="homeblog-inner">
-{{--                                                <div class="customNavigation">--}}
-{{--                                                    <a class="btn prev blog_prev" href="#blog-carousel" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
-{{--                                                    <a class="btn next blog_next" href="#blog-carousel" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
-{{--                                                </div>--}}
-{{--                                                <ul id="blog-carousel" class="carousel slide clearfix" data-ride="carousel">--}}
-{{--                                                    <div class="carousel-inner row w-100 mx-auto">--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6 active">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img1">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img2">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6 ">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="carousel-item col-12 col-sm-6">--}}
-{{--                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">--}}
-{{--                                                        </div>--}}
-                                                <div id="carousel-example" class="carousel slide" data-ride="carousel">
-                                                    <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block active">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto" alt="img1">
+                                        <div class="customNavigation">
+                                            <a class="carousel-control-prev" href="#blog-carousel" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                            <a class="carousel-control-next" href="#blog-carousel" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                    <div id="spe_res">
+                                        <div class="homeblog-inner">
+                                            <ul id="blog-carousel" class="carousel slide product_list owl-carousel owl-theme" data-ride="carousel">
+                                                <div class="owl-wrapper-outer" style="margin-bottom: 60px;">
+                                                    <div class="owl-wrapper carousel-inner row w-100 mx-auto">
+                                                        <div class="owl-item carousel-item active">
+                                                            <li class="blog-post item">
+                                                                <div class="blog-item">
+                                                                    <div class="blog-image text-xs-center">
+                                                                        <a href="#" title="" class="link">
+                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="blog-content-wrap">
+                                                                        <h4 class="title">
+                                                                            <a href="#">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                        </h4>
+                                                                        <div class="blog-shortinfo">
+                                                                            Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block">
-                                                            <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto" alt="img2">
+                                                        <div class="owl-item carousel-item">
+                                                            <li class="blog-post item">
+                                                                <div class="blog-item">
+                                                                    <div class="blog-image text-xs-center">
+                                                                        <a href="#" title="" class="link">
+                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="blog-content-wrap">
+                                                                        <h4 class="title">
+                                                                            <a href="#">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                        </h4>
+                                                                        <div class="blog-shortinfo">
+                                                                            Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">
+                                                        <div class="owl-item carousel-item">
+                                                            <li class="blog-post item">
+                                                                <div class="blog-item">
+                                                                    <div class="blog-image text-xs-center">
+                                                                        <a href="#" title="" class="link">
+                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="blog-content-wrap">
+                                                                        <h4 class="title">
+                                                                            <a href="#">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                        </h4>
+                                                                        <div class="blog-shortinfo">
+                                                                            Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">
+                                                        <div class="owl-item carousel-item">
+                                                            <li class="blog-post item">
+                                                                <div class="blog-item">
+                                                                    <div class="blog-image text-xs-center">
+                                                                        <a href="#" title="" class="link">
+                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="blog-content-wrap">
+                                                                        <h4 class="title">
+                                                                            <a href="#">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                        </h4>
+                                                                        <div class="blog-shortinfo">
+                                                                            Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors4.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/donors5.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">
-                                                        </div>
-                                                        <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 d-block ">
-                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">
+                                                        <div class="owl-item carousel-item">
+                                                            <li class="blog-post item">
+                                                                <div class="blog-item">
+                                                                    <div class="blog-image text-xs-center">
+                                                                        <a href="#" title="" class="link">
+                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" class="img-fluid" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="blog-content-wrap">
+                                                                        <h4 class="title">
+                                                                            <a href="#">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>
+                                                                        </h4>
+                                                                        <div class="blog-shortinfo">
+                                                                            Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </div>
                                                     </div>
-                                                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
-                                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </a>
-                                                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
-                                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                        <span class="sr-only">Next</span>
-                                                    </a>
                                                 </div>
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-{{--                                                        <div class="owl-item carousel-item">--}}
-{{--                                                            <li class="blog-post item">--}}
-{{--                                                                <div class="blog-item">--}}
-{{--                                                                    <div class="blog-image text-xs-center">--}}
-{{--                                                                        <a href="#" title="" class="link">--}}
-{{--                                                                            <img src="{{asset('img/lg-b-5.jpg')}}" alt="Urna pretium elit mauris cursus Curabitur at elit Vestibulum" class="img-fluid">--}}
-{{--                                                                            <span class="post-image-hover"></span>--}}
-{{--                                                                        </a>--}}
-{{--                                                                    </div>--}}
-{{--                                                                    <div class="blog-content-wrap">--}}
-{{--                                                                        <h4 class="title">--}}
-{{--                                                                            <a href="" title="">Urna pretium elit mauris cursus Curabitur at elit Vestibulum</a>--}}
-{{--                                                                        </h4>--}}
-{{--                                                                        <div class="blog-shortinfo">Mi vitae magnis Fusce laoreet nibh felis porttitor laoreet Vestibulum...</div>--}}
-{{--                                                                    </div>--}}
-{{--                                                                </div>--}}
-{{--                                                            </li>--}}
-{{--                                                        </div>--}}
-                                                    </div>
-{{--                                                </ul>--}}
-{{--                                            </div>--}}
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </section>
-{{--                            <section class="brands container">--}}
-{{--                                <div id="spe_res">--}}
-{{--                                    <div class="products">--}}
-{{--                                        <div class="customNavigation">--}}
-{{--                                            <a class="btn prev brand_prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
-{{--                                            <a class="btn next brand_next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div id="brand-carousel_last" class="carousel slide tm-carousel product_list" data-ride="carousel" style="opacity: 1; display: block;">--}}
-{{--                                            <div class="carousel-inner row w-100 mx-auto" role="listbox">--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img2">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img3">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img4">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img5">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img6">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img7">--}}
-{{--                                                </div>--}}
-{{--                                                <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">--}}
-{{--                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block" alt="img8">--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </section>--}}
+                            <section class="brands container">
+                                <div id="spe_res">
+                                    <div class="products">
+                                        <div class="customNavigation">
+                                            <a class="btn prev brand_prev carousel-control-prev" href="#brand_carousel_last" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                            <a class="btn next brand_next carousel-control-next" href="#brand_carousel_last" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        </div>
+                                        <div id="brand_carousel_last" class="carousel slide tm-carousel product_list" data-ride="carousel">
+                                            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                                                <div class="carousel-item col-md-2 active">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors4.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors5.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors1.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors2.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                                <div class="carousel-item col-md-2 ">
+                                                    <img src="{{asset('img/donors3.jpg')}}" class="img-fluid mx-auto d-block">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </section>
                     </div>
                 </div>
@@ -4588,7 +2957,7 @@
                     <div class="row footer">
                         <div class="block-contact footer-block col-xs-12 col-sm-2 links wrapper hb-animate-element right-to-left" style="padding: 0 10px 0 0 !important;">
                             <h3 class="block-contact-title hidden-md-down">address</h3>
-                            <ul>
+                            <ul id="block-contact_list">
                                 <li>
                                     <a href="">
                                         <i class="fa fa-map-marked"></i>
@@ -4640,13 +3009,13 @@
                         </div>
                         <div class="links block_newsletter block col-sm-3" style="padding-left: 30px !important;">
                             <h3 class="block_title hidden-md-down">Đăng ký</h3>
-                            <div class="col-md-12 col-xs-12 block_content" id="block_email_toggle">
+                            <div class="col-md-12 block_content" id="block_email_toggle" style="padding: 0 !important;">
                                 <p class="text">Bạn có thể hủy đăng ký bất cứ lúc nào. Xin vui lòng tìm thông tin liên lạc của chúng tôi trong thông báo pháp lý.</p>
                                 <form >
                                     <div class="col-xs-12">
                                         <div class="input-wrapper">
                                             <input name="email" type="email" value="" placeholder="Nhập id" aria-labelledby="block-newsletter-label">
-                                            <button class="btn btn-primary pull-xs-right hidden-xs-down" name="submitNewsletter"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                            <button class="btn bg-white pull-xs-right hidden-xs-down" name="submitNewsletter"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                                             </button>
                                         </div>
                                         <div class="clearfix"></div>
