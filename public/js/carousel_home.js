@@ -1,14 +1,18 @@
 jQuery(document).ready(function() {
+    // setTimeout(function () {
+    //     $('#blog-carousel').carousel("pause");
+    // }, 200);
+
     $('#carouselExampleIndicators').carousel({
         interval: 6000,
         wrap: true,
         keyboard: true
     });
-
     $('#blog-carousel').carousel({
-        interval: 6000,
+        interval: false,
         wrap: true,
-        keyboard: true
+        keyboard: true,
+        pause: true
     });
     $('#blog-carousel').on('slide.bs.carousel', function (e) {
         var $e = $(e.relatedTarget);
