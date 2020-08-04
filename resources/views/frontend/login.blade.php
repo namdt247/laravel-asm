@@ -68,7 +68,7 @@
                                             </div>
                                         </div>
                                         <!-- end _partials/form-fields.tpl -->
-                                        <div class="forgot-password">
+                                        <div class="forgot-password" style="text-align: center; padding: 15px">
                                             <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=password"
                                                rel="nofollow">
                                                 Forgot your password?
@@ -87,7 +87,7 @@
                                 <!-- end customer/_partials/login-form.tpl -->
                             </section>
                             <hr>
-                            <div class="no-account">
+                            <div class="no-account" style="text-align: center; padding: 15px">
                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=authentication&amp;create_account=1"
                                    data-link-action="display-register-form">
                                     No account? Create one here
