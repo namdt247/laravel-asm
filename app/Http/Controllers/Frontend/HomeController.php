@@ -11,7 +11,6 @@ class HomeController extends Controller
         return view('frontend.home');
     }
 
-
     public function about()
     {
         return view('frontend.about_us');
@@ -25,6 +24,11 @@ class HomeController extends Controller
     public function faq()
     {
         return view('frontend.faq');
+    }
+
+    public function login()
+    {
+        return view('frontend.login');
     }
 
 }
