@@ -14,8 +14,12 @@
     <link rel="stylesheet" href="/Admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="/Admin/plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
-
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+        .ck-editor__editable {
+            min-height: 300px;
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini text-sm">
     <div class="wrapper">
@@ -38,10 +42,7 @@
     </div>
 
     <script src="/Admin/plugins/jquery/jquery.min.js"></script>
-    <script src="{{asset('Admin/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
+    <script src="/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/Admin/plugins/chart.js/Chart.min.js"></script>
     <script src="/Admin/plugins/sparklines/sparkline.js"></script>
@@ -51,6 +52,8 @@
     <script src="/Admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="/Admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <script src="/Admin/dist/js/adminlte.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
 
     @yield('main-script')
 </body>

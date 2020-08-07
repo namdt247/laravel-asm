@@ -15,23 +15,29 @@
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>Danh mục</p>
+                        <p>Bảng điều khiển</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-tags"></i>
-                        <p>Sản phẩm</p>
+                        <p>Quản lý người dùng</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link">
+                    <a href="{!! route('cate.list') !!}" class="nav-link">
+                        <i class="nav-icon fa fa-tags"></i>
+                        <p>Quản lý danh mục</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{!! route('product.list') !!}" class="nav-link">
                         <i class="nav-icon fa fa-list"></i>
-                        <p>Bộ sưu tập</p>
+                        <p>Quản lý sản phẩm</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link">
+                    <a href="{!! route('order.list') !!}" class="nav-link">
                         <i class="nav-icon fa fa-file"></i>
                         <p>Đơn hàng</p>
                     </a>
