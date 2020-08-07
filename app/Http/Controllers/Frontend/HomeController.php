@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('frontend.login');
     }
+    public function introduce()
+    {
+        return view('frontend.introduce');
+    }
 }

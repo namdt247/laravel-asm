@@ -10,9 +10,9 @@
 
 @section('main-content')
     <section id="wrapper">
-        <div class="container" style="max-width: 900px">
-            <div id="columns_inner" style="margin-top: 50px">
-                <nav data-depth="1" class="breadcrumb hidden-sm-down" style="width: 100%">
+        <div class="container">
+            <div id="columns_inner">
+                <nav data-depth="1" class="breadcrumb hidden-sm-down" style="width: 100%" >
                     <div class="container"><h1 class="h1">
                             Log in to your account
                         </h1>
@@ -85,7 +85,6 @@
                                 </form>
                                 <!-- end customer/_partials/login-form.tpl -->
                             </section>
-                            <hr>
                             <div class="no-account" style="text-align: center; padding: 15px">
                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=authentication&amp;create_account=1"
                                    data-link-action="display-register-form">
