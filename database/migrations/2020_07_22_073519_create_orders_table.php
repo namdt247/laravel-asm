@@ -15,14 +15,17 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('account_id');
+            $table->foreign('account_id')->references('id')->on('accounts');
             $table->string('od_code');
-            $table->string('od_name');
             $table->double('od_total_price');
-            $table->unsignedBigInteger('od_created_by');
-            $table->foreign('od_created_by')->references('id')->on('accounts');
+            $table->string('ship_name');
+            $table->string('ship_address');
+            $table->string('ship_email');
+            $table->string('ship_phone');
             $table->text('od_note');
-            $table->integer('od_status');
             $table->timestamps();
+            $table->integer('od_status');
         });
     }
 

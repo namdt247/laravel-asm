@@ -268,13 +268,12 @@
                 <div id="links_block_top" class="block links">
                     <h3 class="h3 title_block "><i class="material-icons"></i></h3>
                     <ul id="tm_toplink" class="block_content">
-                        <li><a href="#" title="today deal's">Đơn hôm nay</a></li>
-                        <li><a href="#" title="gift card">Thẻ quà tặng</a></li>
-                        <li><a href="#" title="subscribe">Đăng ký</a></li>
-                        <li><a href="#" title="buyer Protection">Bảo vệ người mua</a></li>
-                        <li><a href="#" title="portfolio">Danh mục đầu tư</a></li>
-                        <li><a href="#" title="Contacts">Liên lạc</a></li>
+                        <li><a href="#" title="today deal's">Hot deal</a></li>
+                        <li><a href="#" title="introduce">Giới thiệu</a></li>
+                        <li><a href="#" title="q&a">Câu hỏi thường gặp</a></li>
                         <li><a href="#" title="news">Tin tức</a></li>
+                        <li><a href="#" title="Contacts">Tuyển dụng</a></li>
+                        <li><a href="#" title="Contacts">Liên lạc</a></li>
                     </ul>
                 </div>
                 <div id="_desktop_cart">
