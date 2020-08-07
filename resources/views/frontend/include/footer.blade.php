@@ -38,8 +38,7 @@
                 <div class="col-md-2 links block links hb-animate-element top-to-bottom">
                     <h3 class="h3 hidden-md-down">Giới thiệu</h3>
                     <ul id="footer_sub_menu">
-                        <li><a>Giới thiệu</a></li>
-
+                        <li><a href="/">Giới thiệu</a></li>
                         <li><a>Thông báo</a></li>
                         <li><a>Sơ đồ</a></li>
                     </ul>

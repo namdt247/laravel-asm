@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/frontend/content_home.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @yield('link-header')
 </head>
 <body>
     <div id="header">

@@ -1,0 +1,45 @@
+.page-title-wrapper h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 51px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    margin-top: 40px;
+}
+
+.page-title-wrapper {
+    text-align: center;
+}
+body {
+    color: #000;
+    font-family: 'Futura','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+}
+[data-content-type=row][data-appearance=contained] {
+    box-sizing: border-box;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1032px;
+}
+element.style {
+    border-style: none;
+    border-width: 1px;
+    border-radius: 0px;
+}
+h4.container-680 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .62px;
+    line-height: 26px;
+    color: #000;
+    text-transform: uppercase;
+    margin: 24px auto !important;
+}
+strong {
+    font-weight: 700;
+}

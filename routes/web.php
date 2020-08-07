@@ -28,3 +28,4 @@ Route::get('/about', 'Frontend\HomeController@about');
 Route::get('/contact', 'Frontend\HomeController@contact');
 
 Route::get('/faq', 'Frontend\HomeController@faq');
+Route::get('/about_us', 'Frontend\HomeController@aboutUs');

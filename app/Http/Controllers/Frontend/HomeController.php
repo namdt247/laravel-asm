@@ -30,5 +30,9 @@ class HomeController extends Controller
     {
         return view('frontend.login');
     }
+    public function aboutUs()
+    {
+        return view('frontend.about_us');
+    }
 
 }
