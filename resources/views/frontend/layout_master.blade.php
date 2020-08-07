@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/frontend/content_home.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @yield('link-header')
 </head>
 <body>
     <div id="header">
@@ -28,25 +29,27 @@
 
     <script>
         jQuery(document).ready(function() {
-            $('#carousel-example').on('slide.bs.carousel', function (e) {
-                var $e = $(e.relatedTarget);
-                var idx = $e.index();
-                var itemsPerSlide = 5;
-                var totalItems = $('.carousel-item').length;
-
-                if (idx >= totalItems-(itemsPerSlide-1)) {
-                    var it = itemsPerSlide - (totalItems - idx);
-                    for (var i=0; i<it; i++) {
-                        // append slides to end
-                        if (e.direction=="left") {
-                            $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            if ($('.top_button').length) {
+                var scrollTrigger = 100,
+                    backToTop = function () {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('.top_button').addClass('show');
+                        } else {
+                            $('.top_button').removeClass('show');
                         }
-                        else {
-                            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                        }
-                    }
-                }
-            });
+                    };
+                backToTop();
+                $(window).on('scroll', function () {
+                    backToTop();
+                });
+                $('.top_button').on('click', function (e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            }
         });
     </script>
     <script src="/Admin/plugins/jquery/jquery.min.js"></script>

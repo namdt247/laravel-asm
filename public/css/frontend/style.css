@@ -6377,7 +6377,7 @@ body#checkout[data-action="show-password"]:hover {
 }
 body#checkout .custom-checkbox {
     display: -webkit-box;
-    
+
 
     display: flex;
 }
@@ -6900,7 +6900,7 @@ body#checkout #gift_message {
 }
 #authentication .custom-checkbox {
     display: -webkit-box;
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -7120,7 +7120,7 @@ body#checkout #gift_message {
 
 .page-my-account #content .links {
     display: -webkit-box;
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -7252,7 +7252,7 @@ body#checkout #gift_message {
 
 .products .products {
     display: -webkit-box;
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -8232,7 +8232,7 @@ li:hover .product-flags {
 #products .products-select {
     display: -webkit-box;
 
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -9320,7 +9320,7 @@ li:hover .product-flags {
 }
 #product-modal .modal-content .modal-body {
     display: -webkit-box;
-    
+
     display: -webkit-flex;
     display: flex;
     margin-left: 0;
@@ -9746,7 +9746,7 @@ li.product-flag.discount {
 .product-pack .pack-product-container {
     display: -webkit-box;
 
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -9769,7 +9769,7 @@ li.product-flag.discount {
 .product-pack .pack-product-container .pack-product-quantity {
     display: -webkit-box;
 
-    
+
     display: -webkit-flex;
 
     display: flex;
@@ -10827,7 +10827,7 @@ li.cart-item:last-child {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
     display: -webkit-box;
-    
+
     display: -webkit-flex;
     display: flex;
     box-pack: distribute;
@@ -12001,9 +12001,7 @@ li.cart-item:last-child {
 }
 
 .top_button {
-    height: 50px;
-    width: 45px;
-    right: 10px;
+    right: 20px;
     bottom: 10px;
     display: none;
     position: fixed;
@@ -13483,7 +13481,7 @@ li.cart-item:last-child {
     }
     .delivery-option {
         display: -webkit-box;
-        
+
         display: -webkit-flex;
         display: flex;
         margin: auto;
@@ -14936,9 +14934,6 @@ li.cart-item:last-child {
     #brand_list li.brand .brand-inner .brand-products {
         padding: 0;
     }
-    .top_button {
-        bottom: 42px;
-    }
     #mobile_top_menu_wrapper #top-menu {
         padding: 0;
     }
@@ -14975,3 +14970,13 @@ li.cart-item:last-child {
         height: 250px;
     }
 }
+.top_button i{
+    color: #febd69;
+    font-size: 20px;
+    padding: 13px 15px;
+}
+.top_button{
+    border: 2px solid #febd69;
+    transition: opacity 0.2s ease-out;
+}
+

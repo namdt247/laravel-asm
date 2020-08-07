@@ -17,14 +17,16 @@ Route::get('/', 'Frontend\HomeController@home');
 
 Route::get('/login', 'Frontend\HomeController@login');
 
-Route::get('/product', 'Frontend\HomeController@product');
+//Route::get('/product', 'Frontend\HomeController@product');
 
-Route::get('/product/{type}', 'Frontend\HomeController@getProduct');
+//Route::get('/product/{type}', 'Frontend\HomeController@getProduct');
 
-Route::get('/product/detail/{id}', 'Frontend\HomeController@getProductDetail');
+//Route::get('/product/detail/{id}', 'Frontend\HomeController@getProductDetail');
 
 Route::get('/about', 'Frontend\HomeController@about');
 
 Route::get('/contact', 'Frontend\HomeController@contact');
 
 Route::get('/faq', 'Frontend\HomeController@faq');
+
+Route::get('/product/details', 'Frontend\HomeController@detail');
