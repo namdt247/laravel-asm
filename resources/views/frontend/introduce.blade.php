@@ -37,7 +37,7 @@
                         <figure data-content-type="image" data-appearance="full-width" data-element="main"
                                 style="text-align: center; margin: 0px; padding: 0px; border-style: none;"><img
                                 class="desktop-image"
-                                src="https://baya.vn/media/wysiwyg/baya-service-01.jpg" alt="" title=""
+                                src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596805370/baya-service-01_w9ppkf.jpg" alt="" title=""
                                 data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
@@ -52,7 +52,7 @@
                         </div>
                         <figure data-content-type="image" data-appearance="full-width" data-element="main"
                                 style="text-align: center; margin: 0px; padding: 0px; border-style: none;"><img
-                                class="desktop_image" src="https://baya.vn/media/wysiwyg/baya-service.jpg"
+                                class="desktop_image" src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596805369/baya-service_teb3fx.jpg"
                                 alt="" title="" data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
@@ -68,7 +68,7 @@
                         <figure data-content-type="image" data-appearance="full-width" data-element="main"
                                 style="text-align: center; margin: 0px; padding: 0px; border-style: none;"><img
                                 class="desktop_image"
-                                src="https://baya.vn/media/wysiwyg/baya-service-03.jpg" alt="" title=""
+                                src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596805364/baya-service-03_usk0fa.jpg" alt="" title=""
                                 data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
