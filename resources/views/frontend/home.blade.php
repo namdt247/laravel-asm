@@ -404,7 +404,6 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                         </div>
                         <div id="links_block_top" class="block links">
                             <h3 class="h3 title_block "><i class="material-icons"></i></h3>
@@ -493,22 +492,6 @@
                                                     <div class="subbutton">
                                                         <a class="btn btn-primary" href="#">shop now</a>
                                                     </div>
-=======
-                            <div id="tmcms2_block" class="container">
-                                <div class="tmcms2">
-                                    <div class="main-content">
-                                        <div class="cms_content">
-                                            <div class="cms_img">
-                                                <a href="#">
-                                                    <img alt="Offer banner" src="{{asset('img/Offer-banner.jpg')}}">
-                                                </a>
-                                            </div>
-                                            <div class="cms-block">
-                                                <div class="cms_offer">Home Decor Collection</div>
-                                                <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
-                                                <div class="subbutton">
-                                                    <a class="btn " href="#">shop now</a>
->>>>>>> 9372428f532480b442516814f76d91de9614c4af
                                                 </div>
                                             </div>
                                         </div>
