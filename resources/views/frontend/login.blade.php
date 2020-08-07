@@ -1,3 +1,10 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: namdt
+ * Date: 8/3/20
+ */
+?>
 
 @extends('frontend.layout_master')
 
@@ -9,14 +16,6 @@
                     <div class="container"><h1 class="h1">
                             Log in to your account
                         </h1>
-                        <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                <a itemprop="item" href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php">
-                                    <span itemprop="name">Home</span>
-                                </a>
-                                <meta itemprop="position" content="1">
-                            </li>
-                        </ol>
                     </div>
                 </nav>
                 <div id="content-wrapp  er" class="left-column">
