@@ -30,3 +30,4 @@ Route::get('/contact', 'Frontend\HomeController@contact');
 Route::get('/faq', 'Frontend\HomeController@faq');
 
 Route::get('/introduce', 'Frontend\HomeController@introduce');
+Route::get('/detail', 'Frontend\HomeController@detail');

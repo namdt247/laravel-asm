@@ -1,79 +1,63 @@
 jQuery(document).ready(function() {
-    $('#products_included').carousel({
-        interval: false,
-        wrap: true,
-        keyboard: true,
-        pause: true
-    });
-    $('#products_included').on('slide.bs.carousel', function (e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 5;
-        var totalItems = $('#products_included .carousel-item').length;
-
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
-                // append slides to end
-                if (e.direction=="left") {
-                    $('#products_included .carousel-item').eq(i).appendTo('#products_included .carousel-inner');
-                }
-                else {
-                    $('#products_included .carousel-item').eq(0).appendTo('#products_included .carousel-inner');
-                }
+    var swiper = new Swiper('#images-container', {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '#images-container .carousel-control-next',
+            prevEl: '#images-container .carousel-control-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
             }
         }
     });
-    $('#similar_product').carousel({
-        interval: false,
-        wrap: true,
-        keyboard: true,
-        pause: true
-    });
-    $('#similar_product').on('slide.bs.carousel', function (e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 5;
-        var totalItems = $('#similar_product .carousel-item').length;
-
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
-                // append slides to end
-                if (e.direction=="left") {
-                    $('#similar_product .carousel-item').eq(i).appendTo('#similar_product .carousel-inner');
-                }
-                else {
-                    $('#similar_product .carousel-item').eq(0).appendTo('#similar_product .carousel-inner');
-                }
+    var swiper = new Swiper('#productIncluded', {
+        slidesPerView: 5,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '#products_included .carousel-control-next',
+            prevEl: '#products_included .carousel-control-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
             }
         }
     });
-    $('#favorite_product').carousel({
-        interval: false,
-        wrap: true,
-        keyboard: true,
-        pause: true
-    });
-    $('#favorite_product').on('slide.bs.carousel', function (e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 5;
-        var totalItems = $('#favorite_product .carousel-item').length;
-
-        if (idx >= totalItems-(itemsPerSlide-1)) {
-            var it = itemsPerSlide - (totalItems - idx);
-            for (var i=0; i<it; i++) {
-                // append slides to end
-                if (e.direction=="left") {
-                    $('#favorite_product .carousel-item').eq(i).appendTo('#favorite_product .carousel-inner');
-                }
-                else {
-                    $('#favorite_product .carousel-item').eq(0).appendTo('#favorite_product .carousel-inner');
-                }
+    var swiper = new Swiper('#youLike', {
+        slidesPerView: 5,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '#products_youLike .carousel-control-next',
+            prevEl: '#products_youLike .carousel-control-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
             }
         }
     });
+    var swiper = new Swiper('#similar', {
+        slidesPerView: 5,
+        direction: getDirection(),
+        navigation: {
+            nextEl: '#products_similar .carousel-control-next',
+            prevEl: '#products_similar .carousel-control-prev',
+        },
+        on: {
+            resize: function () {
+                swiper.changeDirection(getDirection());
+            }
+        }
+    });
+
+    function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+        return direction;
+    }
+
     $('[data-fancybox="images"]').fancybox({
         thumbs : {
             autoStart : true

@@ -5,9 +5,7 @@
 @section('link-header')
     <link rel="stylesheet" href="{{asset('css/frontend/detail.css')}}">
     <link rel="stylesheet" href="{{asset('Admin/plugins/fancybox/jquery.fancybox.min.css')}}">
-    <script src="{{asset('Admin/plugins/fancybox/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('js/detail.js')}}"></script>
-
+    <link rel="stylesheet" href="{{asset('Admin/plugins/swiper/swiper.min.css')}}">
 @stop
 @section('main-content')
     <section id="wrapper">
@@ -19,7 +17,7 @@
                         <div class="row">
                             <div class="col-md-4 product_main_img">
                                 <section class="page-content" id="content">
-                                    <div class="product-leftside">
+                                    <div id="" class="product-leftside">
                                         <ul class="product-flags">
                                             <li class="product-flag online-only">Online only</li>
                                             <li class="product-flag on-sale">On sale!</li>
@@ -31,64 +29,56 @@
                                                     <img class="js-qv-product-cover" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/0/40-large_default.jpg" style="width: 100%;" width="100"/>
                                                 </a>
                                             </div>
-                                            <div class="js-qv-mask mask additional_slider">
-                                                <ul id="additional-carousel" class="tm-carousel product_list owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                                    <div class="owl-wrapper-outer">
-                                                        <div class="owl-wrapper" style="left: 0px; display: block;">
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                            <div class="owl-item">
-                                                                <li class="thumb-container item">
-                                                                    <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                        <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                                    </a>
-                                                                </li>
-                                                            </div>
-                                                        </div>
+                                            <div id="images-container" class="products swiper-container">
+                                                <ul id="additional-carousel" class="carousel slide tm-carousel product_list swiper-wrapper">
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <div class="owl-item swiper-slide">
+                                                        <li class="thumb-container item">
+                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
+                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
+                                                            </a>
+                                                        </li>
                                                     </div>
                                                 </ul>
                                                 <div class="customNavigation">
-                                                    <a class="btn prev brand_prev carousel-control-prev" href="#additional-carousel" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                                                    <a class="btn next brand_next carousel-control-next" href="#additional-carousel" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                    <a class="btn prev brand_prev carousel-control-prev" >&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                                    <a class="btn next brand_next carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="scroll-box-arrows">
-                                            <i class="material-icons left fa fa-chevron-left"></i>
-                                            <i class="material-icons right fa fa-chevron-right" ></i>
                                         </div>
                                     </div>
                                 </section>
@@ -170,9 +160,8 @@
                                                     </div>
 
                                                     <div class="add">
-                                                        <button class="btn btn-primary add-to-cart" data-button-action="add-to-cart" type="submit">
-                                                            <i class="material-icons shopping-cart"></i>
-                                                            Add to cart
+                                                        <button class="btn btn-sm add-to-cart" type="submit">
+                                                            <i class="fa fa-shopping-cart"></i>Add to cart
                                                         </button>
 
                                                         <span id="product-availability"> </span>
@@ -382,14 +371,14 @@
                             </div>
                         </section>
                         <!-- có thể bạn cũng thích -->
-                        <section class="product-accessories clearfix featured-products">
+                        <section id="products_youLike" class="product-accessories clearfix featured-products">
                             <div class="tab-main-title">
                                 <h2 class="products-section-title text-uppercase">Có thể bạn cũng thích</h2>
                             </div>
                             <div id="spe_res">
-                                <div class="products">
-                                    <ul id="favorite_product" class="carousel slide tm-carousel product_list">
-                                        <div class="owl-item">
+                                <div id="youLike" class="products swiper-container">
+                                    <ul id="favorite_product" class="carousel slide tm-carousel product_list swiper-wrapper">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -434,7 +423,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -481,7 +470,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -528,7 +517,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -575,7 +564,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -622,7 +611,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -678,14 +667,14 @@
                             </div>
                         </section>
                         <!-- Sản phẩm đi kèm -->
-                        <section class="product-accessories clearfix featured-products">
+                        <section id="products_included" class="product-accessories clearfix featured-products">
                             <div class="tab-main-title">
                                 <h2 class="products-section-title text-uppercase">Sản phẩm đi kèm</h2>
                             </div>
                             <div id="spe_res">
-                                <div class="products">
-                                    <ul id="products_included" class="carousel slide tm-carousel product_list">
-                                        <div class="owl-item">
+                                <div id="productIncluded" class="products swiper-container">
+                                    <ul id="products_included" class="carousel slide tm-carousel product_list swiper-wrapper">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -722,7 +711,6 @@
                                                         </div>
                                                         <div class="product-actions-main">
                                                             <form action="" method="post" class="add-to-cart-or-refresh">
-
                                                                 <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
                                                             </form>
                                                         </div>
@@ -730,54 +718,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -824,7 +765,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -871,7 +812,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -918,7 +859,54 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
+                                            <li class="item">
+                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
+                                                    <div class="thumbnail-container">
+                                                        <a href="#" class="thumbnail product-thumbnail">
+                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
+                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
+                                                        </a>
+                                                        <ul class="product-flags">
+                                                            <li class="on-sale">On sale!</li>
+                                                            <li class="new">New</li>
+                                                            <li class="discount_type_flag">
+                                                                <span class="discount-percentage">-20%</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-description">
+                                                        <div class="comments_note">
+                                                            <div class="star_content clearfix">
+                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
+                                                            </div>
+                                                        </div>
+                                                        <span class="h3 product-title" itemprop="name">
+										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
+										            </span>
+                                                        <div class="product-price-and-shipping">
+                                                            <span class="sr-only">Price</span>
+                                                            <span itemprop="price" class="price">$19.12</span>
+                                                            <span class="sr-only">Regular price</span>
+                                                            <span class="regular-price">$23.90</span>
+                                                        </div>
+                                                        <div class="product-actions-main">
+                                                            <form action="" method="post" class="add-to-cart-or-refresh">
+                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
+                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
+                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
+                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </li>
+                                        </div>
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -974,14 +962,14 @@
                             </div>
                         </section>
                         <!-- Sản phẩm tương tự -->
-                        <section class="product-accessories clearfix featured-products">
+                        <section id="products_similar" class="product-accessories clearfix featured-products">
                             <div class="tab-main-title">
                                 <h2 class="products-section-title text-uppercase">Sản phẩm tương tự</h2>
                             </div>
                             <div id="spe_res">
-                                <div class="products">
-                                    <ul id="similar_product" class="carousel slide tm-carousel product_list">
-                                        <div class="owl-item">
+                                <div id="similar" class="products swiper-container">
+                                    <ul id="similar_product" class="carousel slide tm-carousel product_list swiper-wrapper ">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1026,7 +1014,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1073,7 +1061,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1120,7 +1108,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1167,7 +1155,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1214,7 +1202,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item">
+                                        <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
@@ -1265,8 +1253,8 @@
                                 </div>
                             </div>
                             <div class="customNavigation">
-                                <a class="btn prev brand_prev carousel-control-prev" href="#similar_product" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                                <a class="btn next brand_next carousel-control-next" href="#similar_product" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                <a class="btn prev brand_prev carousel-control-prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                                <a class="btn next brand_next carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </section>
                     </section>
@@ -1275,3 +1263,9 @@
         </div>
     </section>
 @endsection
+@section('main-script')
+    <script src="{{asset('Admin/plugins/fancybox/jquery.fancybox.min.js')}}"></script>
+    <script src="{{asset('Admin/plugins/swiper/swiper.min.js')}}"></script>
+    <script src="{{asset('js/detail.js')}}"></script>
+
+@stop

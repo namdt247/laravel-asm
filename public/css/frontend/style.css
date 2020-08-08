@@ -14977,6 +14977,13 @@ li.cart-item:last-child {
 }
 .top_button{
     border: 2px solid #febd69;
-    transition: opacity 0.2s ease-out;
+    transition: background-color 1s,
+    opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.top_button.show {
+    opacity: 1;
+    visibility: visible;
 }
 

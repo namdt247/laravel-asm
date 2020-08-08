@@ -389,7 +389,7 @@ select.form-control:not([size]):not([multiple]) {
     color: #414141;
     background-color: #FFFFFF;
     height: 38px;
-    width: 3rem;
+    min-width: 85px;
 }
 .product-quantity .add {
     margin-top: 20px;
@@ -616,7 +616,6 @@ select.form-control:not([size]):not([multiple]) {
     border: 1px solid #000;
     color: #fff;
     transition: all 500ms ease 0s;
-    padding: 5px 15px 5px 35px;
     font-size: 12px !important;
 }
 .add-to-cart:hover {
@@ -687,12 +686,32 @@ select.form-control:not([size]):not([multiple]) {
 #content{
     border: none !important;
 }
-.tm-carousel {
-    position: relative;
-    float: left;
-    width: 100%;
-    margin: 0;
-}
+
 #additional-carousel .owl-item{
     width: 100px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#images-container .customNavigation {
+    opacity: 1;
+    -webkit-opacity: 1;
+    right: 0;
+    left: auto;
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/frontend/carousel_home.css">
     <link rel="stylesheet" href="/css/frontend/content_home.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
+    <script src="/Admin/plugins/jquery/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @yield('link-header')
 </head>
@@ -28,33 +29,23 @@
     </div>
 
     <script>
-        jQuery(document).ready(function() {
-            if ($('.top_button').length) {
-                var scrollTrigger = 100,
-                    backToTop = function () {
-                        var scrollTop = $(window).scrollTop();
-                        if (scrollTop > scrollTrigger) {
-                            $('.top_button').addClass('show');
-                        } else {
-                            $('.top_button').removeClass('show');
-                        }
-                    };
-                backToTop();
-                $(window).on('scroll', function () {
-                    backToTop();
-                });
-                $('.top_button').on('click', function (e) {
-                    e.preventDefault();
-                    $('html,body').animate({
-                        scrollTop: 0
-                    }, 700);
-                });
+        var btn = $('.top_button');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
             }
         });
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');
+        });
     </script>
-    <script src="/Admin/plugins/jquery/jquery.min.js"></script>
+
     <script src="/Admin/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/carousel_home.js"></script>
+
     @yield('main-script')
 </body>
 </html>

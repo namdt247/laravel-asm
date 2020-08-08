@@ -63,7 +63,7 @@
                     </a>
                 </div>
 
-                <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
+                <div id="search_widget" class="col-lg-5 col-md-7 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
                     <span class="search_button"></span>
                     <div class="searchtoggle">
 
