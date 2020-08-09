@@ -58,7 +58,7 @@
             {{-- logo and sreach--}}
             <div class="container">
                 <div class="header_logo hidden-md-down" id="_desktop_logo">
-                    <a href="#">
+                    <a href="/">
                         <img class="logo img-responsive" src="{{asset('Admin/dist/img/logo_chair.png')}}" alt="Super Chair">
                     </a>
                 </div>
