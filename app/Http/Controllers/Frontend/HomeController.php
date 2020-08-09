@@ -35,7 +35,13 @@ class HomeController extends Controller
         return view('frontend.introduce');
     }
 
-    public function categories(){
+    public function categories()
+    {
         return view('frontend.categories');
+    }
+
+    public function detail()
+    {
+        return view('frontend.detail');
     }
 }

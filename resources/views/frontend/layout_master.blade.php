@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="/css/frontend/carousel_home.css">
     <link rel="stylesheet" href="/css/frontend/content_home.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
+    <script src="/Admin/plugins/jquery/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @yield('link-header')
 </head>
 <body>
     <div id="header">
@@ -27,31 +29,23 @@
     </div>
 
     <script>
-        jQuery(document).ready(function() {
-            $('#carousel-example').on('slide.bs.carousel', function (e) {
-                var $e = $(e.relatedTarget);
-                var idx = $e.index();
-                var itemsPerSlide = 5;
-                var totalItems = $('.carousel-item').length;
-
-                if (idx >= totalItems-(itemsPerSlide-1)) {
-                    var it = itemsPerSlide - (totalItems - idx);
-                    for (var i=0; i<it; i++) {
-                        // append slides to end
-                        if (e.direction=="left") {
-                            $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                        }
-                        else {
-                            $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                        }
-                    }
-                }
-            });
+        var btn = $('.top_button');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');
         });
     </script>
-    <script src="/Admin/plugins/jquery/jquery.min.js"></script>
+
     <script src="/Admin/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/carousel_home.js"></script>
+
     @yield('main-script')
 </body>
 </html>

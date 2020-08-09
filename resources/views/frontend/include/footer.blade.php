@@ -74,4 +74,7 @@
             </div>
         </div>
     </div>
+    <a class="top_button" href="#" style="display: block;">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </a>
 </footer>
