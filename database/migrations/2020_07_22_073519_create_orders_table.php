@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string('ship_name');
             $table->string('ship_address');
             $table->string('ship_email');
-            $table->string('ship_phone');
+            $table->double('ship_phone');
             $table->text('od_note');
             $table->timestamps();
             $table->integer('od_status');
