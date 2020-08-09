@@ -404,26 +404,26 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="links_block_top" class="block links">
-                            <h3 class="h3 title_block "><i class="material-icons"></i></h3>
-                            <ul id="tm_toplink" class="block_content">
-                                <li><a href="#" title="today deal's">today deal's</a></li>
-                                <li><a href="#" title="gift card">gift card</a></li>
-                                <li><a href="#" title="subscribe">subscribe</a></li>
-                                <li><a href="#" title="buyer Protection">buyer Protection</a></li>
-                                <li><a href="#" title="portfolio">portfolio</a></li>
-                                <li><a href="#" title="Contacts">Contacts</a></li>
-                                <li><a href="#" title="news">news</a></li>
-                            </ul>
-                        </div>
-                        <div id="_desktop_cart">
-                            <a href=""><i class="fa fa-user-o"></i></a>
-                            <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+                </div>
+                <div id="links_block_top" class="block links">
+                    <h3 class="h3 title_block "><i class="material-icons"></i></h3>
+                    <ul id="tm_toplink" class="block_content">
+                        <li><a href="#" title="today deal's">today deal's</a></li>
+                        <li><a href="#" title="gift card">gift card</a></li>
+                        <li><a href="#" title="subscribe">subscribe</a></li>
+                        <li><a href="#" title="buyer Protection">buyer Protection</a></li>
+                        <li><a href="#" title="portfolio">portfolio</a></li>
+                        <li><a href="#" title="Contacts">Contacts</a></li>
+                        <li><a href="#" title="news">news</a></li>
+                    </ul>
+                </div>
+                <div id="_desktop_cart">
+                    <a href=""><i class="fa fa-user-o"></i></a>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                 </div>
             </div>
+        </div>
+        </div>
         </header>
         <aside id="notifications"></aside>
         <section id="wrapper">
@@ -483,7 +483,7 @@
                                             <div class="cms_content">
                                                 <div class="cms_img">
                                                     <a href="#">
-{{--                                                        <img alt="Cms-Banner1.jpg" src="img/cms/Sub-banner-1.jpg">--}}
+                                                        {{--                                                        <img alt="Cms-Banner1.jpg" src="img/cms/Sub-banner-1.jpg">--}}
                                                     </a>
                                                 </div>
                                                 <div class="cms-block">
@@ -832,7 +832,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white"
                                                 >
                                                     Curabitur Dolor NuncPellentesque augue
                                                 </a>
@@ -867,18 +867,18 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white"
-                                                                                                class="color"
-                                                                                                title="White"
-                                                                                                style="background-color: #ffffff;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=1&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white"
+                                                                                            class="color"
+                                                                                            title="White"
+                                                                                            style="background-color: #ffffff;"
                                                                                         >
                                                                                             <span class="sr-only">White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
-                                                                                                class="color"
-                                                                                                title="Black"
-                                                                                                style="background-color: #434a54;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=1&amp;id_product_attribute=2&amp;rewrite=hummingbird-printed-t-shirt&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
+                                                                                            class="color"
+                                                                                            title="Black"
+                                                                                            style="background-color: #434a54;"
                                                                                         >
                                                                                             <span class="sr-only">Black</span>
                                                                                         </a>
@@ -894,21 +894,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="2" data-id-product-attribute="48" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"
-                                                                                            alt="Suspendisse Massa Nullaqm vulputate dictum"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"
+                                                                                        alt="Suspendisse Massa Nullaqm vulputate dictum"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/7/37-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -942,7 +942,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=48&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/1-size-s/8-color-white/20-dimension-60x90cm"
                                                 >
                                                     Suspendisse Massa Nullaqm vulputate dictum
                                                 </a>
@@ -977,34 +977,34 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=43&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Taupe"
-                                                                                                style="background-color: #cfc4a6;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=43&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Taupe"
+                                                                                            style="background-color: #cfc4a6;"
                                                                                         >
                                                                                             <span class="sr-only">Taupe</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=40&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/8-color-white/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="White"
-                                                                                                style="background-color: #ffffff;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=40&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/8-color-white/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="White"
+                                                                                            style="background-color: #ffffff;"
                                                                                         >
                                                                                             <span class="sr-only">White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=42&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/9-color-off_white/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Off White"
-                                                                                                style="background-color: #faebd7;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=42&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/9-color-off_white/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Off White"
+                                                                                            style="background-color: #faebd7;"
                                                                                         >
                                                                                             <span class="sr-only">Off White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=41&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Red"
-                                                                                                style="background-color: #e84c3d;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=2&amp;id_product_attribute=41&amp;rewrite=brown-bear-printed-sweater&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Red"
+                                                                                            style="background-color: #e84c3d;"
                                                                                         >
                                                                                             <span class="sr-only">Red</span>
                                                                                         </a>
@@ -1020,21 +1020,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="10" data-id-product-attribute="157" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
-                                                                                            alt="Nascetur ridiculus muscursus dictum risusrte"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
+                                                                                        alt="Nascetur ridiculus muscursus dictum risusrte"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1068,7 +1068,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
                                                 >
                                                     Nascetur ridiculus muscursus dictum risusrte
                                                 </a>
@@ -1103,42 +1103,42 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Taupe"
-                                                                                                style="background-color: #cfc4a6;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Taupe"
+                                                                                            style="background-color: #cfc4a6;"
                                                                                         >
                                                                                             <span class="sr-only">Taupe</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=161&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=161&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=159&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Green"
-                                                                                                style="background-color: #a0d468;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=159&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Green"
+                                                                                            style="background-color: #a0d468;"
                                                                                         >
                                                                                             <span class="sr-only">Green</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=163&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=163&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=165&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=165&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -1154,21 +1154,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="3" data-id-product-attribute="72" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-home_default.jpg"
-                                                                                            alt="Justo Neque Commodo Pellentesque augue justo"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-home_default.jpg"
+                                                                                        alt="Justo Neque Commodo Pellentesque augue justo"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1197,7 +1197,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
                                                 >
                                                     Justo Neque Commodo Pellentesque augue justo
                                                 </a>
@@ -1227,34 +1227,34 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=67&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/13-color-orange"
-                                                                                                class="color"
-                                                                                                title="Orange"
-                                                                                                style="background-color: #f39c11;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=67&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/13-color-orange"
+                                                                                            class="color"
+                                                                                            title="Orange"
+                                                                                            style="background-color: #f39c11;"
                                                                                         >
                                                                                             <span class="sr-only">Orange</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=66&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=66&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=65&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green"
-                                                                                                class="color"
-                                                                                                title="Green"
-                                                                                                style="background-color: #a0d468;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=65&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green"
+                                                                                            class="color"
+                                                                                            title="Green"
+                                                                                            style="background-color: #a0d468;"
                                                                                         >
                                                                                             <span class="sr-only">Green</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=64&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=64&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
@@ -1270,21 +1270,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="4" data-id-product-attribute="76" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-home_default.jpg"
-                                                                                            alt="Suspendisse PotentiSed atant Mauris eleifend"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-home_default.jpg"
+                                                                                        alt="Suspendisse PotentiSed atant Mauris eleifend"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1312,7 +1312,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
                                                 >
                                                     Suspendisse PotentiSed atant Mauris eleifend
                                                 </a>
@@ -1342,26 +1342,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
-                                                                                                class="color"
-                                                                                                title="Beige"
-                                                                                                style="background-color: #f5f5dc;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                                                            class="color"
+                                                                                            title="Beige"
+                                                                                            style="background-color: #f5f5dc;"
                                                                                         >
                                                                                             <span class="sr-only">Beige</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=79&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white"
-                                                                                                class="color"
-                                                                                                title="Off White"
-                                                                                                style="background-color: #faebd7;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=79&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white"
+                                                                                            class="color"
+                                                                                            title="Off White"
+                                                                                            style="background-color: #faebd7;"
                                                                                         >
                                                                                             <span class="sr-only">Off White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=82&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
-                                                                                                class="color"
-                                                                                                title="Black"
-                                                                                                style="background-color: #434a54;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=82&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
+                                                                                            class="color"
+                                                                                            title="Black"
+                                                                                            style="background-color: #434a54;"
                                                                                         >
                                                                                             <span class="sr-only">Black</span>
                                                                                         </a>
@@ -1397,21 +1397,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="7" data-id-product-attribute="111" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-home_default.jpg"
-                                                                                            alt="Arcu Vitae Imperdiet Facilisisconsectetur..."
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-home_default.jpg"
+                                                                                        alt="Arcu Vitae Imperdiet Facilisisconsectetur..."
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/8/58-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/8/68-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1444,7 +1444,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
                                                 >
                                                     Arcu Vitae Imperdiet Facilisisconsectetur adipiscing
                                                 </a>
@@ -1479,26 +1479,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Beige"
-                                                                                                style="background-color: #f5f5dc;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=111&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Beige"
+                                                                                            style="background-color: #f5f5dc;"
                                                                                         >
                                                                                             <span class="sr-only">Beige</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=114&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=114&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=117&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=7&amp;id_product_attribute=117&amp;rewrite=mug-the-adventure-begins&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -1514,21 +1514,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="6" data-id-product-attribute="103" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/7/57-home_default.jpg"
-                                                                                            alt="Varius Neque At Enimquam vulputate dictum"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/7/57-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/7/57-home_default.jpg"
+                                                                                        alt="Varius Neque At Enimquam vulputate dictum"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/7/57-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/2/62-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/2/62-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/2/62-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/2/62-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1557,7 +1557,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
                                                 >
                                                     Varius Neque At Enimquam vulputate dictum
                                                 </a>
@@ -1587,18 +1587,18 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=107&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/10-color-red/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Red"
-                                                                                                style="background-color: #e84c3d;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=107&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/10-color-red/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Red"
+                                                                                            style="background-color: #e84c3d;"
                                                                                         >
                                                                                             <span class="sr-only">Red</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Black"
-                                                                                                style="background-color: #434a54;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=6&amp;id_product_attribute=103&amp;rewrite=mug-the-best-is-yet-to-come&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Black"
+                                                                                            style="background-color: #434a54;"
                                                                                         >
                                                                                             <span class="sr-only">Black</span>
                                                                                         </a>
@@ -1614,21 +1614,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="8" data-id-product-attribute="130" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=130&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=130&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/9/59-home_default.jpg"
-                                                                                            alt="Sem Nec Tristique Tempusaliquam quam vel dolor"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/9/59-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/9/59-home_default.jpg"
+                                                                                        alt="Sem Nec Tristique Tempusaliquam quam vel dolor"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/9/59-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/3/73-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/3/73-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/3/73-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/3/73-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1657,7 +1657,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=130&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=130&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
                                                 >
                                                     Sem Nec Tristique Tempusaliquam quam vel dolor
                                                 </a>
@@ -1687,42 +1687,42 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=129&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/7-color-beige"
-                                                                                                class="color"
-                                                                                                title="Beige"
-                                                                                                style="background-color: #f5f5dc;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=129&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/7-color-beige"
+                                                                                            class="color"
+                                                                                            title="Beige"
+                                                                                            style="background-color: #f5f5dc;"
                                                                                         >
                                                                                             <span class="sr-only">Beige</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=131&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/9-color-off_white"
-                                                                                                class="color"
-                                                                                                title="Off White"
-                                                                                                style="background-color: #faebd7;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=131&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/9-color-off_white"
+                                                                                            class="color"
+                                                                                            title="Off White"
+                                                                                            style="background-color: #faebd7;"
                                                                                         >
                                                                                             <span class="sr-only">Off White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=135&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/14-color-blue"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=135&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/14-color-blue"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=133&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/16-color-yellow"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=133&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/16-color-yellow"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=137&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/17-color-brown"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=8&amp;id_product_attribute=137&amp;rewrite=mug-today-is-a-good-day&amp;controller=product&amp;id_lang=1#/3-size-l/17-color-brown"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -1738,21 +1738,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="10" data-id-product-attribute="157" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
-                                                                                            alt="Nascetur ridiculus muscursus dictum risusrte"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-home_default.jpg"
+                                                                                        alt="Nascetur ridiculus muscursus dictum risusrte"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/1/61-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/3/83-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1786,7 +1786,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
                                                 >
                                                     Nascetur ridiculus muscursus dictum risusrte
                                                 </a>
@@ -1821,42 +1821,42 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Taupe"
-                                                                                                style="background-color: #cfc4a6;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=157&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/6-color-taupe/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Taupe"
+                                                                                            style="background-color: #cfc4a6;"
                                                                                         >
                                                                                             <span class="sr-only">Taupe</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=161&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=161&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=159&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Green"
-                                                                                                style="background-color: #a0d468;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=159&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Green"
+                                                                                            style="background-color: #a0d468;"
                                                                                         >
                                                                                             <span class="sr-only">Green</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=163&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=163&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=165&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=10&amp;id_product_attribute=165&amp;rewrite=brown-bear-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -1872,21 +1872,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="9" data-id-product-attribute="145" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=145&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=145&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/0/60-home_default.jpg"
-                                                                                            alt="Nascetur ridiculus musfringilla mi in ligula"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/0/60-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/0/60-home_default.jpg"
+                                                                                        alt="Nascetur ridiculus musfringilla mi in ligula"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/6/0/60-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/8/78-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/8/78-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/8/78-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/7/8/78-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -1914,7 +1914,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=145&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=145&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/20-dimension-60x90cm"
                                                 >
                                                     Nascetur ridiculus musfringilla mi in ligula
                                                 </a>
@@ -1944,26 +1944,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=139&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=139&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=140&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=140&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/17-color-brown/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=141&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/18-color-pink/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Pink"
-                                                                                                style="background-color: #fccacd;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=9&amp;id_product_attribute=141&amp;rewrite=mountain-fox-cushion&amp;controller=product&amp;id_lang=1#/2-size-m/18-color-pink/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Pink"
+                                                                                            style="background-color: #fccacd;"
                                                                                         >
                                                                                             <span class="sr-only">Pink</span>
                                                                                         </a>
@@ -1999,21 +1999,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="3" data-id-product-attribute="72" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-home_default.jpg"
-                                                                                            alt="Justo Neque Commodo Pellentesque augue justo"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-home_default.jpg"
+                                                                                        alt="Justo Neque Commodo Pellentesque augue justo"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/9/29-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/2/42-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -2039,7 +2039,7 @@
                                                                                 </div>
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=72&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow"
                                                 >
                                                     Justo Neque Commodo Pellentesque augue justo
                                                 </a>
@@ -2069,34 +2069,34 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=67&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/13-color-orange"
-                                                                                                class="color"
-                                                                                                title="Orange"
-                                                                                                style="background-color: #f39c11;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=67&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/13-color-orange"
+                                                                                            class="color"
+                                                                                            title="Orange"
+                                                                                            style="background-color: #f39c11;"
                                                                                         >
                                                                                             <span class="sr-only">Orange</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=66&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=66&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/14-color-blue"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=65&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green"
-                                                                                                class="color"
-                                                                                                title="Green"
-                                                                                                style="background-color: #a0d468;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=65&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/15-color-green"
+                                                                                            class="color"
+                                                                                            title="Green"
+                                                                                            style="background-color: #a0d468;"
                                                                                         >
                                                                                             <span class="sr-only">Green</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=64&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=3&amp;id_product_attribute=64&amp;rewrite=the-best-is-yet-to-come-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
@@ -2112,21 +2112,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="4" data-id-product-attribute="76" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-home_default.jpg"
-                                                                                            alt="Suspendisse PotentiSed atant Mauris eleifend"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-home_default.jpg"
+                                                                                        alt="Suspendisse PotentiSed atant Mauris eleifend"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/0/30-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/7/47-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -2155,7 +2155,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
                                                 >
                                                     Suspendisse PotentiSed atant Mauris eleifend
                                                 </a>
@@ -2183,26 +2183,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
-                                                                                                class="color"
-                                                                                                title="Beige"
-                                                                                                style="background-color: #f5f5dc;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=76&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige"
+                                                                                            class="color"
+                                                                                            title="Beige"
+                                                                                            style="background-color: #f5f5dc;"
                                                                                         >
                                                                                             <span class="sr-only">Beige</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=79&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white"
-                                                                                                class="color"
-                                                                                                title="Off White"
-                                                                                                style="background-color: #faebd7;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=79&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/9-color-off_white"
+                                                                                            class="color"
+                                                                                            title="Off White"
+                                                                                            style="background-color: #faebd7;"
                                                                                         >
                                                                                             <span class="sr-only">Off White</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=82&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
-                                                                                                class="color"
-                                                                                                title="Black"
-                                                                                                style="background-color: #434a54;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=4&amp;id_product_attribute=82&amp;rewrite=the-adventure-begins-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/11-color-black"
+                                                                                            class="color"
+                                                                                            title="Black"
+                                                                                            style="background-color: #434a54;"
                                                                                         >
                                                                                             <span class="sr-only">Black</span>
                                                                                         </a>
@@ -2218,21 +2218,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="5" data-id-product-attribute="87" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-home_default.jpg"
-                                                                                            alt="Tellus Eu Volutpat VariusCurabitur sit amet era"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-home_default.jpg"
+                                                                                        alt="Tellus Eu Volutpat VariusCurabitur sit amet era"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/1/31-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/5/2/52-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -2261,7 +2261,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=87&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/1-size-s/7-color-beige/20-dimension-60x90cm"
                                                 >
                                                     Tellus Eu Volutpat VariusCurabitur sit amet era
                                                 </a>
@@ -2291,26 +2291,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=85&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/7-color-beige/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Beige"
-                                                                                                style="background-color: #f5f5dc;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=85&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/7-color-beige/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Beige"
+                                                                                            style="background-color: #f5f5dc;"
                                                                                         >
                                                                                             <span class="sr-only">Beige</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=91&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Red"
-                                                                                                style="background-color: #e84c3d;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=91&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/10-color-red/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Red"
+                                                                                            style="background-color: #e84c3d;"
                                                                                         >
                                                                                             <span class="sr-only">Red</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=97&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/20-dimension-60x90cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=5&amp;id_product_attribute=97&amp;rewrite=today-is-a-good-day-framed-poster&amp;controller=product&amp;id_lang=1#/2-size-m/16-color-yellow/20-dimension-60x90cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
@@ -2326,21 +2326,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="12" data-id-product-attribute="213" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/9/89-home_default.jpg"
-                                                                                            alt="Mauris Blandit Vehiculamassa quam dapibus"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/9/89-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/9/89-home_default.jpg"
+                                                                                        alt="Mauris Blandit Vehiculamassa quam dapibus"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/8/9/89-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/8/98-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/8/98-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/8/98-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/8/98-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -2366,7 +2366,7 @@
                                                                                 </div>
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
                                                 >
                                                     Mauris Blandit Vehiculamassa quam dapibus
                                                 </a>
@@ -2396,26 +2396,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=217&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/13-color-orange/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Orange"
-                                                                                                style="background-color: #f39c11;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=217&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/13-color-orange/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Orange"
+                                                                                            style="background-color: #f39c11;"
                                                                                         >
                                                                                             <span class="sr-only">Orange</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=215&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/14-color-blue/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Blue"
-                                                                                                style="background-color: #5d9cec;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=215&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/14-color-blue/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Blue"
+                                                                                            style="background-color: #5d9cec;"
                                                                                         >
                                                                                             <span class="sr-only">Blue</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=12&amp;id_product_attribute=213&amp;rewrite=mountain-fox-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -2431,21 +2431,21 @@
                                                                         <article class="product-miniature js-product-miniature" data-id-product="13" data-id-product-attribute="225" itemscope="" itemtype="http://schema.org/Product">
                                                                             <div class="thumbnail-container">
                                                                                 <a
-                                                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
-                                                                                        class="thumbnail product-thumbnail"
+                                                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
+                                                                                    class="thumbnail product-thumbnail"
                                                                                 >
                                                                                     <img
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/0/90-home_default.jpg"
-                                                                                            alt="Bhumitationa Centyraonquam dapibus leoerts"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/0/90-large_default.jpg"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/0/90-home_default.jpg"
+                                                                                        alt="Bhumitationa Centyraonquam dapibus leoerts"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/9/0/90-large_default.jpg"
                                                                                     />
 
                                                                                     <!-- begin modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
                                                                                     <img
-                                                                                            class="replace-2x img_1 img-responsive"
-                                                                                            src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/0/3/103-home_default.jpg"
-                                                                                            data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/0/3/103-large_default.jpg"
-                                                                                            alt=""
+                                                                                        class="replace-2x img_1 img-responsive"
+                                                                                        src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/0/3/103-home_default.jpg"
+                                                                                        data-full-size-image-url="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/1/0/3/103-large_default.jpg"
+                                                                                        alt=""
                                                                                     />
 
                                                                                     <!-- end modules/tm_imagehover/views/templates/hook/tm_imagehover.tpl -->
@@ -2474,7 +2474,7 @@
 
                                                                                 <span class="h3 product-title" itemprop="name">
                                                 <a
-                                                        href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
+                                                    href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
                                                 >
                                                     Bhumitationa Centyraonquam dapibus leoerts
                                                 </a>
@@ -2504,26 +2504,26 @@
                                                                                 <div class="highlighted-informations hidden-sm-down">
                                                                                     <div class="variant-links">
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=228&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/15-color-green/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Green"
-                                                                                                style="background-color: #a0d468;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=228&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/15-color-green/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Green"
+                                                                                            style="background-color: #a0d468;"
                                                                                         >
                                                                                             <span class="sr-only">Green</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Yellow"
-                                                                                                style="background-color: #f1c40f;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=225&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/16-color-yellow/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Yellow"
+                                                                                            style="background-color: #f1c40f;"
                                                                                         >
                                                                                             <span class="sr-only">Yellow</span>
                                                                                         </a>
                                                                                         <a
-                                                                                                href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=231&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
-                                                                                                class="color"
-                                                                                                title="Brown"
-                                                                                                style="background-color: #964b00;"
+                                                                                            href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?id_product=13&amp;id_product_attribute=231&amp;rewrite=brown-bear-vector-graphics&amp;controller=product&amp;id_lang=1#/1-size-s/17-color-brown/19-dimension-40x60cm"
+                                                                                            class="color"
+                                                                                            title="Brown"
+                                                                                            style="background-color: #964b00;"
                                                                                         >
                                                                                             <span class="sr-only">Brown</span>
                                                                                         </a>
@@ -2703,9 +2703,9 @@
                                 </div>
                             </div>
                         </section>
-                    </section>
-                </div>
-            </div>
+        </section>
+        </div>
+        </div>
         </div>
     </section>
 @endsection
