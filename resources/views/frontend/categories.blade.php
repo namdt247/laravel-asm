@@ -24,7 +24,7 @@
                         <div class="row">
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596073392/ga8jhn0ffv1ji8tspwar.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn ăn</p>
                                 <a href="#">PRINCETON</a>
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596075712/rujgmrwg4jnhhypmv10f.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn ăn</p>
                                 <a href="#">QATAR</a>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596075903/tda5opepgkdrrzxwaupv.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn ăn</p>
                                 <a href="#">VERONA</a>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596076637/kqunzglwkz3eqh4b5tvy.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn ăn</p>
                                 <a href="#">COBRA</a>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596077312/tlnpruygvm1atpvvfivx.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn ăn</p>
                                 <a href="#">PALL-MALL</a>
@@ -64,35 +64,11 @@
                             </div>
                             <div class="col-4 text-center">
                                 <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596077480/csm9wrzxmcxzpsbyamhg.jpg"
+                                    src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
                                     alt="product" class="img-fluid">
                                 <p>Bàn cafe</p>
                                 <a href="#">TREVOR</a>
                                 <p>2.990.000</p>
-                            </div>
-                            <div class="col-4 text-center">
-                                <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596077791/lpeqhcr9dnanp818i5lx.jpg"
-                                    alt="product" class="img-fluid">
-                                <p>Bàn cafe</p>
-                                <a href="#">MANILOW</a>
-                                <p>2.990.000</p>
-                            </div>
-                            <div class="col-4 text-center">
-                                <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596078559/u85gm3uh2nocqcbpogsq.jpg"
-                                    alt="product" class="img-fluid">
-                                <p>Bàn cafe</p>
-                                <a href="#">SUECIA</a>
-                                <p>6.990.000</p>
-                            </div>
-                            <div class="col-4 text-center">
-                                <img
-                                    src="https://res.cloudinary.com/bigbignoobbb/image/upload/v1596078715/insdneo5j5qeezxkuh2p.jpg"
-                                    alt="product" class="img-fluid">
-                                <p>Bàn ăn</p>
-                                <a href="#">MISSION</a>
-                                <p>1.490.000</p>
                             </div>
                         </div>
                     </div>
