@@ -35,3 +35,7 @@ Route::get('/categories','Frontend\HomeController@categories');
 
 Route::get('/detail', 'Frontend\HomeController@detail');
 
+Route::get('/shopping', 'Frontend\HomeController@shoppingCart');
+
+Route::get('/categories', 'Frontend\HomeController@category');
+
