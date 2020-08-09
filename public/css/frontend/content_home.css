@@ -684,6 +684,18 @@ ul#blog-carousel .owl-item{
 .star_content .star_on i{
     color: #febd69;
 }
+#list_product2{
+    position: relative;
+}
+#list_product2 .customNavigation {
+    top: 250px !important;
+}
+#list_product2:hover .customNavigation{
+    opacity: 1;
+    -webkit-opacity: 1;
+    right: 0;
+    left: auto;
+}
 .swiper-container {
     width: 100%;
     height: 100%;

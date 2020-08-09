@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/Admin/plugins/fontawesome-free/css/v4-shims.css">
     <link rel="stylesheet" href="/css/frontend/style.css">
     <link rel="stylesheet" href="/css/frontend/refresh_style.css">
-    <link rel="stylesheet" href="/css/frontend/carousel_home.css">
     <link rel="stylesheet" href="/css/frontend/content_home.css">
     <link rel="stylesheet" href="/Admin/plugins/bootstrap/css/bootstrap.min.css">
     <script src="/Admin/plugins/jquery/jquery.min.js"></script>
@@ -44,7 +43,6 @@
     </script>
 
     <script src="/Admin/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/carousel_home.js"></script>
 
     @yield('main-script')
 </body>
