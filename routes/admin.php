@@ -36,6 +36,14 @@ Route::get('/admin/product/add', 'Admin\AdminController@getAddProduct')
 
 Route::post('/admin/product/add', 'Admin\AdminController@postAddProduct');
 
+Route::get('/admin/product/detail/{id}', 'Admin\AdminController@getDetailProduct')
+    ->name('product.detail');
+
+Route::get('/admin/product/edit/{id}', 'Admin\AdminController@getEditProduct')
+    ->name('product.edit');
+
+Route::post('/admin/product/edit', 'Admin\AdminController@postEditProduct');
+
 Route::get('/admin/product/delete/{id}', 'Admin\AdminController@getDeleteProduct')
     ->name('product.delete');
 
