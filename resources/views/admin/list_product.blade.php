@@ -41,8 +41,8 @@
                     </td>
 
                     <td class="border-top-0 text-center font-weight-medium text-muted px-2 py-4">
-                        <a href="#" class="text-primary mr-1">Detail</a>
-                        <a href="#" class="text-orange mr-1">Edit</a>
+                        <a href="{!! route('product.detail', $prd->id) !!}" target="_blank" class="text-primary mr-1">Detail</a>
+                        <a href="{!! route('product.edit', $prd->id) !!}" class="text-orange mr-1">Edit</a>
                         <a href="{!! route('product.delete', $prd->id) !!}" class="text-danger mr-1">Delete</a>
                     </td>
                 </tr>

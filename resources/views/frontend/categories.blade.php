@@ -19,93 +19,19 @@
          style="box-sizing: border-box; margin-left: auto; margin-right: auto; width: 1072px; padding-left: 20px; padding-right: 20px;">
         <div class="columns" style="display: block; padding-top: 20px; position: relative;">
             <div class="columns main" style="float: right; text-align: center; width: 73%">
-                <div class="products wrapper grid products-grid" style="margin: 50px 0 10px">
-                    <ol class="products list items product-items">
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
+                <div class="products wrapper grid products-grid">
 
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
+{{--                    Show product--}}
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <img src="https://baya.vn/media/catalog/product/cache/118c277d36880e995352bb5114dbca5e/v/e/verona_dining_table_oak_mdf_oak_veneer_uma_1071795_corner.jpg"
+                                 alt="product" class="img-fluid" />
+                            <p>Bàn ăn</p>
+                            <p>1.200.000</p>
+                        </div>
+                    </div>
+{{--                    End show product--}}
 
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                        <li class="item product product-item"
-                            style="padding: 9px; width: calc(100%/3); text-align: center; float: left; margin:10px 0 20px; list-style-type: none">
-                            <div class="product-item-info" data-container="product-grid"
-                                 style="position: relative;">
-
-                            </div>
-                        </li>
-                    </ol>
                 </div>
             </div>
             <div class="sidebar sidebar-main"
