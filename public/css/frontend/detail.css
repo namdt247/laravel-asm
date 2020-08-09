@@ -715,3 +715,6 @@ select.form-control:not([size]):not([multiple]) {
     right: 0;
     left: auto;
 }
+#product-details .product-reference label{
+    font-size: 14px !important;
+}

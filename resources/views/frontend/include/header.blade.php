@@ -69,9 +69,9 @@
 
                         <form method="get" action="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
                             <input type="hidden" name="controller" value="search">
-                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="s" value="" placeholder="Serach Product here..." aria-label="Search" class="ui-autocomplete-input" autocomplete="off">
+                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input type="text" name="s" value="" placeholder="Tìm kiếm Sản phẩm tại đây" aria-label="Search" class="ui-autocomplete-input">
                             <button type="submit">
-                                <div class="submit-text">search</div>
+                                <div class="submit-text">Tìm kiếm</div>
                             </button>
                         </form>
                     </div>
