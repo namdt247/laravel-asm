@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('products')->insert([
             [
                 'id' => 1,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ăn PRINCETON',
                 'price' => 6990000,
                 'thumbnail' => 'ksnsjdsgzhfwlj30zkbp,g1rxjto9or4camsweczv,v0mojy82vvxzj4cbacv4,gsegjgwslnk0l4horqqo,ga8jhn0ffv1ji8tspwar',
@@ -36,7 +36,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ăn QATAR',
                 'price' => 2990000,
                 'thumbnail' => 'ce4vxtwpu3bxunbkmhki,e0j74ur7nqjphj4y03of,dn7fkocri9bzd8we3q4e,rujgmrwg4jnhhypmv10f',
@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ăn VERONA',
                 'price' => 1790000,
                 'thumbnail' => 'jj1kslvnlj07pg5jrge0,k0oshlc1phjlmsmyjf5j,tda5opepgkdrrzxwaupv',
@@ -65,7 +65,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ăn COBRA',
                 'price' => 6490000,
                 'thumbnail' => 'xjvp7owbpj95myzxagye,kqunzglwkz3eqh4b5tvy,hron3guxjmhcrzczrgau,wpheonqggc02vowyi7zc,e0cdq97yi32fa9jnkxk6',
@@ -80,7 +80,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ăn PALL-MALL',
                 'price' => 1990000,
                 'thumbnail' => 'inadjcosgam9zejsstm7,i2ly5odfexek6r3ljccr,jbe9lwaoily1fl5dziap,tila0m3futeotpdltmrj,tlnpruygvm1atpvvfivx',
@@ -95,7 +95,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn cà phê TREVOR',
                 'price' => 2990000,
                 'thumbnail' => 'mvwghqbguvudevlpcpfg,lpeqhcr9dnanp818i5lx,yxjvior2q9hnothcsuy3,jomlkp4gqchhc6aksq64',
@@ -110,7 +110,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn cà phê MANILOW',
                 'price' => 2990000,
                 'thumbnail' => 'mvwghqbguvudevlpcpfg,lpeqhcr9dnanp818i5lx,yxjvior2q9hnothcsuy3,jomlkp4gqchhc6aksq64',
@@ -127,7 +127,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn cà phê SUECIA',
                 'price' => 2390000,
                 'thumbnail' => 'u85gm3uh2nocqcbpogsq,ontdp9ppwadsrqgx5qwn,hykspks8s5uxzu8beqo1,jg5pmhuhbb5hqskehvpj',
@@ -143,7 +143,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 9,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn cà phê MISSION',
                 'price' => 1490000,
                 'thumbnail' => 'insdneo5j5qeezxkuh2p,zpj2zbuiihwll3ag51ii,xf2i5b6ud1i0qvkf0s7k',
@@ -157,7 +157,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 10,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn cà phê HUNG-VUONG',
                 'price' => 2490000,
                 'thumbnail' => 'bif28mtonogb6yypovou,yah8at2resu8gdrfm0c3,kd2bfrzzzjzvrdqiwyaj,z7jfv4u5irdsh8wbsmh4',
@@ -174,7 +174,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 11,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ đầu giường SUECIA',
                 'price' => 2490000,
                 'thumbnail' => 'v7uyynphfax7bb0h1sz8,m62dnmu1wayvuullbsjc,s5wkwxndmxl9arsh1nes,t2sp6pqsaxohg2duchpi,zxkw4cb0dg0huxmf40wr',
@@ -190,7 +190,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 12,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ đầu giường ATTILA',
                 'price' => 2490000,
                 'thumbnail' => 'oxlajxk4tmjvmnihnroi,kohnac5vy6p902yi8bfx,uffeq03yxpnhuloriseg,t2sp6pqsaxohg2duchpi,xfn1wtingb3lo2hfhot9',
@@ -204,7 +204,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 13,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ đầu giường ALBANY',
                 'price' => 2890000,
                 'thumbnail' => 'oxlajxk4tmjvmnihnroi,kohnac5vy6p902yi8bfx,uffeq03yxpnhuloriseg,t2sp6pqsaxohg2duchpi,xfn1wtingb3lo2hfhot9',
@@ -220,7 +220,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 14,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ đầu giường HARRIS',
                 'price' => 2890000,
                 'thumbnail' => 'oxlajxk4tmjvmnihnroi,kohnac5vy6p902yi8bfx,uffeq03yxpnhuloriseg,t2sp6pqsaxohg2duchpi,xfn1wtingb3lo2hfhot9',
@@ -236,7 +236,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 15,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ đầu giường AKIO',
                 'price' => 2990000,
                 'thumbnail' => 'g7qk9czlve7qi5gvhb5a,mqrxm82yywbof4ycodtn,yvwqm8vzzl595tredbk2,vwu3oazgsmb8c5mxsz9g',
@@ -252,7 +252,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 16,
-                'categoryId' => 3,
+                'category_id' => 3,
                 'name' => 'Giường AKIO',
                 'price' => 12900000,
                 'thumbnail' => 'ykovd7vckhheeweaou9s,j2n4djlzv260eld78khs,i3uaexvzymxwg26ljob3,xiwfzawjcqlhemv3bguw',
@@ -267,7 +267,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 17,
-                'categoryId' => 3,
+                'category_id' => 3,
                 'name' => 'Giường BERNIE',
                 'price' => 3990000,
                 'thumbnail' => 'hplu3gpo9juhfsqozdfc,vkat9el8slx6ijzbddro,u9qqrn9hzbhn9svyijrl,towlax3riylq3ij4qqbr',
@@ -283,7 +283,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 18,
-                'categoryId' => 3,
+                'category_id' => 3,
                 'name' => 'Giường RALLY',
                 'price' => 5490000,
                 'thumbnail' => 'vlj70umw4zja35dtydsw,oh6g765drf6z3cwfeuzd,dqk8kuqk6u3qgw6xgp8c,mvpqslzkrtq0nblai0e7',
@@ -299,7 +299,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 19,
-                'categoryId' => 3,
+                'category_id' => 3,
                 'name' => 'Giường MOZART',
                 'price' => 5490000,
                 'thumbnail' => 'agt3esh8mk6drrm5pbod,rseoswqfzonkhrcacafp,felafbczcy0swwpqhhtx,j0xngvbi8g6ht1glvzxh',
@@ -314,7 +314,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 20,
-                'categoryId' => 3,
+                'category_id' => 3,
                 'name' => 'Giường GRAFFITI',
                 'price' => 4490000,
                 'thumbnail' => 'dnryvyyehiruttvqbuza,uduxmwkmr7m2lfdmpipf,imyuzuz2mx57rhqscuag,yj4kqkqgwgs0j7zpzv8l',
@@ -330,7 +330,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 21,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế ăn QATAR',
                 'price' => 699000,
                 'thumbnail' => 'uam6wf0adxb3lecgxre5,qjixynplykjlbz0riw4y,lhxzy4xljzmlyeb199j7,wctpedpadcnu1ku92hvp',
@@ -344,7 +344,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 22,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế ăn KITKA',
                 'price' => 849000,
                 'thumbnail' => 'j3w4sgev1qrssqa3mcmd,l3ezt4unazh4usunpmor,esf8dbbisochyacsdbgj,koabxlredz2qc5it1u2i',
@@ -360,7 +360,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 23,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn cao JEFFERSON',
                 'price' => 899000,
                 'thumbnail' => 'qsjczmlvspapucednc29,gamo4biukpdtfxwgtdxu,alqtn26mtqeavupzl7pc',
@@ -374,7 +374,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 24,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn MOZART',
                 'price' => 499000,
                 'thumbnail' => 'df2mptp6dv9hjujvhtmo,xlgee8bpe2c2mnmptd4c,tvueh3hoiqghw7pbz2eu',
@@ -389,7 +389,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 25,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế ngoài trời CAFE-ROYALE',
                 'price' => 749000,
                 'thumbnail' => 'ty8asgs06wypfa4wqz5h,ehkmlbhqzvowndgu3hyt,g4coj41qnqel1vgkorlh,bcb7pw69xmr4irwjtd6r',
@@ -405,7 +405,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 26,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn ngoài trời CAFE-ROYALE',
                 'price' => 599000,
                 'thumbnail' => 'dxo5sjc6v8nqwjqwxr1y,vagvfkfggomtu80oyhvn,neckgp9s8or4gsninttn',
@@ -421,7 +421,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 27,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn góc RAMO',
                 'price' => 2490000,
                 'thumbnail' => 'yxiolz3fmdsphwkjdwgr,ddirxiq7plbcmlotrgul,hbb4vgx9zggcjh4txqkt,dhhfyravfw8mc4wscoei',
@@ -437,7 +437,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 28,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn góc MOZART',
                 'price' => 849000,
                 'thumbnail' => 'akxhinfegnvzcbm8cqwm,kww37ib7fc6bggy44lkg,umooffpazndpqwftqglb,e1i8ablfgmwkqh1uu4s6',
@@ -452,7 +452,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 29,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn góc KINGSTON',
                 'price' => 799000,
                 'thumbnail' => 'fkvcqvllm3xuvmgabcn0,tepryscy4ij2r4zn7sik',
@@ -468,7 +468,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 30,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn góc CONNEMARA',
                 'price' => 1190000,
                 'thumbnail' => 'nfvchz0vvwcsbxfe44ql,df026fadguaju0xx5cid,dr2z7kc2ycrfoiwlji42,w45arv5md8zk9vwsanyq',
@@ -484,7 +484,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 31,
-                'categoryId' => 7,
+                'category_id' => 7,
                 'name' => 'Giá treo quần áo AKIO',
                 'price' => 3990000,
                 'thumbnail' => 'aczl69eiliibetttozzo,c1hqgp4ip7ubqakuyyyv,tak2mlg1rme7kr3fubdn,mmoh0ndjmrcod3g55or3',
@@ -500,7 +500,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 32,
-                'categoryId' => 7,
+                'category_id' => 7,
                 'name' => 'Giá treo quần áo VIBORG',
                 'price' => 1690000,
                 'thumbnail' => 'rnikibiol1x1bwemmsox,frhbzz65wozrtdviyyy2,hjkf88fvvsqputnxxc0o,flks1muneddqasmgnnby',
@@ -516,7 +516,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 33,
-                'categoryId' => 7,
+                'category_id' => 7,
                 'name' => 'Giá treo quần áo REBEL',
                 'price' => 1690000,
                 'thumbnail' => 'yfahnl3bggegu0z46pw9,vybghlzbxa6tels06m6r,zlafijlad9iwo0afa6ap,strpevbjbto0odtca3sr',
@@ -533,7 +533,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 34,
-                'categoryId' => 7,
+                'category_id' => 7,
                 'name' => 'Cây treo quần áo EDEN',
                 'price' => 749000,
                 'thumbnail' => 'bihuow2pggfgukaeiek3,wwmxmsibtrbpf2jdxhg7',
@@ -548,7 +548,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 35,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ TV SUECIA',
                 'price' => 3990000,
                 'thumbnail' => 'suhuvb5ma3euosoorthp,buiolavekr1cjsdsxe4g,a427dkuvjfve6ktrtkcf,opcdrv7rd8fpaeblatxy',
@@ -563,7 +563,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 36,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ TV RAMO',
                 'price' => 5490000,
                 'thumbnail' => 'kysp82dfhtetqiqcyxwu,jibzntvrwl4bdmjqizfp,znl89msm207fbbxmaskd,svc0sscsshdpwag7f1b4',
@@ -579,7 +579,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 37,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ TV DYNAMO',
                 'price' => 4990000,
                 'thumbnail' => 'rbgaxeoqkfsu25hxehmq,yoosyo44c9lkciqwwjfx,lov1t2erx0iyswmxozbs,hbz9iur9jw4reockyxcz',
@@ -595,7 +595,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 38,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ TV COBRA',
                 'price' => 6490000,
                 'thumbnail' => 'clqnub97v8qznpqkw8sl,vpwzksfsd6cxz5epih0l,vcdq1dv6uzlxc3niwosg,drny3fvsfk9zro1h2hix',
@@ -611,7 +611,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 39,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ quần áo SUECIA',
                 'price' => 6490000,
                 'thumbnail' => 'by221wea97vg0wfmncxi,lchysfsnhnmep3p9m4iw,xse9701q9ihzivxp3yng,huup7qgqmhii2ywie9jx',
@@ -626,7 +626,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 40,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ quần áo PALLADIUM',
                 'price' => 4998000,
                 'thumbnail' => 'glvlhjajc4zanco6cxet,r1wts4htbd087e305x1r,j7184gj582krjcndojev,l3uy7isbmtg6hzcfqea6',
@@ -641,7 +641,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 41,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ quần áo AKIO',
                 'price' => 21900000,
                 'thumbnail' => 'n7dghuk6jumybtnok6q3,nkonmcj9gwvav5u5fiqq,ob7ygojh8pvoaw16rh3k,lnbalbwsskrucatjexud',
@@ -657,7 +657,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 42,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ quần áo BERNIE',
                 'price' => 3990000,
                 'thumbnail' => 'ipmidbx2rdejxnsbrama,uebgg1fpoaflxwjuk0bp,nrzpppsyz8wfevtw8jga,g4qfccytdzrrlktiz7br',
@@ -672,7 +672,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 43,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ quần áo MOZART',
                 'price' => 7490000,
                 'thumbnail' => 'ipmidbx2rdejxnsbrama,uebgg1fpoaflxwjuk0bp,nrzpppsyz8wfevtw8jga,g4qfccytdzrrlktiz7br',
@@ -687,7 +687,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 44,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ ngăn kéo HARRIS',
                 'price' => 6990000,
                 'thumbnail' => 'exfjsdsoxfnxmjvhrm48,kpojhgqstnkuwrq0ibqn,c63dagvi2g0xploxqqlu,urqhhgzqmmsunv171urk',
@@ -702,7 +702,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 45,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ ngăn kéo ALBANY',
                 'price' => 7990000,
                 'thumbnail' => 'qx2wf4hwwkv93212p7um,krzzeuicz2fr5m1vmzhj,vxjpwzwy0yotkrq1xdjm,esi29hbrl7r5f3fb7xy1',
@@ -717,7 +717,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 46,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ ngăn kéo FREESTYLE',
                 'price' => 3990000,
                 'thumbnail' => 'vu2i9iiye1bpbwnwu33r,d4ln8qa4fze84ae1pide,kt97w558ex4uwbmlgohq,udco7tkqhy9bephtpnhe',
@@ -732,7 +732,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 47,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ ngăn kéo MOZART',
                 'price' => 4990000,
                 'thumbnail' => 'dbtjfsk2fcb73otxjzij,yk9x3lk5had0rus50wsp,dq9uew0hriioddphmcz7,xla0lbf9u7hmv6kgla1f',
@@ -748,7 +748,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 48,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ ngăn kéo SUECIA',
                 'price' => 4990000,
                 'thumbnail' => 'zrnsqxlceaxr6b1pkwq1,si9a32p83ph5sebt6evq,rzmvzakeiw2aezip0zgh,tziv1fzlztggkawpjn6c',
@@ -764,7 +764,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 49,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ giầy kèm giá treo mũ RAMO',
                 'price' => 4990000,
                 'thumbnail' => 'kyjqxwd8yqr32emsquyr,q1jfuorkmje5z9t04jqa,w2ewado6vi0m5v4h3i4x,rqjemcal6rssrrvwxqfa',
@@ -781,7 +781,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 50,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ giầy GUARDIA',
                 'price' => 1790000,
                 'thumbnail' => 'y7mn2p8knbss8ulzn7q0,thipcwvb1siozkacobxc,w4dczqkkkqoeacpi1fab,pk4qt8z9assesnuizsi1',
@@ -796,7 +796,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 51,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ giầy TOBAGO',
                 'price' => 499000,
                 'thumbnail' => 'dgb7hucbhet5had5lekh,ijwvkoaqpdnaazfdet2z',
@@ -811,7 +811,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 52,
-                'categoryId' => 6,
+                'category_id' => 6,
                 'name' => 'Tủ giầy PILOT',
                 'price' => 729000,
                 'thumbnail' => 'lchjqdrmb6xxre09hwzj,bepiq9cwbxrvetzk2el3',
@@ -825,7 +825,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 53,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 4 ghế SKAGEN',
                 'price' => 8490000,
                 'thumbnail' => 'iwtanklxaebdvpfe0bf7,k3ytzsxog1gh6repyvhx,fxo4sv2om24r26dj3ywm,e9qzeqm6xt9vxgdzx7eh,y56nqkm4wrp8z5ntuzvr',
@@ -841,7 +841,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 54,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 4 ghế PRINCETON',
                 'price' => 14400000,
                 'thumbnail' => 'r0oqpgokyttyfcicpznm,xw3lerdrifjk7wpgbuva,ty4hvzd7ikil4owe04uw,bdiw8dju3motxwifydhz',
@@ -857,7 +857,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 55,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 4 ghế PALL-MALL',
                 'price' => 4790000,
                 'thumbnail' => 'smpnmcxmqwiaqs4ztmsq,smpnmcxmqwiaqs4ztmsq,fod3ozctoczvnfos1jql,wrtnprmhjpdxg6u2pegx',
@@ -872,7 +872,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 56,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 4 ghế BIANCA',
                 'price' => 4490000,
                 'thumbnail' => 'riqhsuy6bxaya1ndvmxe,xl9fmhzplfkwtaobdfpu,m5xmsownafu4igsljy0l,sxkua4fchehagbvgpa44',
@@ -888,7 +888,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 57,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 4 ghế RIVIERA',
                 'price' => 1890000,
                 'thumbnail' => 'cb271wxasbqcunruz6b1,yygzdokmvcmelei6ouqr,dmaepnayxogvas2osebk,pocnqmcwp0apuzemzhr2',
@@ -904,7 +904,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 58,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 6 ghế KITKA',
                 'price' => 7690000,
                 'thumbnail' => 'bdrjgepulkbeiihivwqw,r8aplpw5nlhii5fymwkg,fsez2c7zfuvzot6wlyaa',
@@ -920,7 +920,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 59,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 6 ghế ATTILA',
                 'price' => 18400000,
                 'thumbnail' => 'dmiw03kfkf0ekxnijzej,vs5e7jlsshtveu3bol2v,s3bbnrat3f2uwwsibvb6,vm1ddfqlpmmzhogpx1os',
@@ -935,7 +935,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 60,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 6 ghế QATAR',
                 'price' => 6400000,
                 'thumbnail' => 'v9y7banzfmu1rgiunq89,bhkvom804iyzldhufsc3,mbnhcrafuez1bmqrcfzy',
@@ -951,7 +951,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 61,
-                'categoryId' => 8,
+                'category_id' => 8,
                 'name' => 'Bộ bàn ăn 6 ghế PRINCETON',
                 'price' => 16400000,
                 'thumbnail' => 'cqschi5byjvbyg4nrnzk,wqmxgnkmsqahgsdsvesv,aj1lhfpgtkhaywx2lyvy,nhpmf18kpbqxeigsu4zw,i39b3qeqevhvotf9ug2w',
@@ -967,7 +967,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 62,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn cao NOTTING-HILL',
                 'price' => 999000,
                 'thumbnail' => 'gfij6min4xrawdjek2b0,nape3b0irksgyqatvoyl,h4iihynba6md0gwwmj3t',
@@ -983,7 +983,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 63,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn NAGASAKI',
                 'price' => 499000,
                 'thumbnail' => 'fomqs4bsxhyby94t6zuq,fzy7kwwcovegrrc9pyvb,qoczuoymmnkgfvyzxjl7',
@@ -997,7 +997,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 64,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn CONNEMARA',
                 'price' => 4990000,
                 'thumbnail' => 'rvz3xhhjaf8coqcyyrf1,mzbkendexwz2hlrbnnre,oyr1cwalifrykk2jazdo',
@@ -1011,7 +1011,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 65,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn ALI',
                 'price' => 799000,
                 'thumbnail' => 'fuanmew7e6mshwwou5dr,lz7jhubpjs0s3yzuimf3,zxmoorre8jp2jju85sha,jfuq0hadyd6f8flybnwe',
@@ -1026,7 +1026,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 66,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn HARRIS',
                 'price' => 1600000,
                 'thumbnail' => 'xgoz61dn93errqto5kjl,pdrmszp8kjstlcwhyggc',
@@ -1041,7 +1041,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 67,
-                'categoryId' => 2,
+                'category_id' => 2,
                 'name' => 'Ghế đôn ANN-LOUISE',
                 'price' => 850000,
                 'thumbnail' => 'shqgri2l1lipzr7zhqte,tzvr6brd0mjjhuzjv5kk',
@@ -1056,7 +1056,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 68,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn trang điểm HARRIS',
                 'price' => 3140000,
                 'thumbnail' => 'fq8esvdvihbg58ccza9n,kcj0q0h0inngczlvaqnq,ssva2woxhws8j0c1bwtb',
@@ -1071,7 +1071,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 69,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn trang điểm ANN-LOUISE',
                 'price' => 2690000,
                 'thumbnail' => 'rgkpgneintwywljaoeub,hkyzkvlnrn0qsvfg3xdi,m4j7hb77s8equf7vkmht',
@@ -1087,7 +1087,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 70,
-                'categoryId' => 1,
+                'category_id' => 1,
                 'name' => 'Bàn trang điểm MOZART',
                 'price' => 2060000,
                 'thumbnail' => 'hfrmz5kzer5s5stcwdux,f8ws3gvl9hioh56vapdv,assinspquurs9qcmhlps',
@@ -1102,7 +1102,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 71,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Bàn trang điểm CATCH',
                 'price' => 699000,
                 'thumbnail' => 'nps0tb4cgyxggwrpdscv,upld6aspjmvxubsgrej7,flsm4nnhw4ffvsn1hf0x',
@@ -1118,7 +1118,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 72,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ gắn tường EDEN',
                 'price' => 999000,
                 'thumbnail' => 'imrlplpmbo8kjcrjcgvt,k5mb6gpjs6da3xyd54u0,s2ebtbghhna7jhislv1l,mafh1h8rx0p6ojfrakyj',
@@ -1134,7 +1134,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 73,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ gắn tường AUSTRO',
                 'price' => 999000,
                 'thumbnail' => 'q1ietuz2g7udqqe0zqfv,qkcpgxnb18zeembjas66,wgzziysikjauoo6wizwl',
@@ -1149,7 +1149,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 74,
-                'categoryId' => 4,
+                'category_id' => 4,
                 'name' => 'Kệ gắn tường REBEL',
                 'price' => 999000,
                 'thumbnail' => 'qbva3dap2gggudinldvs,abdnfvn8dlylmccmpr1o,ohmafmui92leknwm4wux',
@@ -1164,7 +1164,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 75,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương để bàn trang điểm ANN-LOUISE',
                 'price' => 809000,
                 'thumbnail' => 'nrqyqogqhmtu0ykmyqmz,ezbnus64tnidfiqbpajh,dod8ftikxqnwumig5oqp',
@@ -1180,7 +1180,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 76,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương để bàn trang điểm HARRIS',
                 'price' => 899000,
                 'thumbnail' => 'djbo8erpzwh0vymrtcbn,z6mca9n1tcjcrju6putv',
@@ -1195,7 +1195,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 77,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương đứng KITKA',
                 'price' => 2490000,
                 'thumbnail' => 'awzqpikgque33r6ayefw,dn3ut1bp33av3rulqwqd,cgr2zksrpcmd1mtfgv3a',
@@ -1211,7 +1211,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 78,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương treo tường MOZART',
                 'price' => 690000,
                 'thumbnail' => 'afiit7f7lttknt7kwdgz,sbeg31ffynudqwpzgkux',
@@ -1226,7 +1226,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 79,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương treo tường MITFORD',
                 'price' => 740000,
                 'thumbnail' => 'ljcrexewtcxlzt5ehp3s,muphffadvbhnbzhegs86',
@@ -1241,7 +1241,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 80,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương đứng REBEL',
                 'price' => 1690000,
                 'thumbnail' => 'm1rtu7s7wnsy6yr6ibzz,sg0qincpwupgtlbfkhpt,yqxqoupkynsjf0m25rut',
@@ -1257,7 +1257,7 @@ class ProductSeeder extends Seeder
             ],
             [
                 'id' => 81,
-                'categoryId' => 5,
+                'category_id' => 5,
                 'name' => 'Gương đứng MOZART',
                 'price' => 1590000,
                 'thumbnail' => 'rycucnsbgf8zcai9ugs7,gnzp6kwtfyxxzradpnk9,pkebcinsljouiil6y0y9',
