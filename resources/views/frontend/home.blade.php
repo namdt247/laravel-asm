@@ -43,10 +43,10 @@
                                                 </a>
                                             </div>
                                             <div class="cms-block">
-                                                <div class="cms_offer">New Lighting</div>
-                                                <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                <div class="cms_offer">Kiểu dáng mới</div>
+                                                <div class="cms_offer1">Hiện có sẵn tất cả các màu ..</div>
                                                 <div class="subbutton">
-                                                    <a href="#" class="btn ">shop now</a>
+                                                    <a href="#" class="btn ">Mua ngay</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -59,10 +59,10 @@
                                                 </a>
                                             </div>
                                             <div class="cms-block">
-                                                <div class="cms_offer">New Lighting</div>
-                                                <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                <div class="cms_offer">Sản phẩm đặc biệt</div>
+                                                <div class="cms_offer1">Hiện có sẵn tất cả các màu ..</div>
                                                 <div class="subbutton">
-                                                    <a href="#" class="btn ">shop now</a>
+                                                    <a href="#" class="btn ">Mua ngay</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -76,20 +76,20 @@
                             <div class="tm-hometabcontent container">
                                 <div class="tabs">
                                     <ul id="home-page-tabs" class="nav nav-tabs clearfix">
-                                        <h2 class="products-section-title text-uppercase" style="border: none;">Trending Product</h2>
+                                        <h2 class="products-section-title text-uppercase" style="border: none;">Sản phẩm bán chạy</h2>
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#featureProduct" class="nav-link active" data-text="">
-                                                <span>Feature</span>
+                                                <span>Nổi bật</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#newProduct" class="nav-link" data-text="">
-                                                <span>New</span>
+                                                <span>Mới</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a data-toggle="tab" href="#bestseller" class="nav-link" data-text="">
-                                                <span>Bestseller</span>
+                                                <span>Bán chạy</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -175,10 +175,10 @@
                                                 </a>
                                             </div>
                                             <div class="cms-block">
-                                                <div class="cms_offer">Home Decor Collection</div>
-                                                <div class="cms_offer2">Now in all Color Varient Available Grab This Offer Now...</div>
+                                                <div class="cms_offer">Bộ sưu tập trang trí nội thất</div>
+                                                <div class="cms_offer2">Hiện có tất cả các màu sắc đặt hàng ngay để nhận ưu đãi</div>
                                                 <div class="subbutton">
-                                                    <a class="btn " href="#">shop now</a>
+                                                    <a class="btn " href="#">Mua ngay</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,8 +192,8 @@
                                     <div class="tmcategorylist">
                                         <div class="tmcategory-container container hb-animate-element left-to-right">
                                             <div class="row" id="product_department">
-                                                <h2 class="h1 products-section-title">Shop by department</h2>
-                                                <div class="menu-title">choose what you looking for</div>
+                                                <h2 class="h1 products-section-title">Mua sắm theo bộ phận</h2>
+                                                <div class="menu-title">chọn những gì bạn đang tìm kiếm</div>
                                                 <div class="customNavigation">
                                                     <a class="carousel-control-prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
                                                     <a class="carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
@@ -243,10 +243,10 @@
                                                 </a>
                                             </div>
                                             <div class="cms-block">
-                                                <div class="cms_offer">Latest Rest Chair</div>
-                                                <div class="cms_offer1">Now in all Color Varient Available..</div>
+                                                <div class="cms_offer">Ghế nghỉ mới nhất</div>
+                                                <div class="cms_offer1">Hiện có sẵn trong tất cả các màu ..</div>
                                                 <div class="subbutton">
-                                                    <a class="btn " href="#">shop now</a>
+                                                    <a class="btn " href="#">Mua ngay</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -257,9 +257,9 @@
                                                 <a href="#"> <img alt="Cms-Banner2.jpg" src="{{asset('img/Sub-banner-05.jpg')}}" /></a>
                                             </div>
                                             <div class="cms-block">
-                                                <div class="cms_offer">New Drover Table</div>
-                                                <div class="cms_offer1">Now in all Color Varient Available..</div>
-                                                <div class="subbutton"><a class="btn " href="#">shop now</a></div>
+                                                <div class="cms_offer">Bảng Drover mới</div>
+                                                <div class="cms_offer1">Hiện có sẵn trong tất cả các màu ..</div>
+                                                <div class="subbutton"><a class="btn " href="#">Mua ngay</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -269,16 +269,13 @@
                             {{--  section 6 --}}
                             <div id="tmcategorytabs" class="tabs products_block container clearfix">
                                 <div class="tab-main-title">
-                                    <h2 class="products-section-title">new arrival item</h2>
+                                    <h2 class="products-section-title">Hàng mới về</h2>
                                     <ul id="tmcategory-tabs" class="nav nav-tabs clearfix tmcategory-tabs-carousel mobiletab d-block">
                                         <li class="nav-item">
-                                            <a href="#tab_3" data-toggle="tab" class="nav-link active">furniture </a>
+                                            <a href="#tab_3" data-toggle="tab" class="nav-link active">Đồ nội thất </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="#tab_6" data-toggle="tab" class="nav-link">Accessories</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#tab_9" data-toggle="tab" class="nav-link">Sports Shoes</a>
+                                            <a href="#tab_6" data-toggle="tab" class="nav-link">Phụ kiện</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1517,7 +1514,7 @@
                             {{--  section 7 --}}
                             <div class="lastest_block block tmblog-latest container" id="blog_home">
                                 <div class="blog_title">
-                                    <h2 class="products-section-title text-uppercase">from the Blog</h2>
+                                    <h2 class="products-section-title text-uppercase">Bài viết</h2>
                                     <div class="customNavigation">
                                         <a class="carousel-control-prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
                                         <a class="carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
