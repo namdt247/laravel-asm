@@ -18238,4 +18238,10 @@ img {
 .dropdown, .dropup {
     position: relative;
     text-align: right;
+
 } */
+
+.title{
+    font-size: 20px;
+    font-weight: bold;
+}

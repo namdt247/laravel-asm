@@ -114,4 +114,8 @@ class HomeController extends Controller
         dd($data['product']);
         return view('frontend.categories')->with($data);
     }
+
+    public function a(){
+        return view('frontend.contact');
+    }
 }

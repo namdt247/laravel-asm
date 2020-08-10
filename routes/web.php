@@ -26,8 +26,6 @@ Route::get('/product/detail/{id}', 'Frontend\HomeController@getProductDetail');
 Route::get('/about', 'Frontend\HomeController@getAbout')
     ->name('frontend.about');
 
-Route::get('/contact', 'Frontend\HomeController@contact');
-
 Route::get('/faq', 'Frontend\HomeController@getFaq')
     ->name('frontend.faq');
 
@@ -47,13 +45,16 @@ Route::get('/products/{prdId}', 'Frontend\HomeController@getDetailProduct')
     ->name('frontend.detailProduct');
 
 Route::get('/categories','Frontend\HomeController@categories');
-Route::get('/quest', 'Frontend\HomeController@getContact')
+
+// Route::get('/quest', 'Frontend\HomeController@getContact')
+//     ->name('frontend.contact');
+
+// Route::get('/detail', 'Frontend\HomeController@detail');
+
+// Route::get('/shopping', 'Frontend\HomeController@shoppingCart')
+//     ->name('frontend.shopping_cart');
+
+// Route::get('/categories', 'Frontend\HomeController@getQuest');
+
+Route::get('/contact','Frontend\HomeController@contact')
     ->name('frontend.contact');
-
-Route::get('/detail', 'Frontend\HomeController@detail');
-
-Route::get('/shopping', 'Frontend\HomeController@shoppingCart')
-    ->name('frontend.shopping_cart');
-
-Route::get('/categories', 'Frontend\HomeController@getQuest');
-
