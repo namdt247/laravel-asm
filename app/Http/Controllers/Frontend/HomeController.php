@@ -44,4 +44,9 @@ class HomeController extends Controller
     {
         return view('frontend.detail');
     }
+
+    public function product()
+    {
+        return view('frontend.categories');
+    }
 }

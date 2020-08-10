@@ -137,8 +137,6 @@ class AdminController extends Controller
             ->first();
         $name = $request->get('name');
         $price = $request->get('price');
-        dd(intval($price));
-        dd(number_format(intval($price), 0, '.', ''));
         $description = $request->get('description');
 //        $thumbnails = $request->get('thumbnails');
         $cateId = $request->get('cateId');

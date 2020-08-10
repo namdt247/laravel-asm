@@ -28,7 +28,7 @@
 
                     <td class="border-top-0 text-center font-weight-medium text-muted px-2 py-4">
                         <a href="/admin/cate/edit/{{$cate->id}}" class="text-orange mr-1">Edit</a>
-                        <a href="/admin/cate/delete/{{$cate->id}}" class="text-danger mr-1">Delete</a>
+                        <a href="/admin/cate/delete/{{$cate->id}}" class="text-danger mr-1" id="btn-delete">Delete</a>
                     </td>
                 </tr>
             @endforeach
@@ -46,4 +46,20 @@
             {{$categories->links()}}
         </div>
     </div>
+@endsection
+
+@section('main-script')
+    <script>
+        $("a#btn-delete").click(function (evt) {
+            evt.preventDefault();
+            const confirm = window.confirm("Are you sure to delete category?");
+            if(confirm === true) {
+                let linkLocation = $(this).attr("href");
+                $.ajax({
+                    url: linkLocation,
+                    success: window.location.reload(),
+                });
+            }
+        });
+    </script>
 @endsection

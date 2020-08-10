@@ -50,8 +50,8 @@
                 Giá
             </div>
             <div class="col-10">
-                <input type="text" name="price" class="form-control" placeholder="Nhập giá sản phẩm"
-                       value="{{number_format($product->price, 0, '', '.')}}" />
+                <input type="text" name="price" class="form-control price" placeholder="Nhập giá sản phẩm"
+                       value="{{ $product->price }}" />
             </div>
         </div>
 
