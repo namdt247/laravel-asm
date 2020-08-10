@@ -66,8 +66,7 @@
                 <div id="search_widget" class="col-lg-5 col-md-7 col-sm-12 search-widget" data-search-controller-url="//prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=search">
                     <span class="search_button"></span>
                     <div class="searchtoggle">
-
-                        <form method="get" action="{{ route('frontend.productSearch') }}">
+                        <form action="{{ route('frontend.productSearch') }}" method="get">
                             <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                             <input type="text" name="keyword" value="" placeholder="Tìm kiếm Sản phẩm tại đây" aria-label="Search" class="ui-autocomplete-input" />
                             <button type="submit">

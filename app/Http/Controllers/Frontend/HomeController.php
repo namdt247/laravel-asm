@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Product;
-use GuzzleHttp\Psr7\Request;
-use function Sodium\compare;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -103,15 +102,16 @@ class HomeController extends Controller
     {
         $data = array();
         $data['keyword'] = '';
-        $product = Product::query();
-        if ($request->has('keyword') && strlen($request->get('keyword')) > 0) {
-            $data['keyword'] = $request->get('keyword');
-            $product = $product->where('name', 'like', '%' . $request->get('keyword') . '%');
-        }
-        $data['product'] = $product->where('status', '=', 1)
-            ->orderby('created_at', 'desc')
-            ->paginate(12);
-        dd($data['product']);
+        $product = Product::where('name', 'like', '%' . $request->get('keyword') . '%')
+            ->where('status', '=', 1)
+            ->paginate(12);;
+//        if (strlen($request->get('keyword')) > 0) {
+//            $data['keyword'] = $request->get('keyword');
+//            $product = $product->where('name', 'like', '%' . $request->get('keyword') . '%')
+//            ->where('status', '=', 1)
+//            ->paginate(12);
+//        }
+        $data['product'] = $product;
         return view('frontend.categories')->with($data);
     }
 

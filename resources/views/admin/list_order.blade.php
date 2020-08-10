@@ -113,7 +113,11 @@
             </tr>
             </tfoot>
         </table>
+        <div class="float-right">
+            {{ $list->links() }}
+        </div>
     </div>
+
 @endsection
 
 @section('main-script')
