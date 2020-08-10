@@ -13,8 +13,9 @@
         <div class="container">
             <div id="columns_inner">
                 <nav data-depth="1" class="breadcrumb hidden-sm-down" style="width: 100%" >
-                    <div class="container"><h1 class="h1">
-                            Log in to your account
+                    <div class="container">
+                        <h1 class="title">
+                            Đăng nhập tài khoản của bạn
                         </h1>
                     </div>
                 </nav>
@@ -24,15 +25,11 @@
                         </header>
                         <section id="content" class="page-content card card-block">
                             <section class="login-form">
-                                <!-- begin customer/_partials/login-form.tpl -->
                                 <form id="login-form"
                                       action="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=authentication&amp;back=my-account"
                                       method="post">
                                     <section>
-                                        <!-- begin _partials/form-fields.tpl -->
                                         <input type="hidden" name="back" value="my-account">
-                                        <!-- end _partials/form-fields.tpl -->
-                                        <!-- begin _partials/form-fields.tpl -->
                                         <div class="form-group row ">
                                             <label class="col-md-3 form-control-label required">
                                                 Email
@@ -44,11 +41,9 @@
                                             <div class="col-md-3 form-control-comment">
                                             </div>
                                         </div>
-                                        <!-- end _partials/form-fields.tpl -->
-                                        <!-- begin _partials/form-fields.tpl -->
                                         <div class="form-group row ">
                                             <label class="col-md-3 form-control-label required">
-                                                Password
+                                                Mật Khẩu
                                             </label>
                                             <div class="col-md-6">
                                                 <div class="input-group js-parent-focus">
@@ -66,11 +61,10 @@
                                             <div class="col-md-3 form-control-comment">
                                             </div>
                                         </div>
-                                        <!-- end _partials/form-fields.tpl -->
                                         <div class="forgot-password" style="text-align: center; padding: 15px">
                                             <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=password"
                                                rel="nofollow">
-                                                Forgot your password?
+                                                Quên mật khẩu?
                                             </a>
                                         </div>
                                     </section>
@@ -79,16 +73,15 @@
 
                                         <button id="submit-login" class="btn btn-primary" data-link-action="sign-in"
                                                 type="submit">
-                                            Sign in
+                                            Đăng nhập
                                         </button>
                                     </footer>
                                 </form>
-                                <!-- end customer/_partials/login-form.tpl -->
                             </section>
                             <div class="no-account" style="text-align: center; padding: 15px">
                                 <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/index.php?controller=authentication&amp;create_account=1"
                                    data-link-action="display-register-form">
-                                    No account? Create one here
+                                    Chưa cố tài khoản? Tạo tài khoản mới
                                 </a>
                             </div>
                         </section>

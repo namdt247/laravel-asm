@@ -38,4 +38,8 @@ class HomeController extends Controller
     public function categories(){
         return view('frontend.categories');
     }
+
+    public function a(){
+        return view('frontend.contact');
+    }
 }

@@ -32,3 +32,5 @@ Route::get('/faq', 'Frontend\HomeController@faq');
 Route::get('/introduce', 'Frontend\HomeController@introduce');
 
 Route::get('/categories','Frontend\HomeController@categories');
+
+Route::get('/contact','Frontend\HomeController@contact');
