@@ -31,6 +31,15 @@ class Product extends Model
         return self::$cloudinary_link . $photos[0] . '.jpg';
     }
 
+    public function getLargePhoto2Attribute()
+    {
+        if ($this->thumbnail == null || strlen($this->thumbnail) == 0) {
+            return 'https://thanhtra.com.vn/image/images/noimages.png';
+        }
+        $photos = explode(',', $this->thumbnail);
+        return self::$cloudinary_link . $photos[1] . '.jpg';
+    }
+
     public function getLargePhotosAttribute()
     {
         if ($this->thumbnail == null || strlen($this->thumbnail) == 0) {

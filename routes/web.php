@@ -37,11 +37,21 @@ Route::get('/introduce', 'Frontend\HomeController@getIntroduce')
 Route::get('/contact', 'Frontend\HomeController@getContact')
     ->name('frontend.contact');
 
+Route::get('/categories/{id}','Frontend\HomeController@getProductByCate')
+    ->name('frontend.productByCate');
+
+Route::get('/categories/search','Frontend\HomeController@getSearchProduct')
+    ->name('frontend.productSearch');
+
+Route::get('/products/{prdId}', 'Frontend\HomeController@getDetailProduct')
+    ->name('frontend.detailProduct');
+
 Route::get('/categories','Frontend\HomeController@categories');
 
 Route::get('/detail', 'Frontend\HomeController@detail');
 
-Route::get('/shopping', 'Frontend\HomeController@shoppingCart');
+Route::get('/shopping', 'Frontend\HomeController@shoppingCart')
+    ->name('frontend.shopping_cart');
 
 Route::get('/categories', 'Frontend\HomeController@category');
 

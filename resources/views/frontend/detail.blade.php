@@ -25,8 +25,9 @@
                                         </ul>
                                         <div class="images-container">
                                             <div class="product-cover">
-                                                <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/0/40-large_default.jpg" data-fancybox="images">
-                                                    <img class="js-qv-product-cover" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/4/0/40-large_default.jpg" style="width: 100%;" width="100"/>
+                                                <a href="#" data-fancybox="images">
+                                                    <img class="js-qv-product-cover"
+                                                         src="{{$prd->large_photo}}" style="width: 100%;" width="100"/>
                                                 </a>
                                             </div>
                                             <div id="images-container" class="products swiper-container">
@@ -38,41 +39,17 @@
                                                             </a>
                                                         </li>
                                                     </div>
-                                                    <div class="owl-item swiper-slide">
-                                                        <li class="thumb-container item">
-                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                            </a>
-                                                        </li>
-                                                    </div>
-                                                    <div class="owl-item swiper-slide">
-                                                        <li class="thumb-container item">
-                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                            </a>
-                                                        </li>
-                                                    </div>
-                                                    <div class="owl-item swiper-slide">
-                                                        <li class="thumb-container item">
-                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                            </a>
-                                                        </li>
-                                                    </div>
-                                                    <div class="owl-item swiper-slide">
-                                                        <li class="thumb-container item">
-                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                            </a>
-                                                        </li>
-                                                    </div>
-                                                    <div class="owl-item swiper-slide">
-                                                        <li class="thumb-container item">
-                                                            <a href="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg" data-fancybox="images">
-                                                                <img class="thumb js-thumb" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/8/28-home_default.jpg"  width="100"/>
-                                                            </a>
-                                                        </li>
-                                                    </div>
+
+                                                    @foreach($prd->large_photos as $p)
+                                                        <div class="owl-item swiper-slide">
+                                                            <li class="thumb-container item">
+                                                                <a href="#" data-fancybox="images">
+                                                                    <img class="thumb js-thumb"
+                                                                         src="{{$p}}"  width="100"/>
+                                                                </a>
+                                                            </li>
+                                                        </div>
+                                                    @endforeach
                                                 </ul>
                                                 <div class="customNavigation">
                                                     <a class="btn prev brand_prev carousel-control-prev" >&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
@@ -84,7 +61,7 @@
                                 </section>
                             </div>
                             <div class="col-md-6 product_middle">
-                                <h1 class="productpage_title" itemprop="name">Suspendisse Massa Nullaqm vulputate dictum</h1>
+                                <h1 class="productpage_title" itemprop="name">{{$prd->name}}</h1>
                                 <div class="hook-reviews">
                                     <div class="comments_note">
                                         <div class="star_content clearfix">
@@ -100,16 +77,16 @@
                                     <div class="product-prices">
                                         <div class="product-price h5 has-discount">
                                             <div class="current-price">
-                                                <span>280.000 VND</span>
-                                                <span class="discount discount-percentage">Save 20%</span>
+                                                <span>{{number_format($prd->price)}} VND</span>
+                                                <span class="discount discount-percentage">Sale off 20%</span>
                                             </div>
                                         </div>
                                         <div class="product-discount">
-                                            <span class="regular-price">$35.90</span>
+                                            <span class="regular-price">{{number_format($prd->price * 0.2 + $prd->price)}} vnđ</span>
                                         </div>
                                     </div>
                                     <div id="product-description-short-2" itemprop="description">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.</p>
+                                        <p>{{$prd->description}}</p>
                                     </div>
                                     <div class="product-actions">
                                         <form action="" method="post" id="add-to-cart-or-refresh">
@@ -203,13 +180,13 @@
                             <div class="tabs">
                                 <ul class="nav nav-tabs">
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#description">Description</a>
+                                        <a class="nav-link active" data-toggle="tab" href="#description">Mô tả</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#product-details">Product Details</a>
+                                        <a class="nav-link" data-toggle="tab" href="#product-details">Chi tiết sản phẩm</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#rating">rating</a>
+                                        <a class="nav-link" data-toggle="tab" href="#rating">Đánh giá</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="tab-content">
@@ -217,9 +194,7 @@
                                     <div class="tab-pane active" id="description">
                                         <div class="product-description">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque
-                                                aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus
-                                                feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero. In cursus dictum risus. Etiam tristique nisla
+                                                {{$prd->description}}
                                             </p>
                                         </div>
                                     </div>
@@ -234,11 +209,7 @@
                                         <div class="detail_content" style="float: left;">
                                             <div class="product-reference">
                                                 <label class="label">Sản phẩm: </label>
-                                                <span itemprop="sku">Bàn góc</span>
-                                            </div>
-                                            <div class="product-reference">
-                                                <label class="label">Bộ sư tập: </label>
-                                                <span itemprop="sku">CONNEMARA</span>
+                                                <span itemprop="sku">{{$prd->name}}</span>
                                             </div>
                                             <div class="product-reference">
                                                 <label class="label">Kích cỡ: </label>
@@ -378,13 +349,15 @@
                             <div id="spe_res">
                                 <div id="youLike" class="products swiper-container">
                                     <ul id="favorite_product" class="carousel slide tm-carousel product_list swiper-wrapper">
+                                        @foreach($list_product as $prd)
                                         <div class="owl-item swiper-slide">
                                             <li class="item">
                                                 <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
                                                     <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
+                                                        <a href="{{ route('frontend.detailProduct', $prd->id) }}" class="thumbnail product-thumbnail">
+                                                            <img src="{{ $prd->large_photo }}" alt="product"/>
+                                                            <img class="replace-2x img_1 img-responsive"
+                                                                 src="{{ $prd->large_photo2 }}"/>
                                                         </a>
                                                         <ul class="product-flags">
                                                             <li class="on-sale">On sale!</li>
@@ -405,58 +378,13 @@
                                                             </div>
                                                         </div>
                                                         <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
+										                <a href="{{ route('frontend.detailProduct', $prd->id) }}" > {{$prd->name}} </a>
 										            </span>
                                                         <div class="product-price-and-shipping">
                                                             <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
+                                                            <span itemprop="price" class="price">{{number_format($prd->price)}} VNĐ</span>
                                                             <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
+                                                            <span class="regular-price">{{number_format($prd->price * 0.2 + $prd->price)}} vnđ</span>
                                                         </div>
                                                         <div class="product-actions-main">
                                                             <form action="" method="post" class="add-to-cart-or-refresh">
@@ -470,194 +398,7 @@
                                                 </article>
                                             </li>
                                         </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -667,596 +408,596 @@
                             </div>
                         </section>
                         <!-- Sản phẩm đi kèm -->
-                        <section id="products_included" class="product-accessories clearfix featured-products">
-                            <div class="tab-main-title">
-                                <h2 class="products-section-title text-uppercase">Sản phẩm đi kèm</h2>
-                            </div>
-                            <div id="spe_res">
-                                <div id="productIncluded" class="products swiper-container">
-                                    <ul id="products_included" class="carousel slide tm-carousel product_list swiper-wrapper">
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="customNavigation">
-                                <a class="btn prev brand_prev carousel-control-prev" href="#products_included" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                                <a class="btn next brand_next carousel-control-next" href="#products_included" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </section>
-                        <!-- Sản phẩm tương tự -->
-                        <section id="products_similar" class="product-accessories clearfix featured-products">
-                            <div class="tab-main-title">
-                                <h2 class="products-section-title text-uppercase">Sản phẩm tương tự</h2>
-                            </div>
-                            <div id="spe_res">
-                                <div id="similar" class="products swiper-container">
-                                    <ul id="similar_product" class="carousel slide tm-carousel product_list swiper-wrapper ">
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
+{{--                        <section id="products_included" class="product-accessories clearfix featured-products">--}}
+{{--                            <div class="tab-main-title">--}}
+{{--                                <h2 class="products-section-title text-uppercase">Sản phẩm đi kèm</h2>--}}
+{{--                            </div>--}}
+{{--                            <div id="spe_res">--}}
+{{--                                <div id="productIncluded" class="products swiper-container">--}}
+{{--                                    <ul id="products_included" class="carousel slide tm-carousel product_list swiper-wrapper">--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="customNavigation">--}}
+{{--                                <a class="btn prev brand_prev carousel-control-prev" href="#products_included" role="button" data-slide="prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
+{{--                                <a class="btn next brand_next carousel-control-next" href="#products_included" role="button" data-slide="next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
+{{--                            </div>--}}
+{{--                        </section>--}}
+{{--                        <!-- Sản phẩm tương tự -->--}}
+{{--                        <section id="products_similar" class="product-accessories clearfix featured-products">--}}
+{{--                            <div class="tab-main-title">--}}
+{{--                                <h2 class="products-section-title text-uppercase">Sản phẩm tương tự</h2>--}}
+{{--                            </div>--}}
+{{--                            <div id="spe_res">--}}
+{{--                                <div id="similar" class="products swiper-container">--}}
+{{--                                    <ul id="similar_product" class="carousel slide tm-carousel product_list swiper-wrapper ">--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
 
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                        <div class="owl-item swiper-slide">
-                                            <li class="item">
-                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">
-                                                    <div class="thumbnail-container">
-                                                        <a href="#" class="thumbnail product-thumbnail">
-                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>
-                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>
-                                                        </a>
-                                                        <ul class="product-flags">
-                                                            <li class="on-sale">On sale!</li>
-                                                            <li class="new">New</li>
-                                                            <li class="discount_type_flag">
-                                                                <span class="discount-percentage">-20%</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="product-description">
-                                                        <div class="comments_note">
-                                                            <div class="star_content clearfix">
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                                <div class="star star_on"><i class="fa fa-star"></i></div>
-                                                            </div>
-                                                        </div>
-                                                        <span class="h3 product-title" itemprop="name">
-										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>
-										            </span>
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="sr-only">Price</span>
-                                                            <span itemprop="price" class="price">$19.12</span>
-                                                            <span class="sr-only">Regular price</span>
-                                                            <span class="regular-price">$23.90</span>
-                                                        </div>
-                                                        <div class="product-actions-main">
-                                                            <form action="" method="post" class="add-to-cart-or-refresh">
-                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />
-                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />
-                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />
-                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="customNavigation">
-                                <a class="btn prev brand_prev carousel-control-prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-                                <a class="btn next brand_next carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </section>
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="owl-item swiper-slide">--}}
+{{--                                            <li class="item">--}}
+{{--                                                <article class="product-miniature js-product-miniature" data-id-product="1" data-id-product-attribute="1" itemscope="" itemtype="http://schema.org/Product">--}}
+{{--                                                    <div class="thumbnail-container">--}}
+{{--                                                        <a href="#" class="thumbnail product-thumbnail">--}}
+{{--                                                            <img src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/2/7/27-home_default.jpg" alt=""/>--}}
+{{--                                                            <img class="replace-2x img_1 img-responsive" src="https://prestashop.templatemela.com/PRSADD11/PRS273/img/p/3/2/32-home_default.jpg"/>--}}
+{{--                                                        </a>--}}
+{{--                                                        <ul class="product-flags">--}}
+{{--                                                            <li class="on-sale">On sale!</li>--}}
+{{--                                                            <li class="new">New</li>--}}
+{{--                                                            <li class="discount_type_flag">--}}
+{{--                                                                <span class="discount-percentage">-20%</span>--}}
+{{--                                                            </li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </div>--}}
+{{--                                                    <div class="product-description">--}}
+{{--                                                        <div class="comments_note">--}}
+{{--                                                            <div class="star_content clearfix">--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                                <div class="star star_on"><i class="fa fa-star"></i></div>--}}
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        <span class="h3 product-title" itemprop="name">--}}
+{{--										                <a href="#" > Curabitur Dolor NuncPellentesque augue </a>--}}
+{{--										            </span>--}}
+{{--                                                        <div class="product-price-and-shipping">--}}
+{{--                                                            <span class="sr-only">Price</span>--}}
+{{--                                                            <span itemprop="price" class="price">$19.12</span>--}}
+{{--                                                            <span class="sr-only">Regular price</span>--}}
+{{--                                                            <span class="regular-price">$23.90</span>--}}
+{{--                                                        </div>--}}
+{{--                                                        <div class="product-actions-main">--}}
+{{--                                                            <form action="" method="post" class="add-to-cart-or-refresh">--}}
+{{--                                                                <input type="hidden" name="token" value="75d588bed716bb5ab0bb3241a08ab68c" />--}}
+{{--                                                                <input type="hidden" name="id_product" value="1" class="product_page_product_id" />--}}
+{{--                                                                <input type="hidden" name="id_customization" value="0" class="product_customization_id" />--}}
+{{--                                                                <button class="btn btn-sm add-to-cart" type="submit"><i class="fa fa-shopping-cart"></i> Add to cart</button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </article>--}}
+{{--                                            </li>--}}
+{{--                                        </div>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="customNavigation">--}}
+{{--                                <a class="btn prev brand_prev carousel-control-prev">&nbsp;<i class="fa fa-chevron-left" aria-hidden="true"></i></a>--}}
+{{--                                <a class="btn next brand_next carousel-control-next">&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
+{{--                            </div>--}}
+{{--                        </section>--}}
                     </section>
                 </div>
             </div>
