@@ -38,10 +38,12 @@ Route::get('/contact', 'Frontend\HomeController@getContact')
     ->name('frontend.contact');
 
 Route::get('/categories','Frontend\HomeController@categories');
+Route::get('/quest', 'Frontend\HomeController@getContact')
+    ->name('frontend.contact');
 
 Route::get('/detail', 'Frontend\HomeController@detail');
 
 Route::get('/shopping', 'Frontend\HomeController@shoppingCart');
 
-Route::get('/categories', 'Frontend\HomeController@category');
+Route::get('/categories', 'Frontend\HomeController@getQuest');
 
