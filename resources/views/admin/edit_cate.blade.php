@@ -17,10 +17,20 @@
             </div>
             <div class="col-12 mt-3">
                 <input type="submit" value="Cập nhật" class="btn btn-primary"/>
-                <input type="reset" value="Hủy" class="btn btn-danger"/>
+                <input type="reset" value="Hủy" class="btn btn-danger btn-cancel"/>
             </div>
         </div>
     </form>
+@endsection
+
+@section('main-script')
+    <script>
+        $("input.btn-cancel").click(function (evt) {
+            evt.preventDefault();
+            console.log('click');
+            window.location = "/admin/cate/list";
+        });
+    </script>
 @endsection
 
 

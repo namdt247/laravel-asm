@@ -1,12 +1,52 @@
 @extends('admin.layout_admin_master')
 
 @section('main-header')
-    <h1>Sản phẩm <small>danh sách</small></h1>
+    <h1>Sản phẩm <small style="font-size: 14px; color: green;">danh sách</small></h1>
     <a href="{!! route('product.add') !!}" class="btn btn-warning float-right">Thêm sản phẩm</a>
 @endsection
 
 @section('main-content')
-    <div class="col-md-12">
+    <div class="col-md-12 px-3 pt-4 pb-5" style="background-color: white; border-radius: 5px;">
+        <form action="{!! route('product.list') !!}" method="get" id="product_form">
+            @csrf
+            <div class="form-body">
+                <h5>
+                    Lọc theo:
+                </h5>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group mb-4">
+                            <label for="exampleFormControlSelect1">Dòng sản phẩm</label>
+                            <select name="category_id" class="form-control" id="categorySelect">
+                                <option value="0">All</option>
+                                @foreach($categories as $cate)
+                                    <option value="{{$cate->id}}" {{$cate->id == $category_id ? 'selected':''}}>{{$cate->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Thời gian</label>
+                            <input type="text" name="dates" class="form-control">
+                            <input type="hidden" name="start">
+                            <input type="hidden" name="end">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Từ khóa</label>
+                            <input value="{{$keyword}}" type="text" name="keyword" class="form-control" placeholder="Search by keyword">
+                            <input type="submit" style="visibility: hidden;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-12 px-3 py-4 mt-3" style="background-color: white; border-radius: 5px;">
         <table id="tblMain" class="table table-bordered table-striped">
             <thead>
             <tr>
@@ -20,7 +60,7 @@
             </thead>
 
             <tbody>
-            @foreach($products as $prd)
+            @foreach($list as $prd)
                 <tr>
                     <td class="border-top-0 px-2 py-4">
                         {{$prd->id}}
@@ -61,7 +101,7 @@
             </tfoot>
         </table>
         <div class="float-right">
-            {{ $products->links() }}
+            {{ $list->links() }}
         </div>
     </div>
 @endsection
@@ -78,6 +118,32 @@
                     success: window.location.reload(),
                 });
             }
+        });
+    </script>
+
+    <script>
+        $('input[name="dates"]').daterangepicker(
+            {
+                locale: {
+                    format: 'DD/MM/YYYY'
+                },
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                }
+            }
+        );
+        $('#categorySelect').change(function () {
+            $('#product_form').submit();
+        })
+        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+            $('input[name="start"]').val(picker.startDate.format('YYYY-MM-DD'));
+            $('input[name="end"]').val(picker.endDate.format('YYYY-MM-DD'));
+            $('#product_form').submit();
         });
     </script>
 @endsection

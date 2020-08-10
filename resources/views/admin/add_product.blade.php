@@ -1,11 +1,12 @@
 @extends('admin.layout_admin_master')
 
 @section('main-header')
-    <h1>Sản phẩm <small>thêm mới</small></h1>
+    <h1>Sản phẩm <small style="font-size: 14px; color: green;">thêm mới</small></h1>
 @endsection
 
 @section('main-content')
-    <form action="/admin/product/add" method="post" class="p-3 mb-3" id="product_form" style="background-color: white">
+    <form action="/admin/product/add" method="post" class="p-3 my-3" id="product_form"
+          style="background-color: white; border-radius: 5px;">
         @csrf
         <div class="row mt-3">
             <div class="col-2">
@@ -73,7 +74,7 @@
                 <input type="submit" value="Thêm mới" class="btn btn-primary form-control"/>
             </div>
             <div class="col-6">
-                <input type="reset" value="Hủy" class="btn btn-secondary form-control" />
+                <input type="reset" value="Hủy" class="btn btn-secondary btn-cancel form-control" />
             </div>
         </div>
     </form>
@@ -83,8 +84,8 @@
     <script type="text/javascript">
         var myWidget = cloudinary.createUploadWidget(
             {
-                cloudName: 'namdt247',
-                uploadPreset: 'yfb575vu',
+                cloudName: 'bigbignoobbb',
+                uploadPreset: 'x0svi0az',
                 multiple: true,
                 form: '#product_form',
                 fieldName: 'thumbnails[]',
@@ -120,5 +121,12 @@
             .catch( error => {
                 console.error( error );
             } );
+    </script>
+
+    <script>
+        $("input.btn-cancel").click(function (evt) {
+            evt.preventDefault();
+            window.location = "/admin/product/list";
+        });
     </script>
 @endsection

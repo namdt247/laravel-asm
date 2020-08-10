@@ -28,8 +28,8 @@
 
         @include('admin.include.main_sidebar')
 
-        <div class="content-wrapper">
-            <section class="content-header clearfix">
+        <div class="content-wrapper px-2">
+            <section class="content-header clearfix mt-2">
                 @yield('main-header')
             </section>
 

@@ -8,11 +8,12 @@
 @extends('admin.layout_admin_master')
 
 @section('main-header')
-    <h1>Sản phẩm <small>chi tiết</small></h1>
+    <h1>Sản phẩm <small style="font-size: 14px; color: green;">chi tiết</small></h1>
 @endsection
 
 @section('main-content')
-    <form action="/admin/product/edit" method="post" class="p-3 mb-3" id="product_form" style="background-color: white">
+    <form action="/admin/product/edit" method="post" class="p-3 my-3" id="product_form"
+          style="background-color: white; border-radius: 5px;">
         @csrf
         <div class="row mt-3">
             <div class="col-2">

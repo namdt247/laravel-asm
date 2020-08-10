@@ -1,12 +1,12 @@
 @extends('admin.layout_admin_master')
 
 @section('main-header')
-    <h1>Danh mục <small>danh sách</small></h1>
+    <h1>Danh mục <small style="font-size: 14px; color: green;">danh sách</small></h1>
     <a href="{!! route('cate.add') !!}" class="btn btn-warning pull-right float-right">Thêm mới</a>
 @endsection
 
 @section('main-content')
-    <div class="col-md-12">
+    <div class="col-md-12 px-3 pt-4 pb-5" style="background-color: white; border-radius: 5px;">
         <table id="tblMain" class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -26,7 +26,7 @@
                         {{$cate->name}}
                     </td>
 
-                    <td class="border-top-0 text-center font-weight-medium text-muted px-2 py-4">
+                    <td class="border-top-0 font-weight-medium text-muted px-2 py-4">
                         <a href="/admin/cate/edit/{{$cate->id}}" class="text-orange mr-1">Edit</a>
                         <a href="/admin/cate/delete/{{$cate->id}}" class="text-danger mr-1" id="btn-delete">Delete</a>
                     </td>

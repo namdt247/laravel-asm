@@ -8,21 +8,20 @@
 @extends('admin.layout_admin_master')
 
 @section('main-header')
-    <h1>Sản phẩm <small style="font-size: 14px; color: green;">chỉnh sửa</small></h1>
+    <h1>Đơn hàng <small style="font-size: 14px; color: green;">chi tiết</small></h1>
 @endsection
 
 @section('main-content')
     <form action="/admin/product/edit" method="post" class="p-3 my-3" id="product_form"
           style="background-color: white; border-radius: 5px;">
         @csrf
-        <input type="text" name="id" value="{{ $product->id }}" hidden />
         <div class="row mt-3">
             <div class="col-2">
                 Tên sản phẩm
             </div>
             <div class="col-10">
                 <input type="text" name="name" class="form-control" placeholder="Nhập tên sản phẩm"
-                       value="{{ $product->name }}" />
+                       value="{{ $product->name }}" disabled/>
             </div>
         </div>
 
@@ -32,10 +31,10 @@
             </div>
             <div class="col-10">
                 <div class="form-group">
-                    <select class="form-control" name="cateId">
+                    <select class="form-control" name="cateId" disabled>
                         @foreach($listCate as $cate)
                             <option value="{{ $cate->id }}" class="form-control"
-                                @if ($product->categoryId == $cate->id) selected
+                                    @if ($product->categoryId == $cate->id) selected
                                 @endif
                             >
                                 {{ $cate->name }}
@@ -51,8 +50,8 @@
                 Giá
             </div>
             <div class="col-10">
-                <input type="text" name="price" class="form-control price" placeholder="Nhập giá sản phẩm"
-                       value="{{ $product->price }}" />
+                <input type="text" name="price" class="form-control" placeholder="Nhập giá sản phẩm"
+                       value="{{number_format($product->price, 0, '', '.')}}" disabled />
             </div>
         </div>
 
@@ -60,21 +59,12 @@
             <div class="col-2">
                 Ảnh sản phẩm
             </div>
-
-            <div class="col-md-6">
+            <div class="col-10">
                 <div class="form-group">
-                    <button type="button" id="upload_widget" class="btn btn-primary">Upload
-                        files
-                    </button>
                     <div class="thumbnails">
-                        <ul class="cloudinary-thumbnails">
-                            @foreach($product->preview_photos as $preview)
-                                <li class="cloudinary-thumbnail active">
-                                    <img src="{{$preview}}" alt="">
-                                    <a href="javascript:void(0)" class="cloudinary-delete">x</a>
-                                </li>
-                            @endforeach
-                        </ul>
+                        @foreach($product->large_photos as $p)
+                            <img src="{{$p}}" alt=""  width="150" height="150">
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -93,18 +83,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="row mt-3 px-5">
-            <div class="col-6">
-                <input type="submit" value="Cập nhật" class="btn btn-primary form-control"/>
-            </div>
-            <div class="col-6">
-                <input type="reset" value="Hủy" class="btn btn-secondary btn-cancel form-control" />
-            </div>
-        </div>
-        @foreach($product->photo_ids as $id)
-            <input type="hidden" name="thumbnails[]" data-cloudinary-public-id="{{$id}}" value="{{$id}}">
-        @endforeach
     </form>
 @endsection
 
@@ -112,8 +90,8 @@
     <script type="text/javascript">
         var myWidget = cloudinary.createUploadWidget(
             {
-                cloudName: 'bigbignoobbb',
-                uploadPreset: 'x0svi0az',
+                cloudName: 'namdt247',
+                uploadPreset: 'yfb575vu',
                 multiple: true,
                 form: '#product_form',
                 fieldName: 'thumbnails[]',
@@ -137,7 +115,6 @@
             var imgName = splittedImg[splittedImg.length - 1];
             imgName = imgName.replace('.jpg', '');
             $('input[data-cloudinary-public-id="' + imgName + '"]').remove();
-            $(this).parent().remove();
         });
     </script>
 
@@ -150,13 +127,6 @@
             .catch( error => {
                 console.error( error );
             } );
-    </script>
-
-    <script>
-        $("input.btn-cancel").click(function (evt) {
-            evt.preventDefault();
-            window.location = "/admin/product/list";
-        });
     </script>
 @endsection
 

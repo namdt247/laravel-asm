@@ -72,12 +72,33 @@ class AdminController extends Controller
         return redirect('/admin/cate/list');
     }
 
-    public function getListProduct()
+    public function getListProduct(Request $request)
     {
-        $products = Product::where('status', '=', 1)
+        $data = array();
+        $data['category_id'] = 0;
+        $data['keyword'] = '';
+        $categories = Category::where('status', '=', 1)->get();
+        $product_list = Product::query();
+        if ($request->has('category_id') && $request->get('category_id') != 0) {
+            $data['category_id'] = $request->get('category_id');
+            $product_list = $product_list->where('category_id', '=', $request->get('category_id'));
+        }
+        if ($request->has('keyword') && strlen($request->get('keyword')) > 0) {
+            $data['keyword'] = $request->get('keyword');
+            $product_list = $product_list->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+        if ($request->has('start') && strlen($request->get('start')) > 0 && $request->has('end') && strlen($request->get('end')) > 0) {
+            $data['start'] = $request->get('start');
+            $data['end'] = $request->get('end');
+            $from = date($request->get('start') . ' 00:00:00');
+            $to = date($request->get('end') . ' 23:59:00');
+            $product_list = $product_list->whereBetween('created_at', [$from, $to]);
+        }
+        $data['list'] = $product_list->where('status', '=', 1)
             ->orderby('id', 'desc')
-            ->paginate(20);
-        return view('admin.list_product')->with('products', $products);
+            ->paginate(15);
+        $data['categories'] = $categories;
+        return view('admin.list_product')->with($data);
     }
 
     public function getAddProduct()
@@ -94,7 +115,7 @@ class AdminController extends Controller
         $description = $request->get('description');
         $thumbnails = $request->get('thumbnails');
         $cateId = $request->get('cateId');
-        $product->categoryId = $cateId;
+        $product->category_id = $cateId;
         $product->name = $name;
         $product->price = $price;
         foreach ($thumbnails as $thumbnail) {
@@ -135,18 +156,16 @@ class AdminController extends Controller
         $product = Product::where('id', '=', $id)
             ->where('status', '=', 1)
             ->first();
-        $name = $request->get('name');
-        $price = $request->get('price');
-        $description = $request->get('description');
-//        $thumbnails = $request->get('thumbnails');
-        $cateId = $request->get('cateId');
-        $product->categoryId = $cateId;
-        $product->name = $name;
-        $product->price = $price;
-//        foreach ($thumbnails as $thumbnail) {
-//            $product->thumbnail .= $thumbnail . ',';
-//        }
-        $product->description = $description;
+        $product->name = $request->get('name');
+        $product->price = $request->get('price');
+        $product->description = $request->get('description');
+        $product->category_id = $request->get('cateId');
+        $product->thumbnail = '';
+
+        $thumbnails = $request->get('thumbnails');
+        foreach ($thumbnails as $thumbnail) {
+            $product->thumbnail .= $thumbnail . ',';
+        }
         $product->save();
 
         // msg success
@@ -163,9 +182,51 @@ class AdminController extends Controller
         return redirect('/admin/product/list');
     }
 
-    public function getListOrder()
+    public function getListOrder(Request $request)
     {
-        $orders = Order::where('od_status', '=', 1)
+        $data = array();
+        $data['status'] = 0;
+        $data['keyword'] = '';
+//        $categories = Category::where('status', '=', 1)->get();
+        $order_list = Order::query();
+        if ($request->has('status') && $request->get('status') != 0) {
+            $data['status'] = $request->get('status');
+            $order_list = $order_list->where('od_status', '=', $request->get('status'));
+        }
+        if ($request->has('keyword') && strlen($request->get('keyword')) > 0) {
+            $data['keyword'] = $request->get('keyword');
+            $order_list = $order_list->where('od_code', 'like', '%' . $request->get('keyword') . '%')
+                ->orWhere('ship_name', 'like', '%' . $request->get('keyword') . '%')
+                ->orWhere('ship_phone', 'like', '%' . $request->get('keyword') . '%');
+        }
+        if ($request->has('start') && strlen($request->get('start')) > 0 && $request->has('end') && strlen($request->get('end')) > 0) {
+            $data['start'] = $request->get('start');
+            $data['end'] = $request->get('end');
+            $from = date($request->get('start') . ' 00:00:00');
+            $to = date($request->get('end') . ' 23:59:00');
+            $order_list = $order_list->whereBetween('created_at', [$from, $to]);
+        }
+        $data['list'] = $order_list->whereNotIn('od_status', [-1])
+            ->orderby('created_at', 'desc')
+            ->paginate(10);
+        return view('admin.list_order')->with($data);
+
+//        $orders = Order::whereNotIn('od_status', [-1])
+//            ->orderby('created_at', 'desc')
+//            ->paginate(10);
+//        return view('admin.list_order', compact('orders'));
+    }
+
+    public function getDetailOrder($id)
+    {
+        $product = Product::where('id', '=', $id)
+            ->where('status', '=', 1)
+            ->first();
+        $listCate = Category::where('status', '=', 1)->get();
+        return view('admin.edit_product', compact('listCate', 'product'));
+
+        $orders = Order::where('id', '=', $id)
+            ->orderby('created_at', 'desc')
             ->paginate(10);
         return view('admin.list_order', compact())->with('orders', $orders);
     }
