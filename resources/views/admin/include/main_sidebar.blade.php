@@ -12,6 +12,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column nav-compact nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-header">Danh mục</li>
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -20,8 +21,14 @@
                 </li>
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-tags"></i>
+                        <i class="nav-icon fa fa-users"></i>
                         <p>Quản lý người dùng</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-rss"></i>
+                        <p>Quản lý tin tức</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
@@ -40,6 +47,12 @@
                     <a href="{!! route('order.list') !!}" class="nav-link">
                         <i class="nav-icon fa fa-file"></i>
                         <p>Đơn hàng</p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a class="nav-link">
+                        <i class="nav-icon fa fa-comments"></i>
+                        <p>Phản hồi khách hàng</p>
                     </a>
                 </li>
             </ul>
