@@ -33,6 +33,10 @@ class HomeController extends Controller
     {
         return view('frontend.about_us');
     }
+    public function getQuest()
+    {
+        return view('frontend.quest');
+    }
 
     public function contact()
     {
