@@ -41,7 +41,7 @@
                                 data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
-                        <h4 class="container-680" data-content-type="heading" data-appearance="default"
+                        <h4 class="container-680 mt-5" data-content-type="heading" data-appearance="default"
                             data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px;">TẦM
                             NHÌN</h4>
                         <div class="container-680" data-content-type="text" data-appearance="default"
@@ -56,7 +56,7 @@
                                 alt="" title="" data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
-                        <h4 class="container-680" data-content-type="heading" data-appearance="default"
+                        <h4 class="container-680 mt-5" data-content-type="heading" data-appearance="default"
                             data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px;">SỨ
                             MỆNH</h4>
                         <div class="container-680" data-content-type="text" data-appearance="default"
@@ -72,7 +72,7 @@
                                 data-element="desktop_image"
                                 style="border-style: none; border-width: 1px; border-radius: 0px; max-width: 100%; height: auto;">
                         </figure>
-                        <h4 class="container-680" data-content-type="heading" data-appearance="default"
+                        <h4 class="container-680 mt-5" data-content-type="heading" data-appearance="default"
                             data-element="main" style="border-style: none; border-width: 1px; border-radius: 0px;">
                             GIÁ
                             TRỊ</h4>

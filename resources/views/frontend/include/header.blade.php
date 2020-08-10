@@ -269,11 +269,10 @@
                     <h3 class="h3 title_block "><i class="material-icons"></i></h3>
                     <ul id="tm_toplink" class="block_content">
                         <li><a href="#" title="today deal's">Hot deal</a></li>
-                        <li><a href="#" title="introduce">Giới thiệu</a></li>
-                        <li><a href="#" title="q&a">Câu hỏi thường gặp</a></li>
+                        <li><a href="{{ route('frontend.introduce') }}" title="introduce">Giới thiệu</a></li>
+                        <li><a href="{{ route('frontend.faq') }}" title="q&a">Câu hỏi thường gặp</a></li>
                         <li><a href="#" title="news">Tin tức</a></li>
-                        <li><a href="#" title="Contacts">Tuyển dụng</a></li>
-                        <li><a href="#" title="Contacts">Liên lạc</a></li>
+                        <li><a href="{{ route('frontend.contact') }}" title="Contacts">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div id="_desktop_cart">

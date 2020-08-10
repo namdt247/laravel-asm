@@ -23,13 +23,19 @@ Route::get('/product/{type}', 'Frontend\HomeController@getProduct');
 
 Route::get('/product/detail/{id}', 'Frontend\HomeController@getProductDetail');
 
-Route::get('/about', 'Frontend\HomeController@about');
+Route::get('/about', 'Frontend\HomeController@getAbout')
+    ->name('frontend.about');
 
 Route::get('/contact', 'Frontend\HomeController@contact');
 
-Route::get('/faq', 'Frontend\HomeController@faq');
+Route::get('/faq', 'Frontend\HomeController@getFaq')
+    ->name('frontend.faq');
 
-Route::get('/introduce', 'Frontend\HomeController@introduce');
+Route::get('/introduce', 'Frontend\HomeController@getIntroduce')
+    ->name('frontend.introduce');
+
+Route::get('/contact', 'Frontend\HomeController@getContact')
+    ->name('frontend.contact');
 
 Route::get('/categories','Frontend\HomeController@categories');
 
