@@ -45,7 +45,11 @@ class HomeController extends Controller
         return view('frontend.detail');
     }
 
-    public function product()
+    public function shoppingCart()
+    {
+        return view('frontend.shoppingCart');
+    }
+    public function category()
     {
         return view('frontend.categories');
     }
