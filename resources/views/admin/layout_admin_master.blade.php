@@ -40,7 +40,7 @@
         </div>
         @include('admin.include.footer')
     </div>
-
+    
     <script src="/Admin/plugins/jquery/jquery.min.js"></script>
     <script src="/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -54,7 +54,14 @@
     <script src="/Admin/dist/js/adminlte.min.js"></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
-
+    <script>
+        $( document ).ready(function() {
+            function activeFilter (e) {
+                $('.nav-link').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    </script>
     @yield('main-script')
 </body>
 </html>
