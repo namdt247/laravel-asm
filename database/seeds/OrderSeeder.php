@@ -18,7 +18,7 @@ class OrderSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('orders')->insert([
             [
                 'id' => 1,
-                'account_id' => 2,
+                'account_id' => 1,
                 'od_code' => 'A001',
                 'od_total_price' => 9786000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -32,7 +32,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'account_id' => 3,
+                'account_id' => 2,
                 'od_code' => 'A002',
                 'od_total_price' => 15790000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -46,7 +46,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'account_id' => 4,
+                'account_id' => 1,
                 'od_code' => 'A003',
                 'od_total_price' => 7980000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -60,7 +60,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'account_id' => 5,
+                'account_id' => 2,
                 'od_code' => 'A004',
                 'od_total_price' => 5490000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -74,7 +74,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'account_id' => 6,
+                'account_id' => 1,
                 'od_code' => 'A005',
                 'od_total_price' => 3595000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -88,7 +88,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'account_id' => 7,
+                'account_id' => 1,
                 'od_code' => 'A006',
                 'od_total_price' => 15890000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -102,7 +102,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'account_id' => 8,
+                'account_id' => 1,
                 'od_code' => 'A007',
                 'od_total_price' => 10488000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -116,7 +116,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'account_id' => 9,
+                'account_id' => 1,
                 'od_code' => 'A008',
                 'od_total_price' => 15476000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -130,7 +130,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 9,
-                'account_id' => 10,
+                'account_id' => 1,
                 'od_code' => 'A009',
                 'od_total_price' => 14470000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -144,7 +144,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 10,
-                'account_id' => 11,
+                'account_id' => 2,
                 'od_code' => 'A010',
                 'od_total_price' => 5549000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -158,7 +158,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 11,
-                'account_id' => 12,
+                'account_id' => 2,
                 'od_code' => 'A011',
                 'od_total_price' => 11078000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -172,7 +172,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 12,
-                'account_id' => 13,
+                'account_id' => 1,
                 'od_code' => 'A012',
                 'od_total_price' => 19639000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -186,7 +186,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 13,
-                'account_id' => 14,
+                'account_id' => 1,
                 'od_code' => 'A013',
                 'od_total_price' => 4089000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -200,7 +200,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 14,
-                'account_id' => 15,
+                'account_id' => 1,
                 'od_code' => 'A014',
                 'od_total_price' => 21880000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -214,7 +214,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 15,
-                'account_id' => 16,
+                'account_id' => 1,
                 'od_code' => 'A015',
                 'od_total_price' => 15666000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -228,7 +228,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 16,
-                'account_id' => 17,
+                'account_id' => 1,
                 'od_code' => 'A016',
                 'od_total_price' => 26880000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -242,7 +242,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 17,
-                'account_id' => 18,
+                'account_id' => 1,
                 'od_code' => 'A017',
                 'od_total_price' => 10380000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -256,7 +256,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 18,
-                'account_id' => 19,
+                'account_id' => 1,
                 'od_code' => 'A018',
                 'od_total_price' => 10370000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -270,7 +270,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 19,
-                'account_id' => 20,
+                'account_id' => 2,
                 'od_code' => 'A019',
                 'od_total_price' => 9880000,
                 'ship_name' => 'Trường Thái Hoàn',
@@ -284,7 +284,7 @@ class OrderSeeder extends Seeder
             ],
             [
                 'id' => 20,
-                'account_id' => 21,
+                'account_id' => 2,
                 'od_code' => 'A020',
                 'od_total_price' => 7094000,
                 'ship_name' => 'Trường Thái Hoàn',
